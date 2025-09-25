@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">TỔNG QUAN</a></li>
+            <li><a href="#">SẢN PHẨM</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="#">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-brands fa-product-hunt"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li>
+                <div class="inner-icon">
+                <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <a href="./statistic.html">Thống kê và báo cáo</a>
+            </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Change Wrap -->
+      <div class="change-wrap">
+        <h1>Quản lý sản phẩm</h1>
+
+        <!-- Form Thêm/Sửa Sản phẩm -->
+        <form id="productForm">
+          <h2>Thêm/Sửa sản phẩm</h2>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="productName">Tên sản phẩm</label>
+              <input
+                type="text"
+                id="productName"
+                placeholder="Tên sản phẩm"
+                required
+              />
+            </div>
+
+            <div class="form-item">
+              <label for="productPrice">Giá</label>
+              <input
+                type="number"
+                id="productPrice"
+                placeholder="Giá"
+                required
+              />
+            </div>
+
+            <div class="form-item">
+              <label for="productCategory">Danh mục</label>
+              <select id="productCategory" required>
+                <option value="">Chọn danh mục</option>
+                <option value="Giày">Giày</option>
+                <option value="Trang phục thể thao">Trang phục thể thao</option>
+                <option value="Dụng cụ thể thao">Dụng cụ thể thao</option>
+                <option value="Lều ngủ - Túi ngủ">Lều ngủ - Túi ngủ</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productCategory">Kích thước</label>
+              <select id="productCategory" required>
+                <option value="">Chọn kích thước</option>
+                <option value="Size X">X</option>
+                <option value="Size M">M</option>
+                <option value="Size L">L</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productName">Thêm mô tả</label>
+              <input type="text" id="productName" placeholder="" required />
+            </div>
+
+            <div class="form-item">
+              <label for="productStatus">Trạng thái</label>
+              <select id="productStatus" required>
+                <option value="Còn hàng">Còn hàng</option>
+                <option value="Hết hàng">Hết hàng</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productDiscount">Giảm giá (%)</label>
+              <input
+                type="number"
+                id="productDiscount"
+                placeholder="Giảm giá"
+              />
+            </div>
+
+            <div class="form-item">
+              <label for="productImage">Hình ảnh</label>
+              <input type="file" id="productImage" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Lưu sản phẩm</button>
+          </div>
+        </form>
+
+        <!-- Danh sách Sản phẩm -->
+        <div id="productList">
+          <h2>Danh sách sản phẩm</h2>
+          <div class="product">
+            <img src="img/WMNS+AIR+FORCE+1+'07.png" alt="Product Image" />
+            <div class="product-info">
+              <h3>Giày Nike Air Force 1 '07</h3>
+              <p>Giá: 2.000.000₫</p>
+              <p>Trạng thái: Còn hàng</p>
+              <p>Giảm giá: 25%</p>
+            </div>
+            <div class="product-actions">
+              <button class="edit-btn">Sửa</button>
+              <button class="delete-btn">Xóa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner Wrap -->
+    </div>
+    <!-- Main Content -->
+
+    <!-- End Task 1  -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner padding-top-20 padding-bottom-20">
+          <div class="copyright clearfix">
+            <div class="container">
+              <div class="inner clearfix">
+                <div class="row">
+                  <div class="col-sm-12 text-center">
+                    <span
+                      >© Bản quyền thuộc về <b>Nhóm 21</b>
+                      <span class="s480-f">|</span> Cung cấp bởi
+                      <a
+                        href="https://fit.sgu.edu.vn/site/"
+                        title="SGU IT"
+                        target="_blank"
+                        rel="nofollow"
+                        style="color: white"
+                        >SGU IT</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="back-to-top show">
+                <i class="fa fa-arrow-circle-up"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

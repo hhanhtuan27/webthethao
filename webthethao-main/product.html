@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="topbar" style="max-width: 1150px; margin: auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-7 left-infor">
+                <ul class="ul-inform">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-5 hidden-xs">
+                <ul class="ul-social">
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-main" style="max-width: 1150px; margin: auto">
+            <div class="row" style="
+                display: flex;
+                max-width: 1150px;
+                margin: auto;
+                justify-content: space-between;
+              ">
+              <div class="col-md-3 col-100-h">
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+                </button>
+                <div class="logo">
+                  <a href="index.html" class="logo-wrapper">
+                    <img src="./img/logo.png" alt="logo SGU Sport" />
+                  </a>
+                </div>
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-forms">
+                <div class="search-header">
+                  <div class="header_search search_form">
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn icon-fallback-text">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="index-cart cart-wishlist">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
+                <div class="account-sign">
+                  <a href="#" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <nav class="hidden-sm hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul id="nav" class="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="has-mega">
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <div class="mega-content">
+                        <div class="level0-wrapper2">
+                          <div class="nav-block nav-block-center">
+                            <ul class="level0">
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="has-mega abc">
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <ul class="menu">
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="bread-crumb margin-bottom-10" id="prd-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <li class="home">
+                <a itemprop="url" href="/" title="Trang chủ">
+                  <span itemprop="title">Trang chủ</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <strong itemprop="title">sản phẩm</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container margin-bottom-20" id="prd-container">
+      <div class="row" id="ctgprd">
+        <aside class="sidebar left left-content col-md-3 col-sm-12 col-xs-12">
+          <div class="left-filters">
+            <script src="./js/search_filter.js" type="text/javascript"></script>
+            <div class="aside-filter">
+              <div class="heading">
+                <button id="toggle-arrow" class="toggle-arrow" style="float: right;">
+                  <!-- Mũi tên sẽ hiển thị ở phần ::before -->
+                </button>
+                <h2 class="title-head">Bộ lọc</h2>
+                <p>Giúp lọc nhanh sản phẩm bạn tìm kiếm</p>
+              </div>
+              <!-- Mũi tên để mở/đóng phần aside -->
+              <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function() {
+                  const toggleArrow = document.getElementById("toggle-arrow");
+                  const aside = document.getElementById("aside-hidden-mobile");
+                  // Kiểm tra xem phần tử có tồn tại không
+                  if (!toggleArrow || !aside) {
+                    console.error("Một hoặc cả hai phần tử không tồn tại.");
+                    return; // Dừng thực thi nếu phần tử không tồn tại
+                  }
+                  toggleArrow.addEventListener("click", function() {
+                    // Chuyển đổi giữa trạng thái display block và none
+                    if (aside.style.display === "block") {
+                      aside.style.display = "none"; // Ẩn phần aside
+                      toggleArrow.classList.remove("active");
+                    } else {
+                      aside.style.display = "block"; // Hiển thị phần aside
+                      toggleArrow.classList.add("active");
+                    }
+                  });
+                });
+              </script>
+              <div class="aside-hidden-mobile" id="aside-hidden-mobile">
+                <div class="filter-container">
+                  <div class="filter-containers">
+                    <div class="filter-container__selected-filter" style="display: none">
+                      <div class="filter-container__selected-filter-header clearfix">
+                        <span class="filter-container__selected-filter-header-title">Bạn chọn</span>
+                        <a href="javascript:void(0)" onclick="clearAllFiltered()" class="filter-container__clear-all">Bỏ hết <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                      <div class="filter-container__selected-filter-list">
+                        <ul></ul>
+                      </div>
+                    </div>
+                  </div>
+                  <aside class="aside-item filter-vendor">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Thương hiệu</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <ul class="filter-list">
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-brand" value="Fornix"> Fornix </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-brand" value="Bianchi"> Bianchi </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-brand" value="DON"> DON </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-brand" value="JACK WOLFSKIN"> JACK WOLFSKIN </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-brand" value="Khác"> Khác </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                  <aside class="aside-item filter-type">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Loại</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <ul class="filter-list">
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-type" value="Xe đạp"> Xe đạp </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-type" value="Balo"> Balo </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-type" value="Giày"> Giày </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-type" value="Nón bảo hiểm"> Nón bảo hiểm </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-type" value="Phụ kiện"> Phụ kiện </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                  <aside class="aside-item filter-price">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Giá sản phẩm</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <ul class="filter-list">
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-price" value="
+                                                  <500000"> Dưới 500.000₫ </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-price" value="500000-1000000"> 500.000₫ - 1.000.000₫ </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-price" value="1000000-2000000"> 1.000.000₫ - 2.000.000₫ </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="checkbox" class="filter-price" value="2000000-20000000"> Trên 2.000.000₫ </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+            <script>
+              $(document).ready(function() {
+                function getQueryParam(param) {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  return urlParams.get(param);
+                }
+
+                function filterProducts() {
+
+                  // Lấy danh sách các bộ lọc đã chọn
+                  const selectedBrands = $('.filter-brand:checked').map(function() {
+                    return $(this).val().toLowerCase();
+                  }).get();
+                  const selectedTypes = $('.filter-type:checked').map(function() {
+                    return $(this).val().toLowerCase();
+                  }).get();
+                  const selectedPrices = $('.filter-price:checked').map(function() {
+                    return $(this).val();
+                  }).get();
+                  let visibleProductsCount = 0; // Biến đếm số sản phẩm hiển thị
+                  // Lấy từ khóa tìm kiếm từ URL nếu có
+                  const queryKeyword = getQueryParam('query') ? getQueryParam('query').toLowerCase() : '';
+                  // Duyệt qua tất cả các sản phẩm trong lưới sản phẩm
+                  $('.product-grid').each(function() {
+                    const brand = $(this).data('brand') ? $(this).data('brand').toLowerCase() : '';
+                    const type = $(this).data('type') ? $(this).data('type').toLowerCase() : '';
+                    const key = $(this).data('key') ? $(this).data('key').toLowerCase() : '';
+                    const name = $(this).data('name') ? $(this).data('name').toLowerCase() : '';
+                    const price = parseInt($(this).data('price'), 10);
+                    // Kiểm tra sự khớp của sản phẩm với từ khóa (nếu có)
+                    let keywordMatch = true;
+                    if (queryKeyword) {
+                      // Kiểm tra nếu từ khóa khớp với tên, thương hiệu, hoặc loại của sản phẩm
+                      keywordMatch = name.includes(queryKeyword) || brand.includes(queryKeyword) || key.includes(queryKeyword);
+                    }
+                    // Kiểm tra sự khớp của sản phẩm với các bộ lọc
+                    let brandMatch = !selectedBrands.length || selectedBrands.some(selectedBrand => brand.includes(selectedBrand));
+                    let typeMatch = !selectedTypes.length || selectedTypes.some(selectedType => type.includes(selectedType));
+                    let priceMatch = !selectedPrices.length || selectedPrices.some(function(priceRange) {
+                      // Kiểm tra giá theo các phạm vi đã chọn
+                      if (priceRange.startsWith('<')) return price < parseInt(priceRange.slice(1), 10);
+                      const [min, max] = priceRange.split('-').map(Number);
+                      return price >= min && price <= max;
+                    });
+                    // Hiển thị hoặc ẩn sản phẩm dựa trên sự khớp
+                    if (brandMatch && typeMatch && priceMatch && keywordMatch) {
+                      $(this).show();
+
+                      visibleProductsCount++; // Tăng số lượng sản phẩm hiển thị
+                    } else {
+                      $(this).hide();
+
+                    }
+                  });
+                  // Kiểm tra nếu không có sản phẩm nào hiển thị
+                  if (visibleProductsCount === 0) {
+                    $('#noProductsMessage').show();
+                  } else {
+                    $('#noProductsMessage').hide();
+                    
+                    // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                    if (queryValue) {
+                        const messageDiv1 = document.getElementById('ti-title');
+                        messageDiv1.innerHTML = `
+                           Sản phẩm cho từ khoá '<strong>${queryValue}</strong>'.
+                        `;
+                    }
+                  }
+                }
+                // Gọi hàm lọc ngay khi trang được tải (để áp dụng từ khóa query nếu có)
+                filterProducts();
+                // Thêm sự kiện thay đổi khi người dùng chọn/deselect bộ lọc
+                $('.filter-list input[type="checkbox"]').on('change', filterProducts);
+              });
+            </script>
+          </div>
+          <div class="left-filters margin-top-10 hidden-xs hidden-sm">
+            <aside class="aside-item collection-category">
+              <div class="aside-title">
+                <h3 class="title-head margin-top-0">
+                  <span>Danh mục</span>
+                </h3>
+              </div>
+              <div class="aside-content">
+                <nav class="nav-category navbar-toggleable-md">
+                  <ul class="nav navbar-pills">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/gioi-thieu">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/collections/all" class="nav-link">Sản phẩm</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/giay">Giày</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-nam">Giày Nam</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/trang-phuc-the-thao">Trang phục thể thao</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/danh-cho-nam">Dành cho Nam</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/dung-cu-the-thao">Dụng cụ thể thao</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/yoga-the-hinh">Yoga, thể hình</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/leu-ngu-tui-ngu">Lều ngủ, Túi ngủ</a>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/">Thương hiệu</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/nike">Nike</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/tat-ca-thuong-hieu" class="nav-link">Thương hiệu</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/nike">Nike</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/khuyen-mai">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/tin-tuc">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/lien-he">Liên hệ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </aside>
+          </div>
+        </aside>
+        <section class="main_container collection col-md-9 col-sm-12 col-xs-12">
+          <div class="pottion">
+            <h1 class="title-head margin-top-0" id="ti-title">Sản phẩm</h1>
+            <div class="category-products products clearfix">
+              <div class="sort-cate clearfix" style="display: none;">
+                <div class="sort-cate-left hidden-xs">
+                  <h3>Xếp theo:</h3>
+                  <ul>
+                    <li class="btn-quick-sort position-desc">
+                      <a href="javascript:;" onclick="sortby('created-desc')">
+                        <i></i>Hàng mới </a>
+                    </li>
+                    <li class="btn-quick-sort price-asc">
+                      <a href="javascript:;" onclick="sortby('price-asc')">
+                        <i></i>Giá thấp đến cao </a>
+                    </li>
+                    <li class="btn-quick-sort price-desc">
+                      <a href="javascript:;" onclick="sortby('price-desc')">
+                        <i></i>Giá cao xuống thấp </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sort-cate-right-mobile hidden-lg hidden-md hidden-sm" style="display: none;">
+                  <div id="sort-by">
+                    <label class="left">Sắp xếp: </label>
+                    <ul>
+                      <li>
+                        <span>Thứ tự </span>
+                        <i class="fa fa-caret-down" aria-hidden="true" onclick="SF()" id="thutu"></i>
+                        <ul id="soft-leftt">
+                          <li>
+                            <a href="javascript:;" onclick="sortby('price-asc')">Giá tăng dần</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;" onclick="sortby('price-desc')">Giá giảm dần</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;" onclick="sortby('created-desc')">Hàng mới</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sort-cate-right" style="display: none;">
+                  <h3>Xem:</h3>
+                  <div class="view-mode">
+                    <a href="javascript:;" class="btn button-view-mode view-mode-grid active" data-view="grid">
+                      <i class="fa fa-th" aria-hidden="true"></i> Lưới </a>
+                    <a href="javascript:;" class="btn button-view-mode view-mode-list" data-view="list" onclick="switchView('list')">
+                      <i class="fa fa-list" aria-hidden="true"></i> Cột </a>
+                  </div>
+                </div>
+              </div>
+              <div id="noProductsMessage" class="alert alert-warning alert-dismissible fade in margin-top-15" role="alert" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button> Sản phẩm đang được cập nhật. Vui lòng quay lại sau. 
+              </div>
+              <script type="text/javascript">
+                // Hàm lấy giá trị của tham số query từ URL
+                function getQueryParam(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(param);
+                }
+
+                // Lấy giá trị của query
+                const queryValue = getQueryParam('query');
+
+                // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                if (queryValue) {
+                    const messageDiv = document.getElementById('noProductsMessage');
+                    messageDiv.style.display = 'block'; // Hiển thị thông báo
+                    messageDiv.innerHTML = `
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        Không tìm thấy sản phẩm cho từ khoá '<strong>${queryValue}</strong>'.
+                    `;
+                }
+              </script>
+              <div class="selection-new-product">
+                <div class="row">
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="DON" data-type="Găng tay" data-key="Găng Tay Xe Đạp DON Chống Trượt POPO" data-price="500000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="product-detail.html">
+                        <img class="pic-1" src="./img/gang-tay-1.jpg" />
+                        <img class="pic-2" src="./img/gang-tay-2.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content " id="gangtay">
+                      <h3 class="title">
+                        <a href="product-detail.html"> Găng Tay Xe Đạp DON Chống Trượt POPO</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">500.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Fornix" data-type="Xe đạp" data-key="Xe đạp gấp dòng địa hình Fornix F3" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-23.jpg" />
+                        <img class="pic-2" src="./img/product-23-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Xe đạp gấp dòng địa hình Fornix F3</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="BoGeer" data-type="Đồng hồ" data-key="Đồng hồ xe đạp BoGeer Manburen MS-602B" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-22.jpg" />
+                        <img class="pic-2" src="./img/product-15.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Đồng hồ xe đạp BoGeer Manburen MS-602B</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Fornix" data-type="Xe đạp" data-key="Xe đạp đua thể thao fornix bt401" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-25.jpg" />
+                        <img class="pic-2" src="./img/product-25-01.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Xe đạp đua thể thao fornix bt401</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="TCR" data-type="Xe đạp" data-key="Xe đạp thể thao TCR ADVANCED PRO 0 - 2018 - Đỏ" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-28-783a00f7-d55e-43f5-b1cf-c5d7dc4c7872.jpg" />
+                        <img class="pic-2" src="./img/product-28-01.jpg" />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Xe đạp thể thao TCR ADVANCED PRO 0 - 2018 - Đỏ</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="TRUVATIV" data-type="Ghi đông" data-key="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-08.jpg" />
+                        <img class="pic-2" src="./img/product-08-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Fornix" data-type="Nón bảo hiểm" data-key="Nón bảo hiểm thể thao Fornix A01N2002L" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-15.jpg" />
+                        <img class="pic-2" src="./img/product-15-01.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Nón bảo hiểm thể thao Fornix A01N2002L</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Ledlenser" data-type="Phụ kiện" data-key="Đèn Pin thể thao Cầm Tay Ledlenser P2" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-14.jpg" />
+                        <img class="pic-2" src="./img/product-14-01.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Đèn Pin thể thao Cầm Tay Ledlenser P2</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="JACK WOLFSKIN" data-type="Balo" data-key="Balo leo núi JACK WOLFSKIN MOAB JAM 18" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-13.jpg" />
+                        <img class="pic-2" src="./img/product-13-01.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Balo leo núi JACK WOLFSKIN MOAB JAM 18</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Cabinzero" data-type="Balo" data-key="Balo thể thao Cabinzero CLASSIC 28L CZ081309 Backpack" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-01.jpg" />
+                        <img class="pic-2" src="./img/product-01-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Balo thể thao Cabinzero CLASSIC 28L CZ081309 Backpack</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Bianchi" data-type="Quần áo thể thao" data-key="Bộ quần áo xe đạp thể thao Bianchi" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-05.jpg" />
+                        <img class="pic-2" src="./img/product-05-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Bộ quần áo xe đạp thể thao Bianchi</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a href="#">VIEW PRODUCTS</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-10.jpg" />
+                        <img class="pic-2" src="./img/product-10-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="TCR" data-type="Xe đạp" data-key="Xe đạp thể thao TCR ADVANCED PRO 0 - 2018" data-price="450000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/product-09.jpg" />
+                        <img class="pic-2" src="./img/product-09-02.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Xe đạp thể thao TCR ADVANCED PRO 0 - 2018</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">450.000₫</span>
+                        <span class="old-price">550.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Giày" data-key="Giày Đi Phượt Cổ Cao Keen Jasper Mid WP" data-price="400000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a>
+                        <img class="pic-1" src="./img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-6_0062626_609be811f67c42a5baa44706ca3aca11_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 20% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Giày Đi Phượt Cổ Cao Keen Jasper Mid WP</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">400.000₫</span>
+                        <span class="old-price">500.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Giày" data-key="Giày Leo Núi Cổ Thấp JACK WOLFSKIN LC130416" data-price="750000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a>
+                        <img class="pic-1" src="./img/giay-leo-nui-jack-wolfskin-co-thap_0059411_cc2c1796c6df4bfeb8e9a01cf77b322f_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/giay-leo-nui-jack-wolfskin-co-thap-back_0059409_a1367296ce794d3f9beab89631818a1b_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 25% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Giày Leo Núi Cổ Thấp JACK WOLFSKIN LC130416</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">750.000₫</span>
+                        <span class="old-price">1.000.000₫</span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Giày" data-key="GIÀY TREKKING LEO NÚI THOÁT NƯỚC, NHANH KHÔ HANAGAL SWIFT HNG-33555" data-price="799000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-9_0062899_40eeef86a54a4530b1fcebe1a3607d10_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-5_0062918_17853218f7694ec2b09b05f0d4770641_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 20% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">GIÀY TREKKING LEO NÚI THOÁT NƯỚC, NHANH KHÔ HANAGAL SWIFT HNG-33555</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">799.000₫</span>
+                        <span class="old-price">999.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a>VIEW PRODUCTS</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Giày" data-key="Giày chạy trail, leo núi mùa khô Hanagal Horizon" data-price="1700000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/giay-leo-nui-co-thap-hanagal-horizon-10_0066249_9df2444293944efea73bbf2fffafb58b_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/giay-leo-nui-co-thap-hanagal-horizon-09_0066254_3086640469284d65ae26c0a6c88af4bd_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="product-detail.html">Giày chạy trail, leo núi mùa khô Hanagal Horizon</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">1.700.000₫</span>
+                        <span class="old-price">2.000.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/artboard_3_f34c4714529c4800992f3405716b995a_master.jpg" />
+                        <img class="pic-2" src="./img/artboard_2_edadf20145944c84a7154a191056a2b1_master.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 20% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo thể thao polo Kamito Victory</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">159.000₫</span>
+                        <span class="old-price">199.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/artboard_7_ed40389b0aa34bcdb821625ed3d1d955_master.jpg" />
+                        <img class="pic-2" src="./img/artboard_9_074788739fcb4175bddf81f05cfad064_master.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 20% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo thể thao polo Kamito Victory</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">159.000₫</span>
+                        <span class="old-price">199.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể nam nam Kamito Hanabi" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/hana-05_2c0a89c1eeb04cc6a39e64ef7d2f6a8e_master.jpg" />
+                        <img class="pic-2" src="./img/hanabi-18_9f6f390978ad4e7989595fac0cd47c6e_master.jpg " />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo thể nam nam Kamito Hanabi</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao nam Kamito Hanabi" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/hana-04_a4d85de2c8454ab4a6b211ebec7f5fc7_master.jpg" />
+                        <img class="pic-2" src="./img/hanabi-13_4b4b0dc3f4564651a11ceec42b859b50_master (1).jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo thể thao nam Kamito Hanabi</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Balo" data-key="Ba Lô 5.11 Tactical Rush 12" data-price="455000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/ba-lo-tac-chien-511-tactical-rush12-24l-black-10_4f11f19a4cd14ae085e591737495b79f_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/ba-lo-tac-chien-511-tactical-rush12-24l-black-07_58bb03dc9b2b4a92a548b99918c0ab62_1024x1024-removebg-preview.png " />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 30% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Ba Lô 5.11 Tactical Rush 12</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">455.000₫</span>
+                        <span class="old-price">650.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Balo" data-key="Ba Lô 5.11 Tactical Rush 24" data-price="525000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/ba-lo-tac-chien-511-tactical-rush24-37l-multicam-11_7864e642fcd54b8590759789e2ff9b0f_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/ba-lo-tac-chien-511-tactical-rush24-37l-multicam-05_5e4fa09fa2bf42ac8a01a487287c7bcc_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 25% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Ba Lô 5.11 Tactical Rush 24</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">525.000₫</span>
+                        <span class="old-price">700.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Bình nước NALGENE camo wide mouth 1000ml" data-price="260000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/binh-nuoc-nalgene-camo-wide-mouth-1000ml-__1__4479dd93da2c4a85b082ab9ae948bdb0_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/binh-nuoc-nalgene-camo-wide-mouth-1000ml-__2__d3ff2cd4d7584a1391ac098482494b6f_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 35% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Bình nước NALGENE camo wide mouth 1000ml</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">260.000₫</span>
+                        <span class="old-price">400.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Mắt kính thể thao Tifosi Crit" data-price="1640000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/kinh-chong-bui-tifosi-crit-matte-black-10_0065721_2c35f5b0e40a42aeb6ee2fce1b49f004_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/mat-kinh-the-thao-tifosi-crit-matt-black-1-px_8xwreveyimms20tiqrg_28fb05ec09134e9fa44153c4cce5ad65_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Mắt kính thể thao Tifosi Crit</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">1.640.000₫</span>
+                        <span class="old-price">2.000.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Lều 6 người MADFOX WOODSMAN 6 2023" data-price="2184000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/leu-6-nguoi-madfox-woodsman-6-2023-__2__06cdc7a81a94454b842799855cf2291a_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/leu-6-nguoi-madfox-woodsman-6-2023-__3__88d607ba037f4ea788d700ca87bdcf97_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 22% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Lều 6 người MADFOX WOODSMAN 6 2023</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">2.184.000₫</span>
+                        <span class="old-price">2.800.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Lều tự bung glamping 3-4 người Naturehike Ango NH21ZP010" data-price="1875000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/leu-tu-bung-glamping-3-4-nguoi-naturehike-ango-nh21zp010-__3__d6d9528557394623ac5f27b8f4807456_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/leu-tu-bung-glamping-3-4-nguoi-naturehike-ango-nh21zp010-__5__8b2d79855aba41a78dd9f0de92bf9cd5_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 25% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Lều tự bung glamping 3-4 người Naturehike Ango NH21ZP010</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">1.875.000₫</span>
+                        <span class="old-price">2.500.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Túi ngủ dã ngoại có nón Y150 Naturehike NH21MSD08" data-price="410000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/tui-ngu-mua-dong-co-non-y150l-naturehike-nh21msd08-__2__af93d610e1164cb9974644fcefab22a6_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/tui-ngu-mua-dong-co-non-y150l-naturehike-nh21msd08-__7__7a6c5649134442779c1fcf9bea5ca360_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 18% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Túi ngủ dã ngoại có nón Y150 Naturehike NH21MSD08</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">410.000₫</span>
+                        <span class="old-price">500.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Phụ kiện" data-key="Túi ngủ mùa đông chống thấm nước MADFOX C140W" data-price="578000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/tui-ngu-madfox-c140w-orange_1f64d68f5cac4d64bc97d559a84ec79d_1024x1024-removebg-preview.png" />
+                        <img class="pic-2" src="./img/tui-ngu-madfox-c140w-orange-rolled_9f2224f15bee4331b8465de212aed345_1024x1024-removebg-preview.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Túi ngủ mùa đông chống thấm nước MADFOX C140W</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">578.000₫</span>
+                        <span class="old-price">680.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div id="pagination" style="display:none; text-align: center;">
+                <button class="btn btn-gray" style="border: 1px solid; background: gray; color: white;" id="prev" > 1 </button>
+                <button class="btn  btn-gray" style="border: 1px solid; background: gray; color: white;"   id="next"> 2 </button>
+              </div>
+
+<script type="text/javascript">
+  const products = document.querySelectorAll(".product-grid"); // Lấy tất cả các sản phẩm
+  const productsPerPage = 15; // Mỗi trang sẽ hiển thị 6 sản phẩm
+  let currentPage = 1; // Trang hiện tại bắt đầu từ 1
+  function getQueryParam(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(param);
+                }
+
+                // Lấy giá trị của query
+                const queryValue = getQueryParam('query');
+
+                // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                if (queryValue) {
+                    const messageDiv = document.getElementById('noProductsMessage');
+                    const pagiHide = document.getElementById('pagination');
+                     pagiHide.style.display = 'none'; 
+                
+                }
+
+  // Nếu số lượng sản phẩm hiển thị lớn hơn 6, mới thực hiện phân trang
+  if (products.length > productsPerPage) {
+    // Ẩn tất cả các sản phẩm trước khi phân trang
+    products.forEach(product => product.style.display = 'none');
+
+    // Lọc ra nửa số sản phẩm để hiển thị khi trang đầu tiên được load
+    const halfProducts = Math.floor(products.length / 2);
+    for (let i = 0; i < halfProducts; i++) {
+      products[i].style.display = 'none'; // Ẩn nửa đầu
+    }
+
+    // Hiển thị phần còn lại (nửa thứ hai)
+    for (let i = halfProducts; i < products.length; i++) {
+      products[i].style.display = 'block'; // Hiển thị nửa sau
+    }
+
+    // Hiển thị phân trang
+    const paginationContainer = document.getElementById("pagination");
+    if (paginationContainer) {
+      paginationContainer.style.display = 'block';
+    }
+
+    // Lắng nghe sự kiện click trên nút Previous
+    document.getElementById("prev").addEventListener("click", function() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    // Lắng nghe sự kiện click trên nút Next
+    document.getElementById("next").addEventListener("click", function() {
+      if (currentPage * productsPerPage < products.length) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // Hiển thị trang đầu tiên khi tải trang
+    showPage(currentPage);
+  } else {
+    // Nếu số lượng sản phẩm <= 6, không cần phân trang, hiển thị tất cả
+    products.forEach(product => product.style.display = 'block');
+  }
+
+
+  // Hàm hiển thị sản phẩm theo trang
+  function showPage(page) {
+    // Tính toán chỉ số bắt đầu và kết thúc của sản phẩm trên trang hiện tại
+    const start = (page - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    // Ẩn tất cả các sản phẩm
+    products.forEach(product => product.style.display = 'none');
+
+    // Hiển thị các sản phẩm của trang hiện tại
+    for (let i = start; i < end && i < products.length; i++) {
+      products[i].style.display = 'block';
+    }
+
+  
+
+  }
+
+window.onload = function() {document.getElementById("next").click();};
+
+</script>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="popup-cart" class="modal fade in" role="dialog" style="display: none; padding-right: 15px">
+      <div id="popup-cart-desktop" class="clearfix">
+        <div class="title-popup-cart">
+          <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm <span class="cart-popup-name">
+            <a href="https://ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" style="color: red" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+          </span> vào giỏ hàng
+        </div>
+        <div class="title-quantity-popup">
+          <a href="/cart">
+            <i class="ion ion-md-basket fa-shopping-cart"></i> Giỏ hàng của bạn ( <span class="cart-popup-count">1</span> sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="content-popup-cart">
+          <div class="thead-popup">
+            <div style="width: 55%" class="text-left">Sản phẩm</div>
+            <div style="width: 15%" class="text-right">Đơn giá</div>
+            <div style="width: 15%" class="text-center">Số lượng</div>
+            <div style="width: 15%" class="text-right">Thành tiền</div>
+          </div>
+          <div class="tbody-popup">
+            <div class="item-popup productid-18765235">
+              <div style="width: 55%" class="text-left">
+                <div class="item-image">
+                  <a class="product-image" href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">
+                    <img alt="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G" src="https://bizweb.dktcdn.net/thumb/small/100/315/907/products/product-08.jpg" width="80" />
+                  </a>
+                </div>
+                <div class="item-info">
+                  <p class="item-name">
+                    <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+                  </p>
+                  <p class="variant-title-popup" style="display: none"> Default Title </p>
+                  <p class="item-remove">
+                    <a href="javascript:;" class="remove-item-cart" title="Xóa" data-id="18765235">
+                      <i class="fa fa-close"></i> Bỏ sản phẩm </a>
+                  </p>
+                  <p class="addpass" style="color: #fff">
+                    <span class="add_sus" style="color: #898989">
+                      <i style="margin-right: 5px; color: red; font-size: 13px" class="fa fa-check" aria-hidden="true"></i>Sản phẩm vừa thêm! </span>
+                  </p>
+                </div>
+              </div>
+              <div style="width: 15%" class="text-right">
+                <div class="item-price">
+                  <span class="price">750.000₫</span>
+                </div>
+              </div>
+              <div style="width: 15%" class="text-center">
+                <input class="variantID" type="hidden" name="variantId" value="18765235" />
+                <button onclick="var result = document.getElementById('qtyItem18765235'); 
+                var qtyItem18765235 = parseInt(result.value, 10); 
+                if( !isNaN(qtyItem18765235) && qtyItem18765235 > 1 ) result.value--; 
+                return false;" class="reduced items-count btn-minus" type="button"> –</button>
+                <input type="text" maxlength="12" min="0" class="input-text number-sidebar qtyItem18765235" id="qtyItem18765235" name="Lines" size="4" value="1" />
+                <button onclick="var result = document.getElementById('qtyItem18765235'); var qtyItem18765235 = result.value; if( !isNaN( qtyItem18765235 )) result.value++;return false;" class="increase items-count btn-plus" type="button"> + </button>
+              </div>
+              <div style="width: 15%" class="text-right">
+                <span class="cart-price">
+                  <span class="price">750.000₫</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="tfoot-popup">
+            <div class="tfoot-popup-1 clearfix">
+              <div class="pull-left popup-ship">
+                <p>Giao hàng trên toàn quốc</p>
+              </div>
+              <div class="pull-right popup-total">
+                <p>Thành tiền: <span class="total-price">750.000₫</span>
+                </p>
+              </div>
+            </div>
+            <div class="tfoot-popup-2 clearfix">
+              <a class="button btn-proceed-checkout" title="Tiến hành đặt hàng" href="checkout.html">
+                <span>Tiến hành đặt hàng <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="button btn-continue" title="Tiếp tục mua hàng" id="continute" onclick="continute()">
+                <span>
+                  <span>
+                    <i class="fa fa-caret-left" aria-hidden="true"></i> Chọn sản phẩm khác </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a title="Close" class="quickview-close close-window" id="hide-modal" onclick="hidenmodal()">
+          <i class="fa fa-close"></i>
+        </a>
+      </div>
+    </div>
+    </section>
+    </div>
+    </div>
+    <div class="footer-policy">
+      <div class="container">
+        <div class="row">
+          <div class="tt-services-listing clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Miễn phí vận chuyển</h4>
+                  <p>Với đơn hàng trên 1tr VNĐ</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Hỗ trợ 24/7</h4>
+                  <p>Hỗ trợ 24h/ngày và 7 ngày/tuần</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">30 ngày trả hàng</h4>
+                  <p>Trả lại hàng trong vòng 30 ngày</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
+      <div class="la-nav-top-login">
+        <div class="la-avatar-nav p-relative text-center">
+          <a href="https://ant-sport.bizwebvietnam.net/account">
+            <i class="fa fa-user-circle"></i>
+          </a>
+          <div class="la-hello-user-nav ng-scope">Xin chào</div>
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()" />
+        </div>
+        <div class="la-action-link-nav text-center">
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="register.html" class="uppercase">ĐĂNG KÝ</a>
+        </div>
+      </div>
+      <aside class="aside-item collection-category">
+        <div class="aside-title">
+          <h3 class="title-head margin-top-0">
+            <span>Danh mục</span>
+          </h3>
+        </div>
+        <div class="aside-content">
+          <nav class="nav-category navbar-toggleable-md">
+            <ul class="nav navbar-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Sản phẩm</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu nav-item active">
+                    <a class="nav-link" href="product.html">Giày</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày leo núi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày chạy bộ</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Trang phục thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ bơi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đấm bốc &amp; Võ thuật</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Dụng cụ thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga, thể hình</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn cá nhân</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Phụ kiện thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn tập thể</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ dưới nước</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Lều ngủ, Túi ngủ</a>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="/">Thương hiệu</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Nike</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Adidas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Gofit</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Bitis</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">New Nalance</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Thương hiệu</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Nike</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Adidas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Gofit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Bitis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">New Nalance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Khuyến mãi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-30 padding-bottom-20">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F1')">
+                    <span>Thông tin cửa hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F1">
+                    <li>
+                      <a href="about.html">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tuyển dụng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F2')">
+                    <span>Chính sách</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F2">
+                    <li>
+                      <a href="index.html">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Trả góp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F3')">
+                    <span>Hỗ trợ khách hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F3">
+                    <li>
+                      <a href="index.html">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tra cứu thẻ thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget no-border">
+                  <h3 style="display: flex; justify-content: space-between" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu ul-footer-contact" id="F4">
+                    <li>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:0982362509"> 0123 456 789</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:baotrung304@gmail.com"></a> acquy666@gmail.com </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright clearfix">
+        <div class="container">
+          <div class="inner clearfix">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function showproduct() {
+        const temp = document.getElementById("showprd");
+        if (temp.style.display == "none") {
+          temp.style.display = "flex";
+          document.getElementById("showprd").style.display = "flex";
+        } else {
+          if ((document.getElementById("showprd").style.display = "none")) {
+            temp.style.display = "flex";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("showprd").style.display = "flex";
+          }
+        }
+        document.getElementById("xemthem").style.display = "none";
+      }
+      var container = document.getElementById("showprd");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("footer-widget");
+      var i;
+
+      function F4(id) {
+        const temp = document.getElementById(id);
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById(id).style.display = "none";
+        } else {
+          if (document.getElementById(id).style.display == "none") {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "block";
+            document.getElementById(id).style.display = "none";
+          }
+        }
+      }
+      var btns = container.getElementsByClassName("footer-widget");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("footer-widget");
+          current[0].className = current[0].className.replace("footer-widget", "");
+          this.className += "footer-widget";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("sort-by");
+      var i;
+
+      function SF() {
+        const temp = document.getElementById("soft-leftt");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("soft-leftt").style.display = "none";
+        } else {
+          if (document.getElementById("soft-leftt").style.display == "none") {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "block";
+            document.getElementById("soft-leftt").style.display = "none";
+          }
+        }
+      }
+      var btns = container.getElementsByClassName("sort-by");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("sort-by");
+          current[0].className = current[0].className.replace("sort-by", "");
+          this.className += "sort-by";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("quickview");
+      var modal1 = document.getElementById("popup-cart");
+      var modal2 = document.getElementById("cmenushow");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == "cmenushow") {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      };
+       var elements = document.getElementsByClassName("product-grid");
+var i;
+
+function cartquick() {
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa
+  if (sessionStorage.getItem("isLoggedIn") === "true") {
+    const temp = document.getElementById("popup-cart");
+    if (temp.style.display == "none") {
+      temp.style.display = "block";
+      document.getElementById("popup-cart").style.display = "block";
+    } else {
+      if ((document.getElementById("popup-cart").style.display = "none")) {
+        temp.style.display = "block";
+      } else {
+        temp.style.display = "none";
+        document.getElementById("popup-cart").style.display = "none";
+      }
+    }
+  } else {
+    // Thông báo và chuyển hướng nếu chưa đăng nhập
+    alert("Vui lòng đăng nhập để sử dụng chức năng này.");
+    window.location.href = "login.html";
+  }
+}
+
+    // duplicate cart badge script removed (handled globally in js/cart.js)
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function quickviewprd() {
+        const temp = document.getElementById("quickview");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("quickview").style.display = "block";
+        } else {
+          if ((document.getElementById("quickview").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("quickview").style.display = "block";
+          }
+        }
+        document.getElementById("xemthem").style.display = "none";
+      }
+      var container = document.getElementById("quickview");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("modal");
+      var i;
+
+      function hidenmodal() {
+        const temp = document.getElementById("popup-cart");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("popup-cart").style.display = "none";
+        } else {
+          if ((document.getElementById("popup-cart").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("popup-cart").style.display = "none";
+          }
+        }
+      }
+      var container = document.getElementById("popup-cart");
+      var btns = container.getElementsByClassName("modal");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("modal");
+          current[0].className = current[0].className.replace("modal", "");
+          this.className += "modal";
+        });
+      }
+    </script>
+  <script src="js/cart.js"></script>
+  </body>
+</html>

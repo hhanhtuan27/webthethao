@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Danh mục</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="topbar" style="max-width: 1150px; margin: auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-7 left-infor">
+                <ul class="ul-inform">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-5 hidden-xs">
+                <ul class="ul-social">
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-main" style="max-width: 1150px; margin: auto">
+            <div class="row" style="
+                display: flex;
+                max-width: 1150px;
+                margin: auto;
+                justify-content: space-between;
+              ">
+              <div class="col-md-3 col-100-h">
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+                </button>
+                <div class="logo">
+                  <a href="index.html" class="logo-wrapper">
+                    <img src="./img/logo.png" alt="logo SGU Sport" />
+                  </a>
+                </div>
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-forms">
+                <div class="search-header">
+                  <div class="header_search search_form">
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn icon-fallback-text">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="index-cart cart-wishlist">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
+                <div class="account-sign">
+                  <a href="#" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <nav class="hidden-sm hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul id="nav" class="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="has-mega">
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <div class="mega-content">
+                        <div class="level0-wrapper2">
+                          <div class="nav-block nav-block-center">
+                            <ul class="level0">
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="has-mega abc">
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <ul class="menu">
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="bread-crumb margin-bottom-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <li class="home">
+                <a itemprop="url" href="/" title="Trang chủ">
+                  <span itemprop="title">Trang chủ</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <strong itemprop="title">sản phẩm</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container margin-bottom-20">
+      <div class="row" id="ctgprd">
+        <aside class="sidebar left left-content col-md-3 col-sm-12 col-xs-12">
+          <div class="left-filters">
+            <script src="./js/search_filter.js" type="text/javascript"></script>
+            <div class="aside-filter">
+              <div class="heading">
+                <h2 class="title-head">Bộ lọc</h2>
+                <p>Giúp lọc nhanh sản phẩm bạn tìm kiếm</p>
+              </div>
+              <div class="aside-hidden-mobile">
+                <div class="filter-container">
+                  <div class="filter-containers">
+                    <div class="filter-container__selected-filter" style="display: none">
+                      <div class="filter-container__selected-filter-header clearfix">
+                        <span class="filter-container__selected-filter-header-title">Bạn chọn</span>
+                        <a href="javascript:void(0)" onclick="clearAllFiltered()" class="filter-container__clear-all">Bỏ hết <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                      <div class="filter-container__selected-filter-list">
+                        <ul></ul>
+                      </div>
+                    </div>
+                  </div>
+                  <aside class="aside-item filter-vendor">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Thương hiệu</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <div class="field-search input-group">
+                        <input type="text" placeholder="Tìm Thương hiệu" class="form-control filter-vendor-list" onkeyup="filterItemInList(jQuery('.filter-vendor-list'))" />
+                        <span class="input-group-btn">
+                          <button class="btn btn-default">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                          </button>
+                        </span>
+                      </div>
+                      <ul class="filter-vendor"></ul>
+                    </div>
+                  </aside>
+                  <aside class="aside-item filter-type">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Loại</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <div class="field-search input-group">
+                        <input type="text" placeholder="Tìm Loại" class="form-control filter-type-list" onkeyup="filterItemInList(jQuery('.filter-type-list'))" />
+                        <span class="input-group-btn">
+                          <button class="btn btn-default">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                          </button>
+                        </span>
+                      </div>
+                      <ul class="filter-type"></ul>
+                    </div>
+                  </aside>
+                  <aside class="aside-item filter-price">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Giá sản phẩm</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <ul>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-duoi-100-000d">
+                              <input type="checkbox" id="filter-duoi-100-000d" onchange="toggleFilter(this);" data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" value="(
+                                <100000)" data-operator="OR" />
+                              <i class="fa"></i> Giá dưới 100.000đ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-100-000d-200-000d">
+                              <input type="checkbox" id="filter-100-000d-200-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 500.000đ" value="(>100000 AND 
+                                  <500000)" data-operator="OR" />
+                              <i class="fa"></i> 100.000đ - 500.000đ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-200-000d-300-000d">
+                              <input type="checkbox" id="filter-200-000d-300-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1.000.000đ" value="(>500000 AND 
+                                    <1000000)" data-operator="OR" />
+                              <i class="fa"></i> 500.000đ - 1.000.000đ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-300-000d-500-000d">
+                              <input type="checkbox" id="filter-300-000d-500-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="1.000.000đ - 2.000.000đ" value="(>1000000 AND 
+                                      <2000000)" data-operator="OR" />
+                              <i class="fa"></i> 1.000.000đ - 2.000.000đ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-500-000d-1-000-000d">
+                              <input type="checkbox" id="filter-500-000d-1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="2.000.000đ - 5.000.000đ" value="(>2000000 AND 
+                                        <50000000)" data-operator="OR" />
+                              <i class="fa"></i> 2.00.000đ - 5.000.000đ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-tren1-000-000d">
+                              <input type="checkbox" id="filter-tren1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 5.000.000đ" value="(>5000000)" data-operator="OR" />
+                              <i class="fa"></i> Giá trên 5.000.000đ </label>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                  <aside class="aside-item filter-tag-style-1">
+                    <div class="aside-title">
+                      <h2 class="title-head margin-top-0">
+                        <span>Màu sắc</span>
+                      </h2>
+                    </div>
+                    <div class="aside-content filter-group">
+                      <ul>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-vang">
+                              <input type="checkbox" id="filter-vang" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Vàng" value="(Vàng)" data-operator="OR" />
+                              <i class="fa"></i> Vàng </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-do">
+                              <input type="checkbox" id="filter-do" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Đỏ" value="(Đỏ)" data-operator="OR" />
+                              <i class="fa"></i> Đỏ </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-trang">
+                              <input type="checkbox" id="filter-trang" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Trắng" value="(Trắng)" data-operator="OR" />
+                              <i class="fa"></i> Trắng </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-nau">
+                              <input type="checkbox" id="filter-nau" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Nâu" value="(Nâu)" data-operator="OR" />
+                              <i class="fa"></i> Nâu </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-da-cam">
+                              <input type="checkbox" id="filter-da-cam" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Da cam" value="(Da cam)" data-operator="OR" />
+                              <i class="fa"></i> Da cam </label>
+                          </span>
+                        </li>
+                        <li class="filter-item filter-item--check-box filter-item--green">
+                          <span>
+                            <label for="filter-hong">
+                              <input type="checkbox" id="filter-hong" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Hồng" value="(Hồng)" data-operator="OR" />
+                              <i class="fa"></i> Hồng </label>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+            <script>
+              var selectedSortby;
+              var tt = "Thứ tự";
+              var selectedViewData = "data";
+              var filter = new Bizweb.SearchFilter();
+              filter.addValue("collection", "collections", "1587097", "AND");
+
+              function toggleFilter(e) {
+                _toggleFilter(e);
+                renderFilterdItems();
+                doSearch();
+              }
+
+              function _toggleFilterdqdt(e) {
+                var $element = $(e);
+                var group = "Khoảng giá";
+                var field = "price_min";
+                var operator = "OR";
+                var value = $element.attr("data-value");
+                filter.deleteValuedqdt(group, field, value, operator);
+                filter.addValue(group, field, value, operator);
+                renderFilterdItems();
+                doSearch(1);
+              }
+
+              function _toggleFilter(e) {
+                var $element = $(e);
+                var group = $element.attr("data-group");
+                var field = $element.attr("data-field");
+                var text = $element.attr("data-text");
+                var value = $element.attr("value");
+                var operator = $element.attr("data-operator");
+                var filterItemId = $element.attr("id");
+                if (!$element.is(":checked")) {
+                  filter.deleteValue(group, field, value, operator);
+                } else {
+                  filter.addValue(group, field, value, operator);
+                }
+                $(".catalog_filters li[data-handle='" + filterItemId + "']").toggleClass("active");
+              }
+
+              function renderFilterdItems() {
+                var $container = $(".filter-container__selected-filter-list ul");
+                $container.html("");
+                $(".filter-container input[type=checkbox]").each(function(index) {
+                  if ($(this).is(":checked")) {
+                    var id = $(this).attr("id");
+                    var name = $(this).closest("label").text();
+                    addFilteredItem(name, id);
+                  }
+                });
+                if ($(".aside-content input[type=checkbox]:checked").length > 0) $(".filter-container__selected-filter").show();
+                else $(".filter-container__selected-filter").hide();
+              }
+
+              function addFilteredItem(name, id) {
+                var filteredItemTemplate = "<li class='filter-container__selected-filter-item' data-for='{3}'><a href='javascript:void(0)' onclick=\"{0}\"><i class='fa fa-close'></i> {1}</a></li>";
+                filteredItemTemplate = filteredItemTemplate.replace("{0}", "removeFilteredItem('" + id + "')");
+                filteredItemTemplate = filteredItemTemplate.replace("{1}", name);
+                filteredItemTemplate = filteredItemTemplate.replace("{3}", id);
+                var $container = $(".filter-container__selected-filter-list ul");
+                $container.append(filteredItemTemplate);
+              }
+
+              function removeFilteredItem(id) {
+                $(".filter-container #" + id).trigger("click");
+              }
+
+              function filterItemInList(object) {
+                q = object.val().toLowerCase();
+                object.parent().next().find("li").show();
+                if (q.length > 0) {
+                  object.parent().next().find("li").each(function() {
+                    if ($(this).find("label").attr("data-filter").indexOf(q) == -1) $(this).hide();
+                  });
+                }
+              }
+
+              function clearAllFiltered() {
+                filter = new Bizweb.SearchFilter();
+                filter.addValue("collection", "collections", "1587097", "AND");
+                $(".filter-container__selected-filter-list ul").html("");
+                $(".filter-container input[type=checkbox]").attr("checked", false);
+                $(".filter-container__selected-filter").hide();
+                doSearch(1);
+              }
+
+              function doSearch(page, options) {
+                if (!options) options = {};
+                //NProgress.start();
+                $(".aside.aside-mini-products-list.filter").removeClass("active");
+                awe_showPopup(".loading");
+                filter.search({
+                  view: selectedViewData,
+                  page: page,
+                  sortby: selectedSortby,
+                  success: function(html) {
+                    var $html = $(html);
+                    // Muốn thay thẻ DIV nào khi filter thì viết như này
+                    var $categoryProducts = $($html[0]);
+                    $(".category-products").html($categoryProducts.html());
+                    pushCurrentFilterState({
+                      sortby: selectedSortby,
+                      page: page,
+                    });
+                    awe_hidePopup(".loading");
+                    awe_lazyloadImage();
+                    callbackW();
+                    $(".add_to_cart").click(function(e) {
+                      e.preventDefault();
+                      var $this = $(this);
+                      var form = $this.parents("form");
+                      $.ajax({
+                        type: "POST",
+                        url: "/cart/add.js",
+                        async: false,
+                        data: form.serialize(),
+                        dataType: "json",
+                        error: addToCartFail,
+                        beforeSend: function() {
+                          if (window.theme_load == "icon") {
+                            awe_showLoading(".btn-addToCart");
+                          } else {
+                            awe_showPopup(".loading");
+                          }
+                        },
+                        success: addToCartSuccess,
+                        cache: false,
+                      });
+                    });
+                    $("html, body").animate({
+                      scrollTop: $(".category-products").offset().top,
+                    }, 0);
+                    resortby(selectedSortby);
+                    if (window.BPR !== undefined) {
+                      return window.BPR.initDomEls(), window.BPR.loadBadges();
+                    }
+                  },
+                });
+              }
+
+              function sortby(sort) {
+                switch (sort) {
+                  case "price-asc":
+                    selectedSortby = "price_min:asc";
+                    break;
+                  case "price-desc":
+                    selectedSortby = "price_min:desc";
+                    break;
+                  case "alpha-asc":
+                    selectedSortby = "name:asc";
+                    break;
+                  case "alpha-desc":
+                    selectedSortby = "name:desc";
+                    break;
+                  case "created-desc":
+                    selectedSortby = "created_on:desc";
+                    break;
+                  case "created-asc":
+                    selectedSortby = "created_on:asc";
+                    break;
+                  default:
+                    selectedSortby = "";
+                    break;
+                }
+                doSearch(1);
+              }
+
+              function resortby(sort) {
+                switch (sort) {
+                  case "price_min:asc":
+                    tt = "Giá tăng dần";
+                    $(".sort-cate-left .price-asc").addClass("active");
+                    break;
+                  case "price_min:desc":
+                    tt = "Giá giảm dần";
+                    $(".sort-cate-left .price-desc").addClass("active");
+                    break;
+                  case "name:asc":
+                    tt = "Tên A → Z";
+                    break;
+                  case "name:desc":
+                    tt = "Tên Z → A";
+                    break;
+                  case "created_on:desc":
+                    tt = "Hàng mới nhất";
+                    $(".sort-cate-left .position-desc").addClass("active");
+                    break;
+                  case "created_on:asc":
+                    tt = "Hàng cũ nhất";
+                    break;
+                  default:
+                    tt = "Mặc định";
+                    break;
+                }
+                $(".sort-cate-right-mobile #sort-by > ul > li > span").html(tt);
+              }
+
+              function _selectSortby(sort) {
+                resortby(sort);
+                switch (sort) {
+                  case "price-asc":
+                    selectedSortby = "price_min:asc";
+                    break;
+                  case "price-desc":
+                    selectedSortby = "price_min:desc";
+                    break;
+                  case "alpha-asc":
+                    selectedSortby = "name:asc";
+                    break;
+                  case "alpha-desc":
+                    selectedSortby = "name:desc";
+                    break;
+                  case "created-desc":
+                    selectedSortby = "created_on:desc";
+                    break;
+                  case "created-asc":
+                    selectedSortby = "created_on:asc";
+                    break;
+                  default:
+                    selectedSortby = sort;
+                    break;
+                }
+              }
+
+              function toggleCheckbox(id) {
+                $(id).click();
+              }
+
+              function pushCurrentFilterState(options) {
+                if (!options) options = {};
+                var url = filter.buildSearchUrl(options);
+                var queryString = url.slice(url.indexOf("?"));
+                if (selectedViewData == "data_list") {
+                  queryString = queryString + "&view=list";
+                } else {
+                  queryString = queryString + "&view=grid";
+                }
+                pushState(queryString);
+              }
+
+              function pushState(url) {
+                window.history.pushState({
+                  turbolinks: true,
+                  url: url,
+                }, null, url);
+              }
+
+              function selectFilterByCurrentQuery() {
+                var isFilter = false;
+                var url = window.location.href;
+                var queryString = decodeURI(window.location.search);
+                var filters = queryString.match(/\(.*?\)/g);
+                var page = 0;
+                if (queryString) {
+                  isFilter = true;
+                  $.urlParam = function(name) {
+                    var results = new RegExp("[\?&]" + name + "=([^&#]*)").exec(window.location.href);
+                    return results[1] || 0;
+                  };
+                  page = $.urlParam("page");
+                }
+                if (filters && filters.length > 0) {
+                  filters.forEach(function(item) {
+                    item = item.replace(/\(\(/g, "(");
+                    var element = $(".aside-content input[value='" + item + "']");
+                    element.attr("checked", "checked");
+                    _toggleFilter(element);
+                  });
+                  isFilter = true;
+                }
+                var sortOrder = getParameter(url, "sortby");
+                if (sortOrder) {
+                  _selectSortby(sortOrder);
+                }
+                if (isFilter) {
+                  doSearch(page);
+                  renderFilterdItems();
+                }
+              }
+
+              function getParameter(url, name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                  results = regex.exec(url);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+              }
+              $(document).ready(function() {
+                $(window).on("popstate", function() {
+                  location.reload(true);
+                });
+                selectFilterByCurrentQuery();
+                $(".filter-group .filter-group-title").click(function(e) {
+                  $(this).parent().toggleClass("active");
+                });
+                $(".filter-mobile").click(function(e) {
+                  $(".aside.aside-mini-products-list.filter").toggleClass("active");
+                });
+                $("#show-admin-bar").click(function(e) {
+                  $(".aside.aside-mini-products-list.filter").toggleClass("active");
+                });
+                $(".filter-container__selected-filter-header-title").click(function(e) {
+                  $(".aside.aside-mini-products-list.filter").toggleClass("active");
+                });
+              });
+            </script>
+          </div>
+          <div class="left-filters margin-top-10 hidden-xs hidden-sm">
+            <aside class="aside-item collection-category">
+              <div class="aside-title">
+                <h3 class="title-head margin-top-0">
+                  <span>Danh mục</span>
+                </h3>
+              </div>
+              <div class="aside-content">
+                <nav class="nav-category navbar-toggleable-md">
+                  <ul class="nav navbar-pills">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/gioi-thieu">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/collections/all" class="nav-link">Sản phẩm</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/giay">Giày</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-nam">Giày Nam</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-nu">Giày Nữ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-the-thao">Giày thể thao</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-leo-nui">Giày leo núi</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/giay-chay-bo">Giày chạy bộ</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/trang-phuc-the-thao">Trang phục thể thao</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/danh-cho-nam">Dành cho Nam</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/danh-cho-nu">Dành cho Nữ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/do-boi">Đồ bơi</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/dam-boc-vo-thuat">Đấm bốc &amp; Võ thuật</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/yoga">Yoga</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/dung-cu-the-thao">Dụng cụ thể thao</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/yoga-the-hinh">Yoga, thể hình</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/cac-mon-ca-nhan">Các môn cá nhân</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/phu-kien-the-thao">Phụ kiện thể thao</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/cac-mon-tap-the">Các môn tập thể</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/do-duoi-nuoc">Đồ dưới nước</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/leu-ngu-tui-ngu">Lều ngủ, Túi ngủ</a>
+                        </li>
+                        <li class="dropdown-submenu nav-item">
+                          <a class="nav-link" href="/">Thương hiệu</a>
+                          <i class="fa fa-angle-down"></i>
+                          <ul class="dropdown-menu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/nike">Nike</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/adidas">Adidas</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/gofit">Gofit</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/bitis">Bitis</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/new-nalance">New Nalance</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/tat-ca-thuong-hieu" class="nav-link">Thương hiệu</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/nike">Nike</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/adidas">Adidas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/gofit">Gofit</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/bitis">Bitis</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/new-nalance">New Nalance</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/khuyen-mai">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/tin-tuc">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/lien-he">Liên hệ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </aside>
+          </div>
+        </aside>
+        <section class="main_container collection col-md-9 col-sm-12 col-xs-12">
+          <div class="pottion">
+            <h1 class="title-head margin-top-0">Giày Nam</h1>
+            <div class="category-products products clearfix">
+              <div class="sort-cate clearfix">
+                <div class="sort-cate-left hidden-xs">
+                  <h3>Xếp theo:</h3>
+                  <ul>
+                    <li class="btn-quick-sort position-desc">
+                      <a href="javascript:;" onclick="sortby('created-desc')">
+                        <i></i>Hàng mới </a>
+                    </li>
+                    <li class="btn-quick-sort price-asc">
+                      <a href="javascript:;" onclick="sortby('price-asc')">
+                        <i></i>Giá thấp đến cao </a>
+                    </li>
+                    <li class="btn-quick-sort price-desc">
+                      <a href="javascript:;" onclick="sortby('price-desc')">
+                        <i></i>Giá cao xuống thấp </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sort-cate-right-mobile hidden-lg hidden-md hidden-sm">
+                  <div id="sort-by">
+                    <label class="left">Sắp xếp: </label>
+                    <ul>
+                      <li>
+                        <span>Thứ tự <i class="fa fa-caret-down" aria-hidden="true" onclick="SF()" id="thutu"></i>
+                        </span>
+                        <ul id="soft-leftt">
+                          <li>
+                            <a href="javascript:;" onclick="sortby('price-asc')">Giá tăng dần</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;" onclick="sortby('price-desc')">Giá giảm dần</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;" onclick="sortby('created-desc')">Hàng mới</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sort-cate-right">
+                  <h3>Xem:</h3>
+                  <div class="view-mode">
+                    <button class="btn" onclick="listView()">
+                      <i class="fa fa-th-large"></i> lưới </button>
+                    <button class="btn active" onclick="gridView()">
+                      <i class="fa fa-bars"></i> cột </button>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert-warning alert-dismissible fade in margin-top-15 alert1" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button> Sản phẩm đang được cập nhật. Vui lòng quay lại sau.
+              </div>
+            </div>
+          </div>
+          <div class="row" id="qwe" style="max-width: 830px; margin-left: 10px">
+            <div id="abc" class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="img/AIR+FORCE+1+'07.png" />
+                    <img class="pic-2" src="img/WMNS+AIR+FORCE+1+'07.png" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 25% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#">Nike Air Force 1 '07</a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">1.500.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">2.000.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-6_0062626_609be811f67c42a5baa44706ca3aca11_1024x1024-removebg-preview.png" />
+                    <img class="pic-2" src="img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 20% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#"> Giày Đi Phượt Cổ Cao Keen Jasper Mid WP </a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">400.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">500.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="./img/giay-leo-nui-jack-wolfskin-co-thap-back_0059409_a1367296ce794d3f9beab89631818a1b_1024x1024-removebg-preview.png" />
+                    <img class="pic-2" src="./img/giay-leo-nui-jack-wolfskin-co-thap_0059411_cc2c1796c6df4bfeb8e9a01cf77b322f_1024x1024-removebg-preview.png" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 25% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#"> Giày Leo Núi Cổ Thấp JACK WOLFSKIN LC130416 </a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">750.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">1.000.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-5_0062918_17853218f7694ec2b09b05f0d4770641_1024x1024-removebg-preview.png" />
+                    <img class="pic-2" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-9_0062899_40eeef86a54a4530b1fcebe1a3607d10_1024x1024-removebg-preview.png" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 20% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#"> GIÀY TREKKING LEO NÚI THOÁT NƯỚC, NHANH KHÔ HANAGAL SWIFT HNG-33555 </a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">799.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">999.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="max-width: 830px; margin-left: 10px"></div>
+            <div class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="./img/giay-leo-nui-co-thap-hanagal-horizon-09_0066254_3086640469284d65ae26c0a6c88af4bd_1024x1024-removebg-preview.png" />
+                    <img class="pic-2" src="./img/giay-leo-nui-co-thap-hanagal-horizon-10_0066249_9df2444293944efea73bbf2fffafb58b_1024x1024-removebg-preview.png" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 15% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#"> Giày chạy trail, leo núi mùa khô Hanagal Horizon </a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">1.700.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">2.000.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-grid hover">
+                <div class="product-image">
+                  <a href="#" class="fa fa-search product-full-view"></a>
+                  <a href="#">
+                    <img class="pic-1" src="./img/Giay_Ultraboost_5_trang_ID8810_HM1.jpg" />
+                    <img class="pic-2" src="./img/Giay_Ultraboost_5_trang_IH3755_HM1.jpg" />
+                  </a>
+                  <span class="tt-label-location">
+                    <span class="tt-label-new">Giảm 10% </span>
+                  </span>
+                </div>
+                <div class="product-content">
+                  <h3 class="title">
+                    <a href="#"> Giày Ultraboost 5 </a>
+                  </h3>
+                  <div class="tt-price">
+                    <span class="new-price">1.800.000₫</span>
+                    <div class="old-price">
+                      <span class="old-price">2.000.000₫ </span>
+                    </div>
+                  </div>
+                  <div class="add-to-card">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="">VIEW PRODUCTS</a>
+                    <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                      <i class="fa fa-heart-o"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- layout2 -->
+      <div class="row" id="qwer" style="max-width: 830px; margin-left: 10px">
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="max-width: 830px; margin-left: 10px"></div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-list">
+          <div class="product-grid hover">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-2" src="./img/product-10-02.jpg" />
+              </a>
+              <span class="tt-label-location">
+                <span class="tt-label-new">Giảm 18% </span>
+              </span>
+            </div>
+            <div class="product-content">
+              <h3 class="title">
+                <a href="#">Bình nước lắc thể thao 3 ngắn tặng kèm quả lắc</a>
+              </h3>
+              <div class="tt-price">
+                <span class="new-price">450.000₫</span>
+                <div class="old-price">
+                  <span class="old-price">550.000₫ </span>
+                </div>
+              </div>
+              <div class="add-to-card">
+                <a href="">
+                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="fa fa-search product-full-view"></a>
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                  <i class="fa fa-heart-o"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        // Declare a loop variable
+        var i;
+        // List View
+        function gridView() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "25%";
+          }
+          const temp = document.getElementById("qwer");
+          if (temp.style.display == "none") {
+            temp.style.display = "flex";
+            document.getElementById("qwe").style.display = "none";
+          } else {
+            if ((document.getElementById("qwe").style.display = "none")) {
+              temp.style.display = "flex";
+            } else {
+              temp.style.display = "none";
+              document.getElementById("qwe").style.display = "flex";
+            }
+          }
+        }
+        // Grid View
+        function listView() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "25%";
+          }
+          const temp = document.getElementById("qwe");
+          const templ = document.getElementById("qwer");
+          if (temp.style.display == "none") {
+            temp.style.display = "flex";
+            document.getElementById("qwer").style.display = "none";
+          } else {
+            if ((document.getElementById("qwer").style.display = "none")) {
+              temp.style.display = "flex";
+            } else {
+              temp.style.display = "none";
+              document.getElementById("qwer").style.display = "flex";
+            }
+          }
+        }
+        /* Optional: Add active class to the current button (highlight it) */
+        var container = document.getElementById("btnContainer");
+        var btns = container.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+      </script>
+      <script>
+        var elements = document.getElementsByClassName("sort-by");
+        var i;
+
+        function SF() {
+          const temp = document.getElementById("soft-leftt");
+          if (temp.style.display == "block") {
+            temp.style.display = "none";
+            document.getElementById("soft-leftt").style.display = "none";
+          } else {
+            if (document.getElementById("soft-leftt").style.display == "none") {
+              temp.style.display = "block";
+            } else {
+              temp.style.display = "block";
+              document.getElementById("soft-leftt").style.display = "none";
+            }
+          }
+        }
+        var btns = container.getElementsByClassName("sort-by");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("sort-by");
+            current[0].className = current[0].className.replace("sort-by", "");
+            this.className += "sort-by";
+          });
+        }
+      </script>
+      </section>
+    </div>
+    </div>
+    <div class="footer-policy">
+      <div class="container">
+        <div class="row">
+          <div class="tt-services-listing clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Miễn phí vận chuyển</h4>
+                  <p>Với đơn hàng trên 1tr VNĐ</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Hỗ trợ 24/7</h4>
+                  <p>Hỗ trợ 24h/ngày và 7 ngày/tuần</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">30 ngày trả hàng</h4>
+                  <p>Trả lại hàng trong vòng 30 ngày</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
+      <div class="la-nav-top-login">
+        <div class="la-avatar-nav p-relative text-center">
+          <a href="https://ant-sport.bizwebvietnam.net/account">
+            <i class="fa fa-user-circle"></i>
+          </a>
+          <div class="la-hello-user-nav ng-scope">Xin chào</div>
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()" />
+        </div>
+        <div class="la-action-link-nav text-center">
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="login.html" class="uppercase">ĐĂNG KÝ</a>
+        </div>
+      </div>
+      <aside class="aside-item collection-category">
+        <div class="aside-title">
+          <h3 class="title-head margin-top-0">
+            <span>Danh mục</span>
+          </h3>
+        </div>
+        <div class="aside-content">
+          <nav class="nav-category navbar-toggleable-md">
+            <ul class="nav navbar-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Sản phẩm</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu nav-item active">
+                    <a class="nav-link" href="product.html">Giày</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày leo núi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày chạy bộ</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Trang phục thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ bơi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đấm bốc &amp; Võ thuật</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Dụng cụ thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga, thể hình</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn cá nhân</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Phụ kiện thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn tập thể</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ dưới nước</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Lều ngủ, Túi ngủ</a>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="/">Thương hiệu</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Nike</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Adidas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Gofit</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Bitis</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">New Nalance</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Thương hiệu</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Nike</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Adidas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Gofit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Bitis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">New Nalance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Khuyến mãi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-30 padding-bottom-20">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F1')">
+                    <span>Thông tin cửa hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F1">
+                    <li>
+                      <a href="about.html">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tuyển dụng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F2')">
+                    <span>Chính sách</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F2">
+                    <li>
+                      <a href="index.html">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Trả góp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F3')">
+                    <span>Hỗ trợ khách hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F3">
+                    <li>
+                      <a href="index.html">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tra cứu thẻ thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget no-border">
+                  <h3 style="display: flex; justify-content: space-between" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu ul-footer-contact" id="F4">
+                    <li>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:0982362509"> 0123 456 789</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:baotrung304@gmail.com"></a> acquy666@gmail.com </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright clearfix">
+        <div class="container">
+          <div class="inner clearfix">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("quickview");
+      var modal1 = document.getElementById("popup-cart");
+      var modal2 = document.getElementById("cmenushow");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == "cmenushow") {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("footer-widget");
+      var i;
+
+      function F4(id) {
+        const temp = document.getElementById(id);
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById(id).style.display = "none";
+        } else {
+          if (document.getElementById(id).style.display == "none") {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "block";
+            document.getElementById(id).style.display = "none";
+          }
+        }
+      }
+      var btns = container.getElementsByClassName("footer-widget");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("footer-widget");
+          current[0].className = current[0].className.replace("footer-widget", "");
+          this.className += "footer-widget";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("quickview");
+      var modal1 = document.getElementById("popup-cart");
+      var modal2 = document.getElementById("cmenushow");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == "cmenushow") {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      listView();
+    });
+  </script>
+</html>

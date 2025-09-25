@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">TỔNG QUAN</a></li>
+            <li><a href="#">SẢN PHẨM</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="#">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa fa-user"> Admin </i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <!-- <i class="fa-solid fa-gauge-high"></i> -->
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <!-- <i class="fa-solid fa-people-group"></i> -->
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <!-- <i class="fa-solid fa-list"></i> -->
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <!-- <i class="fa-brands fa-product-hunt"></i> -->
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <!-- <i class="fa-solid fa-clipboard-list"></i> -->
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <!-- <i class="fa-solid fa-chart-line"></i> -->
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li>
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./statistic.html">Thống kê và báo cáo</a>
+                </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Tổng quan trang admin  -->
+
+      <div class="inner-manage">
+        <!-- Thanh tìm kiếm -->
+
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Hàng 1: Số liệu tổng quát -->
+
+        <div class="table-container table-1">
+          <h3>Số liệu tổng quát</h3>
+          <div class="row">
+            <div class="card">
+              <h3>Tổng Sản Phẩm</h3>
+              <p>1200</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Đơn Hàng</h3>
+              <p>850</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Khách Hàng</h3>
+              <p>450</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Doanh Thu</h3>
+              <p>1,500,000₫</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hàng 2: Đơn hàng gần đây -->
+        <div class="table-container table-2">
+          <h3>Những Đơn Hàng Gần Đây</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Tên Khách Hàng</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Ngày Mua</th>
+                <th>Số Lượng</th>
+                <th>Số Tiền</th>
+                <th>Trạng Thái</th>
+                <th>Xem Chi Tiết</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nguyễn Văn A</td>
+                <td>Áo Thun</td>
+                <td>01/11/2024</td>
+                <td>2</td>
+                <td>200,000₫</td>
+                <td>Đã Giao</td>
+                <td><span class="btn-view">View</span></td>
+              </tr>
+              <tr>
+                <td>Trần Thị B</td>
+                <td>Giày Thể Thao</td>
+                <td>30/10/2024</td>
+                <td>1</td>
+                <td>500,000₫</td>
+                <td>Đang Giao</td>
+                <td><span class="btn-view">View</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Hàng 3: Quản lý chung -->
+
+        <div class="table-container table-3">
+          <h3>Quản lý chung</h3>
+          <div class="row">
+            <div class="dashboard-box">
+              <h4>Tài Khoản Người Dùng</h4>
+              <p>Số lượng tài khoản: 150</p>
+              <p>Đang hoạt động: 120</p>
+              <p>Ngừng hoạt động: 30</p>
+            </div>
+            <div class="dashboard-box">
+              <h4>Danh Mục Sản Phẩm</h4>
+              <p>Số lượng danh mục: 20</p>
+              <p>Đang hoạt động: 18</p>
+              <p>Ngừng hoạt động: 2</p>
+            </div>
+            <div class="dashboard-box">
+              <h4>Sản Phẩm</h4>
+              <p>Số lượng sản phẩm: 500</p>
+              <p>Đang hoạt động: 450</p>
+              <p>Hết hàng: 30</p>
+              <p>Ngừng hoạt động: 20</p>
+            </div>
+            <div class="dashboard-box">
+              <h4>Khách Hàng Truy Cập</h4>
+              <p>Số lượng truy cập hiện tại: 25</p>
+              <p>Thời gian truy cập nhiều nhất: 15h</p>
+              <p>
+                Tài khoản vừa truy cập: nguyen@example.com, Nguyễn Văn C,
+                0123456789
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hàng 4: Sản phẩm bán chạy nhất -->
+
+        <div class="table-container table-4">
+          <h3>Sản phẩm bán chạy nhất</h3>
+          <div class="bestseller-list">
+            <div class="bestseller-item">1. Áo Thun - 200 cái</div>
+            <div class="bestseller-item">2. Giày Thể Thao - 150 cái</div>
+            <div class="bestseller-item">3. Balo - 100 cái</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tổng quan trang admin  -->
+    </div>
+    <!-- Inner Wrap -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="back-to-top show">
+                  <i class="fa fa-arrow-circle-up"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

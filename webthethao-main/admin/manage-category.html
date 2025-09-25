@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+           
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap" style="min-height: 800px;">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
+        <!-- <li>
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./statistic.html">Thống kê và báo cáo</a>
+                </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Quản lý danh mục  -->
+      <div class="change-table-2">
+        <h1>Quản lý Danh mục</h1>
+        <div class="category-manager">
+          <!-- Form tạo/chỉnh sửa danh mục -->
+          <div class="form">
+            <input
+              type="text"
+              id="categoryInput"
+              placeholder="Tên danh mục..."
+            />
+            <button class="add" onclick="addCategory()">Thêm Danh mục</button>
+          </div>
+
+          <!-- Danh sách danh mục -->
+          <ul class="category-list" id="categoryList">
+            <li class="category-item">
+              <span class="category-name">Balo</span>
+              <div class="actions">
+                <button class="edit" onclick="editCategory(this)">
+                  Chỉnh sửa
+                </button>
+                <button onclick="deleteCategory(this)">Xóa</button>
+              </div>
+              <!-- Danh mục con -->
+              <ul class="sub-category-list">
+                <li class="sub-category-item">Balo đi học</li>
+              </ul>
+              <div class="add-subcategory-form">
+                <input type="text" placeholder="Tên danh mục con..." />
+                <button onclick="addSubcategory(this)">Thêm</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        // Thêm danh mục mới
+        function addCategory() {
+          const categoryInput = document.getElementById("categoryInput");
+          const categoryName = categoryInput.value.trim();
+
+          if (categoryName) {
+            const categoryList = document.getElementById("categoryList");
+
+            // Tạo phần tử danh mục mới
+            const li = document.createElement("li");
+            li.className = "category-item";
+            li.innerHTML = `
+                            <span class="category-name">${categoryName}</span>
+                            <div class="actions">
+                                <button class="edit" onclick="editCategory(this)">Chỉnh sửa</button>
+                                <button onclick="deleteCategory(this)">Xóa</button>
+                            </div>
+                            <ul class="sub-category-list"></ul>
+                            <div class="add-subcategory-form">
+                                <input type="text" placeholder="Tên danh mục con...">
+                                <button onclick="addSubcategory(this)">Thêm</button>
+                            </div>
+                        `;
+
+            categoryList.appendChild(li);
+            categoryInput.value = ""; // Xóa nội dung ô input
+          }
+        }
+
+        // Xóa danh mục
+        function deleteCategory(button) {
+          const categoryItem = button.parentNode.parentNode;
+          categoryItem.remove();
+        }
+
+        // Chỉnh sửa danh mục
+        function editCategory(button) {
+          const categoryItem = button.parentNode.parentNode;
+          const categoryName = categoryItem.querySelector(".category-name");
+          const newName = prompt(
+            "Nhập tên danh mục mới:",
+            categoryName.textContent
+          );
+
+          if (newName) {
+            categoryName.textContent = newName;
+          }
+        }
+
+        // Thêm danh mục con
+        function addSubcategory(button) {
+          const subcategoryInput = button.previousElementSibling;
+          const subcategoryName = subcategoryInput.value.trim();
+
+          if (subcategoryName) {
+            const subcategoryList = button.parentNode.previousElementSibling;
+
+            // Tạo phần tử danh mục con mới
+            const subLi = document.createElement("li");
+            subLi.className = "sub-category-item";
+            subLi.textContent = subcategoryName;
+
+            subcategoryList.appendChild(subLi);
+            subcategoryInput.value = ""; // Xóa nội dung ô input
+          }
+        }
+        function deleteCategory(button) {
+          const categoryItem = button.parentNode.parentNode;
+
+          // Hiển thị hộp thoại xác nhận
+          const confirmation = confirm("Bạn có chắc chắn muốn xóa danh mục này?");
+          
+          if (confirmation) {
+            // Nếu người dùng chọn OK, xóa danh mục
+            categoryItem.remove();
+          }
+        }
+      </script>
+      <!-- Quản lý danh mục  -->
+    </div>
+    <!-- Inner Wrap -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".desc-title .fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

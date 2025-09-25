@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <!-- // Menu bar -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
+      <!-- Slide bar Left -->
+
+      <!-- Hóa đơn -->
+      <div class="order-detail">
+        <h3>Mã Đơn Hàng: <span id="orderId"></span></h3>
+        <p><strong>Ngày mua:</strong> <span id="orderDate"></span></p>
+        <p><strong>Trạng thái:</strong> <span id="orderStatus"></span></p>
+        <p><strong>Khách hàng:</strong> <span id="customerName"></span></p>
+        <p><strong>Tổng tiền:</strong> <span id="totalAmount"></span>₫</p>
+
+        <h4>Danh sách Mặt Hàng</h4>
+        <table class="table table-bordered order-detail">
+          <thead>
+            <tr>
+              <th>Tên Mặt Hàng</th>
+              <th>Số lượng</th>
+              <th>Đơn giá</th>
+              <th>Tổng tiền</th>
+            </tr>
+          </thead>
+          <tbody id="itemList">
+            <!-- Dữ liệu mặt hàng sẽ được thêm vào qua JavaScript -->
+          </tbody>
+        </table>
+
+        <button class="btn btn-primary" onclick="goBack()">Quay lại</button>
+      </div>
+    </div>
+
+    <script>
+      // Giả sử chúng ta có dữ liệu hóa đơn mẫu
+      const orderDataList = [
+        {
+          orderId: "001",
+          orderDate: "2024-11-03",
+          status: "Đang chờ xử lý",
+          customerName: "Nguyễn Văn Duy",
+          totalAmount: 2000000,
+          items: [
+            {
+              name: "Đồng hồ xe đạp BoGeer Manburen MS-602B",
+              quantity: 10,
+              price: 200000,
+            },
+          ],
+        },
+        {
+          orderId: "002",
+          orderDate: "2024-11-02",
+          status: "Đang chờ xử lý",
+          customerName: "Trần Thị Lan",
+          totalAmount: 1500000,
+          items: [
+            { name: "Đồ bơi thể thao Adidas", quantity: 5, price: 300000 },
+          ],
+        },
+        {
+          orderId: "003",
+          orderDate: "2024-11-01",
+          status: "Đang chờ xử lý",
+          customerName: "Nguyễn Văn Anh",
+          totalAmount: 1500000,
+          items: [
+            {
+              name: "Balo leo núi JACK WOLFSKIN MOAB JAM 18",
+              quantity: 15,
+              price: 100000,
+            },
+          ],
+        },
+        {
+          orderId: "004",
+          orderDate: "2024-11-05",
+          status: "Đang chờ xử lý",
+          customerName: "Lê Thị Duyên",
+          totalAmount: 3200000,
+          items: [{ name: "Áo chơi bóng bàn", quantity: 12, price: 266667 }],
+        },
+        {
+          orderId: "005",
+          orderDate: "2024-11-05",
+          status: "Đã huỷ",
+          customerName: "Lê Thị Duyên",
+          totalAmount: 3200000,
+          items: [{ name: "Áo chơi bóng bàn", quantity: 12, price: 266667 }],
+        },
+      ];
+
+      // Lấy mã đơn hàng từ URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const orderIdFromUrl = urlParams.get("orderId");
+
+      // Kiểm tra nếu tồn tại orderId
+      const orderData = orderDataList.find(
+        (order) => order.orderId === orderIdFromUrl
+      );
+
+      // Kiểm tra và hiển thị dữ liệu
+      if (orderData) {
+        document.getElementById("orderId").textContent = orderData.orderId;
+        document.getElementById("orderDate").textContent = orderData.orderDate;
+        document.getElementById("orderStatus").textContent = orderData.status;
+        document.getElementById("customerName").textContent =
+          orderData.customerName;
+        document.getElementById("totalAmount").textContent =
+          orderData.totalAmount.toLocaleString();
+
+        const itemList = document.getElementById("itemList");
+        orderData.items.forEach((item) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.quantity}</td>
+      <td>${item.price.toLocaleString()}₫</td>
+      <td>${(item.quantity * item.price).toLocaleString()}₫</td>
+    `;
+          itemList.appendChild(row);
+        });
+      } else {
+        // Nếu không tìm thấy đơn hàng, hiển thị thông báo lỗi
+        document.querySelector(".order-detail").innerHTML =
+          "<p>Không tìm thấy đơn hàng.</p>";
+      }
+
+      // Hàm quay lại trang trước
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+    <!-- Tổng quan trang admin  -->
+    <script>
+      // Kiểm tra trạng thái đăng nhập từ sessionStorage
+      function checkLogin() {
+        const username = sessionStorage.getItem("username");
+        const loggedIn = sessionStorage.getItem("loggedIn");
+
+        const userTitle = document.querySelector(".desc-title .fa-user");
+
+        if (loggedIn === "true" && username) {
+          // Nếu đã đăng nhập, hiển thị tên người dùng
+          userTitle.textContent = `Admin (${username})`;
+        } else {
+          // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+          userTitle.textContent = "Chưa Login";
+          alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+          window.location.href = "login-admin.html";
+        }
+      }
+
+      // Gọi hàm khi tải trang
+      document.addEventListener("DOMContentLoaded", checkLogin);
+    </script>
+    <script>
+      // Tìm liên kết Đăng xuất trong div có class "login-button"
+      const logoutLink = document.querySelector(".login-button a");
+
+      // Thêm sự kiện khi nút Đăng xuất được nhấp
+      logoutLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+        // Xóa thông tin đăng nhập khỏi sessionStorage
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("loggedIn");
+
+        alert("Bạn đã đăng xuất thành công!");
+
+        // Chuyển hướng về trang đăng nhập
+        window.location.href = "./login-admin.html";
+      });
+    </script>
+
+   <!-- Footer  -->
+   <footer class="footer">
+    <div class="site-footer">
+      <div class="container">
+        <div class="footer-inner padding-top-20 padding-bottom-20">
+          <div class="copyright clearfix">
+            <div class="container">
+              <div class="inner clearfix">
+                <div class="row">
+                  <div class="col-sm-12 text-center">
+                    <span
+                      >© Bản quyền thuộc về <b>Nhóm 21</b>
+                      <span class="s480-f">|</span> Cung cấp bởi
+                      <a
+                        href="https://fit.sgu.edu.vn/site/"
+                        title="SGU IT"
+                        target="_blank"
+                        rel="nofollow"
+                        style="color: white"
+                        >SGU IT</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <!-- // Menu bar -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
+      <!-- Slide bar Left -->
+
+      <!-- Quản lý đơn hàng -->
+      <div class="change-table-1">
+        <h1>Quản lý Đơn hàng</h1>
+
+        <!-- Lọc đơn hàng -->
+        <form id="filterForm" onsubmit="filterOrders(event)">
+          <label for="startDate">Từ ngày:</label>
+          <input type="date" id="startDate" />
+
+          <label for="endDate">Đến ngày:</label>
+          <input type="date" id="endDate" />
+
+          <label for="status">Trạng thái:</label>
+          <select id="status">
+            <option value="">Tất cả</option>
+            <option value="pending">Đang chờ xử lý</option>
+            <option value="confirmed">Đã xác nhận</option>
+            <option value="completed">Đã giao thành công</option>
+            <option value="cancelled">Đã hủy</option>
+          </select>
+
+          <label for="district">Quận/Huyện:</label>
+          <select id="district">
+            <option value="">Tất cả</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="TPHCM">TPHCM</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+          </select>
+
+          <button type="submit">Lọc</button>
+        </form>
+
+        <!-- Bảng hiển thị đơn hàng -->
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>Mã Đơn hàng</th>
+              <th>Ngày mua</th>
+              <th>Trạng thái</th>
+              <th>Tổng tiền</th>
+              <th>Tỉnh thành</th>
+              <th>Chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>2024-11-03</td>
+              <td><span class="status pending">Đang chờ xử lý</span></td>
+              <td>2,000,000₫</td>
+              <td>Hà Nội</td>
+              <td>
+                <a href="order-detail.html?orderId=001" class="btn update"
+                  >Xem chi tiết</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>#002</td>
+              <td>2024-11-02</td>
+              <td><span class="status shipped">Đã vận chuyển</span></td>
+              <td>1,500,000₫</td>
+              <td>TPHCM</td>
+              <td>
+                <a href="order-detail.html?orderId=002" class="btn update"
+                  >Xem chi tiết</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>#003</td>
+              <td>2024-11-01</td>
+              <td>
+                <span class="status completed" style="background: purple"
+                  >Đã hoàn thành</span
+                >
+              </td>
+              <td>3,200,000₫</td>
+              <td>Hải Phòng</td>
+              <td>
+                <a href="order-detail.html?orderId=003" class="btn update"
+                  >Xem chi tiết</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>#004</td>
+              <td>2024-11-01</td>
+              <td><span class="status completed">Đã xác nhận</span></td>
+              <td>5,200,000₫</td>
+              <td>Hải Phòng</td>
+              <td>
+                <a href="order-detail.html?orderId=004" class="btn update"
+                  >Xem chi tiết</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>#005</td>
+              <td>2024-11-01</td>
+              <td>
+                <span class="status cancelled" style="background: red"
+                  >Đã huỷ</span
+                >
+              </td>
+              <td>2,200,000₫</td>
+              <td>Hải Phòng</td>
+              <td>
+                <a href="order-detail.html?orderId=005" class="btn update"
+                  >Xem chi tiết</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Inner Wrap -->
+    <script>
+      function filterOrders(event) {
+        event.preventDefault();
+        const startDate = document.getElementById("startDate").value;
+        const endDate = document.getElementById("endDate").value;
+        const status = document.getElementById("status").value;
+        const district = document.getElementById("district").value;
+
+        // Lấy tất cả các hàng trong bảng
+        const rows = document.querySelectorAll(".order-table tbody tr");
+
+        rows.forEach((row) => {
+          const orderDate = row.cells[1].textContent.trim(); // Ngày mua
+          const orderStatus = row.cells[2].textContent.trim(); // Trạng thái
+          const orderStatusClass = row.cells[2].querySelector("span").classList; // Lớp trạng thái (e.g. 'pending', 'shipped')
+          const orderDistrict = row.cells[4].textContent.trim(); // Quận/Huyện
+          let showRow = true;
+
+          // Kiểm tra ngày
+          if (startDate && new Date(orderDate) < new Date(startDate)) {
+            showRow = false;
+          }
+          if (endDate && new Date(orderDate) > new Date(endDate)) {
+            showRow = false;
+          }
+
+          // Kiểm tra trạng thái
+          if (status && !orderStatusClass.contains(status)) {
+            showRow = false;
+          }
+
+          // Kiểm tra quận huyện
+          if (district && !orderDistrict.includes(district)) {
+            showRow = false;
+          }
+
+          // Hiển thị hoặc ẩn hàng
+          if (showRow) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span>© Bản quyền thuộc về <b>Nhóm 21</b> 2024</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tổng quan trang admin  -->
+      <script>
+        // Kiểm tra trạng thái đăng nhập từ sessionStorage
+        function checkLogin() {
+          const username = sessionStorage.getItem("username");
+          const loggedIn = sessionStorage.getItem("loggedIn");
+
+          if (loggedIn === "true" && username) {
+            // Nếu đã đăng nhập, hiển thị tên người dùng
+          } else {
+            // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+            alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+            window.location.href = "login-admin.html";
+          }
+        }
+
+        // Gọi hàm khi tải trang
+        document.addEventListener("DOMContentLoaded", checkLogin);
+      </script>
+      <script>
+        // Tìm liên kết Đăng xuất trong div có class "login-button"
+        const logoutLink = document.querySelector(".login-button a");
+
+        // Thêm sự kiện khi nút Đăng xuất được nhấp
+        logoutLink.addEventListener("click", function (event) {
+          event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+          // Xóa thông tin đăng nhập khỏi sessionStorage
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem("loggedIn");
+
+          alert("Bạn đã đăng xuất thành công!");
+
+          // Chuyển hướng về trang đăng nhập
+          window.location.href = "./login-admin.html";
+        });
+      </script>
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>

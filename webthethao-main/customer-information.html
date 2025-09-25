@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="topbar" style="max-width: 1150px; margin: auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-7 left-infor">
+                <ul class="ul-inform">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-5 hidden-xs">
+                <ul class="ul-social">
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-main" style="max-width: 1150px; margin: auto">
+            <div class="row" style="
+                display: flex;
+                max-width: 1150px;
+                margin: auto;
+                justify-content: space-between;
+              ">
+              <div class="col-md-3 col-100-h">
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+                </button>
+                <div class="logo">
+                  <a href="index.html" class="logo-wrapper">
+                    <img src="./img/logo.png" alt="logo SGU Sport" />
+                  </a>
+                </div>
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-forms">
+                <div class="search-header">
+                  <div class="header_search search_form">
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn icon-fallback-text">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="index-cart cart-wishlist">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
+                <div class="account-sign">
+                  <a href="#" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  const accountSign = document.querySelector(".account-sign");
+  const username = sessionStorage.getItem("userUsername") || "";
+  const email    = sessionStorage.getItem("userEmail") || "";
+  const displayName = username || email; // ưu tiên username
+
+  if (displayName) {
+    accountSign.innerHTML = `
+      <a href="customer-information.html" class="account-header">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="a-text">
+          ${displayName}
+          <span>Tài khoản và đơn hàng</span>
+        </div>
+        <div class="Sub-1">
+          <ul class="Sub-menu">
+            <li><a href="customer-information.html">Quản lý tài khoản</a></li>
+            <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+          </ul>
+        </div>
+      </a>`;
+    document.getElementById("logoutBtn").addEventListener("click", function(e){
+      e.preventDefault();
+      sessionStorage.clear();
+      alert("Đã đăng xuất.");
+      window.location.reload();
+    });
+  } else {
+    accountSign.innerHTML = `
+      <a href="login.html" class="account-header">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="a-text">
+          Đăng nhập
+          <span>Tài khoản và đơn hàng</span>
+        </div>
+        <div class="Sub-1">
+          <ul class="Sub-menu">
+            <li><a href="login.html">Đăng nhập</a></li>
+            <li><a href="register.html">Đăng ký</a></li>
+            <li><a href="javascript:;" class="smartLogin iWishView">Danh sách yêu thích</a></li>
+          </ul>
+        </div>
+      </a>`;
+  }
+});
+</script>
+                <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  const cartButton = document.querySelector(".header-cart");
+  if(!cartButton) return;
+  cartButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const isLoggedIn = sessionStorage.getItem("userUsername"); // dùng username
+    if (isLoggedIn) {
+      window.location.href = "cart.html";
+    } else {
+      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+      window.location.href = "login.html";
+    }
+  });
+});
+</script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <nav class="hidden-sm hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul id="nav" class="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="has-mega">
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <div class="mega-content">
+                        <div class="level0-wrapper2">
+                          <div class="nav-block nav-block-center">
+                            <ul class="level0">
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="has-mega abc">
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <ul class="menu">
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="bread-crumb margin-bottom-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <li class="home">
+                <a itemprop="url" href="/" title="Trang chủ">
+                  <span itemprop="title">Trang chủ</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <strong itemprop="title">Trang khách hàng</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="signup account-page margin-bottom-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="page-title">
+                  <h1 class="title-head widget-title">Thông tin tài khoản</h1>
+                </div>
+                <div class="form-signup">
+                  <p id="welcomeText">
+                    <i>Xin chào</i>
+                  </p>
+                </div>
+                <!-- Thông tin + nút -->
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                  <div class="block block-account margin-bottom-20">
+                    <div class="block-title">
+                      <h2 class="widget-title">Chi tiết tài khoản</h2>
+                    </div>
+                    <div class="divider-full-1"></div>
+                    <div class="block-content form-signup block-edit-padding" id="accountInfoView">
+                      <p><i class="fa fa-user"></i> <span id="infoUsername">--</span></p>
+                      <p><i class="fa fa-envelope"></i> <span id="infoEmail">--</span></p>
+                      <p><i class="fa fa-map-marker"></i> <span id="infoAddress">--</span></p>
+                      <p><i class="fa fa-phone"></i> <span id="infoPhone">--</span></p>
+                      <div class="margin-top-20" style="display:flex;gap:10px;flex-wrap:wrap">
+                        <button class="btn btn-primary" id="btnEditInfo">Sửa thông tin</button>
+                        <button class="btn btn-warning" id="btnChangePassword" data-toggle="modal" data-target="#changePasswordModal">Đổi mật khẩu</button>
+                      </div>
+                    </div>
+
+                    <!-- Form chỉnh sửa -->
+                    <form id="accountEditForm" style="display:none;margin-top:15px">
+                      <div class="form-group">
+                        <label>Tên người dùng (không đổi)</label>
+                        <input type="text" class="form-control" id="editUsername" disabled />
+                      </div>
+                      <div class="form-group">
+                        <label>Email (không đổi)</label>
+                        <input type="email" class="form-control" id="editEmail" readonly />
+                      </div>
+                      <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" class="form-control" id="editAddress" />
+                      </div>
+                      <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="tel" class="form-control" id="editPhone" pattern="^[0-9+ ]{8,15}$" />
+                      </div>
+                      <div style="display:flex;gap:10px;flex-wrap:wrap">
+                        <button type="submit" class="btn btn-success">Lưu</button>
+                        <button type="button" id="btnCancelEdit" class="btn btn-secondary">Hủy</button>
+                      </div>
+                      <small style="display:block;margin-top:10px;color:#888">Dữ liệu demo: lưu trong sessionStorage.</small>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal đổi mật khẩu -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="padding:10px">
+      <div class="modal-header">
+        <h5 class="modal-title">Đổi mật khẩu</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <form id="changePasswordForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Mật khẩu cũ</label>
+            <input type="password" class="form-control" id="oldPassword" required />
+          </div>
+          <div class="form-group">
+            <label>Mật khẩu mới</label>
+            <input type="password" class="form-control" id="newPassword" minlength="6" required />
+          </div>
+            <div class="form-group">
+            <label>Xác nhận mật khẩu mới</label>
+            <input type="password" class="form-control" id="confirmPassword" minlength="6" required />
+          </div>
+          <div id="pwMessage" style="margin-top:8px;font-size:13px;color:#c00;display:none"></div>
+        </div>
+        <div class="modal-footer" style="display:flex;gap:8px">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+          <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+    <div class="footer-policy">
+      <div class="container">
+        <div class="row">
+          <div class="tt-services-listing clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Miễn phí vận chuyển</h4>
+                  <p>Với đơn hàng trên 1tr VNĐ</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Hỗ trợ 24/7</h4>
+                  <p>Hỗ trợ 24h/ngày và 7 ngày/tuần</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">30 ngày trả hàng</h4>
+                  <p>Trả lại hàng trong vòng 30 ngày</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
+      <div class="la-nav-top-login">
+        <div class="la-avatar-nav p-relative text-center">
+          <a href="https://ant-sport.bizwebvietnam.net/account">
+            <i class="fa fa-user-circle"></i>
+          </a>
+          <div class="la-hello-user-nav ng-scope">Xin chào</div>
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()" />
+        </div>
+        <div class="la-action-link-nav text-center">
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="login.html" class="uppercase">ĐĂNG KÝ</a>
+        </div>
+      </div>
+      <div class="c-menu--slide-left active modal fade in" style="display: block" id="cmenushow">
+        <div class="la-nav-top-login">
+          <div class="la-avatar-nav p-relative text-center">
+            <a href="customer-information.html">
+              <i class="fa fa-user-circle"></i>
+            </a>
+            <div class="la-hello-user-nav ng-scope">Xin chào</div>
+            <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()" />
+          </div>
+          <div class="la-action-link-nav text-center">
+            <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+            <a href="register.html" class="uppercase">ĐĂNG KÝ</a>
+          </div>
+        </div>
+        <aside class="aside-item collection-category">
+          <div class="aside-title">
+            <h3 class="title-head margin-top-0">
+              <span>Danh mục</span>
+            </h3>
+          </div>
+          <div class="aside-content">
+            <nav class="nav-category navbar-toggleable-md">
+              <ul class="nav navbar-pills">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a href="product.html" class="nav-link">Sản phẩm</a>
+                  <i class="fa fa-angle-down"></i>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu nav-item active">
+                      <a class="nav-link" href="product.html">Giày</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Giày Nam</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Giày Nữ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Giày thể thao</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Giày leo núi</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Giày chạy bộ</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu nav-item">
+                      <a class="nav-link" href="product.html">Trang phục thể thao</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Dành cho Nam</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Dành cho Nữ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Đồ bơi</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Đấm bốc &amp; Võ thuật</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Yoga</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu nav-item">
+                      <a class="nav-link" href="product.html">Dụng cụ thể thao</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Yoga, thể hình</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Các môn cá nhân</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Phụ kiện thể thao</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Các môn tập thể</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Đồ dưới nước</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Lều ngủ, Túi ngủ</a>
+                    </li>
+                    <li class="dropdown-submenu nav-item">
+                      <a class="nav-link" href="/">Thương hiệu</a>
+                      <i class="fa fa-angle-down"></i>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Nike</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Adidas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Gofit</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">Bitis</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="product.html">New Nalance</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="product.html" class="nav-link">Thương hiệu</a>
+                  <i class="fa fa-angle-down"></i>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Nike</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Adidas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Gofit</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Bitis</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">New Nalance</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Khuyến mãi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Liên hệ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-30 padding-bottom-20">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F1')">
+                    <span>Thông tin cửa hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F1">
+                    <li>
+                      <a href="/">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="/">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="/">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="/">Tuyển dụng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F2')">
+                    <span>Chính sách</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F2">
+                    <li>
+                      <a href="/">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="/">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="/">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="/">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="/">Trả góp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F3')">
+                    <span>Hỗ trợ khách hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F3">
+                    <li>
+                      <a href="/">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="/">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="/">Tra cứu thẻ thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget no-border">
+                  <h3 style="display: flex; justify-content: space-between" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu ul-footer-contact" id="F4">
+                    <li>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:0123456789">0123 456 789</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright clearfix">
+        <div class="container">
+          <div class="inner clearfix">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("quickview");
+      var modal1 = document.getElementById("popup-cart");
+      var modal2 = document.getElementById("cmenushow");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == "cmenushow") {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("footer-widget");
+      var i;
+
+      function F4(id) {
+        const temp = document.getElementById(id);
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById(id).style.display = "none";
+        } else {
+          if (document.getElementById(id).style.display == "none") {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "block";
+            document.getElementById(id).style.display = "none";
+          }
+        }
+      }
+      var btns = container.getElementsByClassName("footer-widget");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("footer-widget");
+          current[0].className = current[0].className.replace("footer-widget", "");
+          this.className += "footer-widget";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("quickview");
+      var modal1 = document.getElementById("popup-cart");
+      var modal2 = document.getElementById("cmenushow");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == "cmenushow") {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      };
+    </script>
+     <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".desc-title .fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+              userTitle.textContent = `Admin (${username})`;
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              userTitle.textContent = "Chưa Login";
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+<script>
+// ================== QUẢN LÝ THÔNG TIN TÀI KHOẢN (CLIENT DEMO) ==================
+(function() {
+  const keys = {
+    name: "userFullName",
+    email: "userEmail",
+    address: "userAddress",
+    phone: "userPhone",
+    password: "userPassword" // (đã lưu khi đăng ký)
+  };
+
+  function getUserData() {
+    return {
+      name: sessionStorage.getItem(keys.name) || "",
+      email: sessionStorage.getItem(keys.email) || "",
+      address: sessionStorage.getItem(keys.address) || "",
+      phone: sessionStorage.getItem(keys.phone) || "",
+      password: sessionStorage.getItem(keys.password) || ""
+    };
+  }
+
+  function requireLogin(user) {
+    if (!user.email) {
+      alert("Vui lòng đăng nhập.");
+      window.location.href = "login.html";
+      return true;
+    }
+    return false;
+  }
+
+  function fillView(u) {
+    const safe = (v) => v || "(Chưa cập nhật)";
+    document.getElementById("welcomeText").innerHTML = `<i>Xin chào, ${safe(u.name)}</i>`;
+    setText("infoName", safe(u.name));
+    setText("infoEmail", safe(u.email));
+    setText("infoAddress", safe(u.address));
+    setText("infoPhone", safe(u.phone));
+    setText("sideName", safe(u.name));
+    setText("sideAddress", safe(u.address));
+    setText("sidePhone", safe(u.phone));
+  }
+
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
+  function showEditForm(u) {
+    document.getElementById("accountInfoView").style.display = "none";
+    const form = document.getElementById("accountEditForm");
+    form.style.display = "block";
+    document.getElementById("editFullName").value = u.name;
+    document.getElementById("editEmail").value = u.email;
+    document.getElementById("editAddress").value = u.address;
+    document.getElementById("editPhone").value = u.phone;
+  }
+
+  function hideEditForm() {
+    document.getElementById("accountInfoView").style.display = "block";
+    document.getElementById("accountEditForm").style.display = "none";
+  }
+
+  function saveUserData(data) {
+    sessionStorage.setItem(keys.name, data.name);
+    sessionStorage.setItem(keys.address, data.address);
+    sessionStorage.setItem(keys.phone, data.phone);
+    // email không đổi ở đây
+  }
+
+  function initEvents(user) {
+    const btnEdit = document.getElementById("btnEditInfo");
+    const formEdit = document.getElementById("accountEditForm");
+    const btnCancelEdit = document.getElementById("btnCancelEdit");
+    const btnChangePw = document.getElementById("btnChangePassword");
+
+    btnEdit?.addEventListener("click", () => showEditForm(getUserData()));
+    btnCancelEdit?.addEventListener("click", hideEditForm);
+
+    formEdit?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const updated = {
+        name: document.getElementById("editFullName").value.trim(),
+        address: document.getElementById("editAddress").value.trim(),
+        phone: document.getElementById("editPhone").value.trim()
+      };
+      saveUserData(updated);
+      fillView(getUserData());
+      hideEditForm();
+      alert("Đã cập nhật thông tin.");
+    });
+
+    // Đổi mật khẩu
+    btnChangePw?.addEventListener("click", () => {
+      if (typeof $ !== "undefined" && $("#changePasswordModal").modal) {
+        $("#changePasswordModal").modal("show");
+      } else {
+        document.getElementById("changePasswordModal").style.display = "block";
+      }
+      document.getElementById("changePasswordForm").reset();
+      document.getElementById("pwMessage").style.display = "none";
+    });
+
+    const pwForm = document.getElementById("changePasswordForm");
+    pwForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const oldPw = document.getElementById("oldPassword").value;
+      const newPw = document.getElementById("newPassword").value;
+      const cfPw = document.getElementById("confirmPassword").value;
+      const msg = document.getElementById("pwMessage");
+
+      if (oldPw !== sessionStorage.getItem(keys.password)) {
+        msg.textContent = "Mật khẩu cũ không đúng.";
+        msg.style.display = "block";
+        return;
+      }
+      if (newPw.length < 6) {
+        msg.textContent = "Mật khẩu mới tối thiểu 6 ký tự.";
+        msg.style.display = "block";
+        return;
+      }
+      if (newPw !== cfPw) {
+        msg.textContent = "Xác nhận mật khẩu không khớp.";
+        msg.style.display = "block";
+        return;
+      }
+
+      sessionStorage.setItem(keys.password, newPw);
+      msg.style.color = "green";
+      msg.textContent = "Đổi mật khẩu thành công.";
+      msg.style.display = "block";
+
+      setTimeout(() => {
+        if (typeof $ !== "undefined" && $("#changePasswordModal").modal) {
+          $("#changePasswordModal").modal("hide");
+        } else {
+          document.getElementById("changePasswordModal").style.display = "none";
+        }
+      }, 800);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = getUserData();
+    if (requireLogin(user)) return;
+    fillView(user);
+    initEvents(user);
+  });
+})();
+</script>
+<script>
+// QUẢN LÝ THÔNG TIN TÀI KHOẢN (DÙNG userUsername LÀM TÊN ĐĂNG NHẬP)
+(function(){
+  function $(id){ return document.getElementById(id); }
+  const username = sessionStorage.getItem("userUsername");
+  const email    = sessionStorage.getItem("userEmail") || "";
+  const address  = sessionStorage.getItem("userAddress") || "";
+  const phone    = sessionStorage.getItem("userPhone") || "";
+  const password = sessionStorage.getItem("userPassword") || "";
+
+  if(!username){ 
+    alert("Vui lòng đăng nhập.");
+    window.location.href = "login.html";
+    return;
+  }
+
+  // Hiển thị
+  $("welcomeText").innerHTML = `<i>Xin chào, ${username}</i>`;
+  setText("infoUsername", username);
+  setText("infoEmail", email || "(Chưa cập nhật)");
+  setText("infoAddress", address || "(Chưa cập nhật)");
+  setText("infoPhone", phone || "(Chưa cập nhật)");
+
+  // Điền form sửa
+  $("editUsername").value = username;
+  $("editEmail").value    = email;
+  $("editAddress").value  = address;
+  $("editPhone").value    = phone;
+
+  // Nút Sửa
+  $("btnEditInfo")?.addEventListener("click", ()=>{
+    $("accountInfoView").style.display="none";
+    $("accountEditForm").style.display="block";
+  });
+  $("btnCancelEdit")?.addEventListener("click", ()=>{
+    $("accountInfoView").style.display="block";
+    $("accountEditForm").style.display="none";
+  });
+
+  // Lưu sửa (không cho đổi username/email)
+  $("accountEditForm")?.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const newAddress = $("editAddress").value.trim();
+    const newPhone   = $("editPhone").value.trim();
+    sessionStorage.setItem("userAddress", newAddress);
+    sessionStorage.setItem("userPhone", newPhone);
+    setText("infoAddress", newAddress || "(Chưa cập nhật)");
+    setText("infoPhone", newPhone || "(Chưa cập nhật)");
+    alert("Đã cập nhật thông tin.");
+    $("accountInfoView").style.display="block";
+    $("accountEditForm").style.display="none";
+  });
+
+  // Đổi mật khẩu (modal đã tồn tại)
+  $("changePasswordForm")?.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const oldPw = $("oldPassword").value;
+    const newPw = $("newPassword").value;
+    const cfPw  = $("confirmPassword").value;
+    const msg   = $("pwMessage");
+    msg.style.display="block"; msg.style.color="#c00";
+    if(oldPw !== password){ msg.textContent="Mật khẩu cũ không đúng."; return; }
+    if(newPw.length < 6){ msg.textContent="Mật khẩu mới tối thiểu 6 ký tự."; return; }
+    if(newPw !== cfPw){ msg.textContent="Xác nhận mật khẩu không khớp."; return; }
+    sessionStorage.setItem("userPassword", newPw);
+    msg.style.color="green"; msg.textContent="Đổi mật khẩu thành công.";
+    setTimeout(()=> {
+      if(window.jQuery) $('#changePasswordModal').modal('hide');
+    }, 800);
+  });
+
+  function setText(id,val){ const el=$(id); if(el) el.textContent=val; }
+})();
+</script>
+  </body>
+</html>

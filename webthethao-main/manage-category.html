@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">TỔNG QUAN</a></li>
+            <li><a href="#">SẢN PHẨM</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="#">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-brands fa-product-hunt"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li>
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./statistic.html">Thống kê và báo cáo</a>
+                </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Quản lý danh mục  -->
+      <div class="change-table-2">
+        <h1>Quản lý Danh mục</h1>
+        <div class="category-manager">
+          <!-- Form tạo/chỉnh sửa danh mục -->
+          <div class="form">
+            <input
+              type="text"
+              id="categoryInput"
+              placeholder="Tên danh mục..."
+            />
+            <button class="add" onclick="addCategory()">Thêm Danh mục</button>
+          </div>
+
+          <!-- Danh sách danh mục -->
+          <ul class="category-list" id="categoryList">
+            <li class="category-item">
+              <span class="category-name">Balo</span>
+              <div class="actions">
+                <button class="edit" onclick="editCategory(this)">
+                  Chỉnh sửa
+                </button>
+                <button onclick="deleteCategory(this)">Xóa</button>
+              </div>
+              <!-- Danh mục con -->
+              <ul class="sub-category-list">
+                <li class="sub-category-item">Balo đi học</li>
+              </ul>
+              <div class="add-subcategory-form">
+                <input type="text" placeholder="Tên danh mục con..." />
+                <button onclick="addSubcategory(this)">Thêm</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        // Thêm danh mục mới
+        function addCategory() {
+          const categoryInput = document.getElementById("categoryInput");
+          const categoryName = categoryInput.value.trim();
+
+          if (categoryName) {
+            const categoryList = document.getElementById("categoryList");
+
+            // Tạo phần tử danh mục mới
+            const li = document.createElement("li");
+            li.className = "category-item";
+            li.innerHTML = `
+                            <span class="category-name">${categoryName}</span>
+                            <div class="actions">
+                                <button class="edit" onclick="editCategory(this)">Chỉnh sửa</button>
+                                <button onclick="deleteCategory(this)">Xóa</button>
+                            </div>
+                            <ul class="sub-category-list"></ul>
+                            <div class="add-subcategory-form">
+                                <input type="text" placeholder="Tên danh mục con...">
+                                <button onclick="addSubcategory(this)">Thêm</button>
+                            </div>
+                        `;
+
+            categoryList.appendChild(li);
+            categoryInput.value = ""; // Xóa nội dung ô input
+          }
+        }
+
+        // Xóa danh mục
+        function deleteCategory(button) {
+          const categoryItem = button.parentNode.parentNode;
+          categoryItem.remove();
+        }
+
+        // Chỉnh sửa danh mục
+        function editCategory(button) {
+          const categoryItem = button.parentNode.parentNode;
+          const categoryName = categoryItem.querySelector(".category-name");
+          const newName = prompt(
+            "Nhập tên danh mục mới:",
+            categoryName.textContent
+          );
+
+          if (newName) {
+            categoryName.textContent = newName;
+          }
+        }
+
+        // Thêm danh mục con
+        function addSubcategory(button) {
+          const subcategoryInput = button.previousElementSibling;
+          const subcategoryName = subcategoryInput.value.trim();
+
+          if (subcategoryName) {
+            const subcategoryList = button.parentNode.previousElementSibling;
+
+            // Tạo phần tử danh mục con mới
+            const subLi = document.createElement("li");
+            subLi.className = "sub-category-item";
+            subLi.textContent = subcategoryName;
+
+            subcategoryList.appendChild(subLi);
+            subcategoryInput.value = ""; // Xóa nội dung ô input
+          }
+        }
+      </script>
+      <!-- Quản lý danh mục  -->
+    </div>
+    <!-- Inner Wrap -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="back-to-top show">
+                  <i class="fa fa-arrow-circle-up"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

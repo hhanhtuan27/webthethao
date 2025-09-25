@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="topbar" style="max-width: 1150px; margin: auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-7 left-infor">
+                <ul class="ul-inform">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-5 hidden-xs">
+                <ul class="ul-social">
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-main" style="max-width: 1150px; margin: auto">
+            <div class="row" style="
+                display: flex;
+                max-width: 1150px;
+                margin: auto;
+                justify-content: space-between;
+              ">
+              <div class="col-md-3 col-100-h">
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+                </button>
+                <div class="logo">
+                  <a href="index.html" class="logo-wrapper">
+                    <img src="./img/logo.png" alt="logo SGU Sport" />
+                  </a>
+                </div>
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-forms">
+                <div class="search-header">
+                  <div class="header_search search_form">
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn icon-fallback-text">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="index-cart cart-wishlist">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
+                <div class="account-sign">
+                  <a href="#" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <nav class="hidden-sm hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul id="nav" class="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="has-mega">
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <div class="mega-content">
+                        <div class="level0-wrapper2">
+                          <div class="nav-block nav-block-center">
+                            <ul class="level0">
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="has-mega abc">
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <ul class="menu">
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="bread-crumb margin-bottom-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <li class="home">
+                <a itemprop="url" href="#" title="Trang chủ">
+                  <span itemprop="title">Trang chủ</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <a itemprop="url" href="#" title="Phụ kiện thể thao">
+                  <span itemprop="title">Phụ kiện thể thao</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <strong>
+                  <span itemprop="title">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</span>
+                </strong>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product" itemscope="" itemtype="http://schema.org/Product">
+      <meta itemprop="url" content="https://ant-sport.bizwebvietnam.net/gang-tay-xe-dap-don-chong-truot-popo-gangtay-don-yellow-vang">
+      <meta itemprop="image" content="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/gang-tay-1.jpg?v=1528296906033">
+      <meta itemprop="description" content=" Thiết kế thể thao 
+                    Mạnh mẽ, nam tính 
+                    Thấm hút tốt 
+                    Thoáng mát, dễ chịu 
+                    Chống trơn trượt ">
+      <meta itemprop="name" content="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 details-product">
+            <div class="row product-bottom">
+              <div class="col-lg-12">
+                <div class="border-bg clearfix padding-bottom-10 padding-top-10">
+                  <div class="col-xs-12 col-sm-6 col-lg-5 col-md-6">
+                    <div class="relative product-image-block ">
+                      <div class="large-image">
+                        <a href="https://bizweb.dktcdn.net/thumb/1024x1024/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-rel="prettyPhoto[product-gallery]">
+                          <div style="height:459px;width:459px;" class="zoomWrapper" id="left-photo">
+                            <img id="myimage" src="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng" class="img-responsive center-block" style="position: absolute; width: 459px; height: 459px;">
+                            <div id="myresult" class="img-zoom-result" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></div>
+                          </div>
+                        </a>
+                        <div class="hidden">
+                          <div class="item">
+                            <a href="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-zoom-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-rel="prettyPhoto[product-gallery]"></a>
+                          </div>
+                          <div class="item">
+                            <a href="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-2.jpg?v=1528296906743" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-2.jpg?v=1528296906743" data-zoom-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-2.jpg?v=1528296906743" data-rel="prettyPhoto[product-gallery]"></a>
+                          </div>
+                          <div class="item">
+                            <a href="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407" data-zoom-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407" data-rel="prettyPhoto[product-gallery]"></a>
+                          </div>
+                        </div>
+                        <a title="Yêu thích" class="button_wh_40  iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11864618" data-variant="18931574">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                        <a title="Bỏ thích" style="display: none;" class="button_wh_40  iWishAdded iwishAddWrapper iWishHidden" href="javascript:;" data-customer-id="0" data-product="11864618" data-variant="18931574">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <script type="text/javascript">
+                      document.addEventListener("DOMContentLoaded", function () {
+    // Tìm tất cả các nút yêu thích và bỏ thích
+    document.querySelectorAll(".iwishAddWrapper").forEach(button => {
+        button.addEventListener("click", function () {
+            // Lấy nút khác (anh em) trong cùng phần tử cha
+            const siblingButton = this.parentElement.querySelector(
+                this.classList.contains("iWishAdd") ? ".iWishAdded" : ".iWishAdd"
+            );
+
+            // Ẩn nút hiện tại
+            this.style.display = "none";
+
+            // Hiện nút còn lại
+            siblingButton.style.display = "block";
+        });
+    });
+});
+
+
+
+                      </script>
+                      <div id="gallery_01" class="owl-carousel owl-theme thumbnail-product margin-top-15 owl-loaded owl-drag" data-md-items="4" data-sm-items="4" data-xs-items="4" data-xss-items="3" data-margin="10" data-nav="true">
+                        <div class="owl-stage-outer">
+                          <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 352px;">
+                            <div class="owl-item active" style="width: 107.25px; margin-right: 10px;">
+                              <div class="item">
+                                <a class="thumb-link" href="javascript:void(0);" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/315/907/products/gang-tay-1.jpg?v=1528296906033">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/gang-tay-1.jpg?v=1528296906033" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="owl-item active" style="width: 107.25px; margin-right: 10px;">
+                              <div class="item">
+                                <a class="thumb-link" href="javascript:void(0);" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-2.jpg?v=1528296906743" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/315/907/products/gang-tay-2.jpg?v=1528296906743">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/gang-tay-2.jpg?v=1528296906743" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="owl-item active" style="width: 107.25px; margin-right: 10px;">
+                              <div class="item">
+                                <a class="thumb-link active" href="javascript:void(0);" data-image="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/315/907/products/gang-tay-3.jpg?v=1528296909407">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/gang-tay-3.jpg?v=1528296909407" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-nav disabled">
+                          <div class="owl-prev disabled">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                          </div>
+                          <div class="owl-next disabled">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div class="owl-dots disabled"></div>
+                      </div>
+                    </div>
+                    <div class="social-sharing margin-top-20">
+                      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                      <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a099baca270babc"></script>
+                      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                      <div class="addthis_inline_share_toolbox_uu9r"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-7 col-md-6 details-pro" style="display: none">
+                    <h1 class="title-head">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</h1>
+                    <div class="panel-product-line panel-product-rating clearfix">
+                      <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="divider-full-1"></div>
+                    <div class="inventory_quantity" itemscope="" itemtype="http://schema.org/ItemAvailability">
+                      <span class="stock-brand-title">
+                        <strong>Tình trạng:</strong>
+                      </span>
+                      <span class="a-stock" itemprop="supersededBy">
+                        <span class="a-stock">Còn hàng</span>
+                      </span>
+                    </div>
+                    <div class="price-box" itemscope="" itemtype="http://schema.org/Offer">
+                      <span class="special-price">
+                        <span class="price product-price" itemprop="price">149.000₫</span>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá Khuyến mại -->
+                      <span class="old-price">
+                        <del class="price product-price-old" itemprop="priceSpecification">200.000₫</del>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá gốc -->
+                    </div>
+                    <div class="product-summary product_description margin-bottom-15">
+                      <div class="rte description">
+                        <p>Thiết kế thể thao</p>
+                        <p>Mạnh mẽ, nam tính</p>
+                        <p>Thấm hút tốt</p>
+                        <p>Thoáng mát, dễ chịu</p>
+                        <p>Chống trơn trượt</p>
+                      </div>
+                    </div>
+                    <div class="form-product">
+                      <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="form-inline has-validation-callback">
+                        <div class="select-swatch">
+                          <div id="variant-swatch-0" class="swatch clearfix" data-option="option1" data-option-index="0">
+                            <div class="header">Kích thước</div>
+                            <div class="select-swap">
+                              <div data-value="X" class="n-sd swatch-element x ">
+                                <input class="variant-0" id="swatch-0-x" type="radio" name="option1" value="X">
+                                <label for="swatch-0-x"> X <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="X">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="X">
+                                </label>
+                              </div>
+                              <div data-value="M" class="n-sd swatch-element m ">
+                                <input class="variant-0" id="swatch-0-m" type="radio" name="option1" value="M">
+                                <label for="swatch-0-m"> M <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="M">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="M">
+                                </label>
+                              </div>
+                              <div data-value="L" class="n-sd swatch-element l ">
+                                <input class="variant-0" id="swatch-0-l" type="radio" name="option1" value="L" checked="">
+                                <label for="swatch-0-l"> L <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="L">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="L">
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-variant clearfix  hidden ">
+                          <fieldset class="form-group">
+                            <div class="selector-wrapper" style="text-align: left; margin-bottom: 15px;">
+                              <label>Kích thước</label>
+                              <select class="single-option-selector" data-option="option1" id="product-selectors-option-0">
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                              </select>
+                            </div>
+                            <select id="product-selectors" class="form-control form-control-lg" name="variantId" style="display:none">
+                              <option value="18931574">X - 0₫</option>
+                              <option value="18960192">M - 169.000₫</option>
+                              <option selected="selected" value="18960193">L - 149.000₫ </option>
+                            </select>
+                          </fieldset>
+                        </div>
+                        <div class="form-group">
+                          <div class="custom custom-btn-number form-control"></div>
+                          <div class="clearfix margin-bottom-20"></div>
+                          
+                        </div>
+                      </form>
+                    </div>
+                    <div class="product-single__visitor mb__20 flex">
+                      <i class="ion ion-md-contacts"></i> Hiện tại có <span class="product-single__visitor-number" data-min="4">34</span> người đang xem sản phẩm này
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-7 col-md-6 details-prom">
+                    <h1 class="title-head">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</h1>
+                    <div class="panel-product-line panel-product-rating clearfix">
+                      <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                        <span class="review-rating">★★★☆☆</span>
+                      </div>
+                    </div>
+                    <div class="divider-full-1"></div>
+                    <div class="inventory_quantity" itemscope="" itemtype="http://schema.org/ItemAvailability">
+                      <span class="stock-brand-title">
+                        <strong>Tình trạng:</strong>
+                      </span>
+                      <span class="a-stock" itemprop="supersededBy">
+                        <span class="a-stock" style="color: green">CÒN HÀNG</span>
+                      </span>
+                    </div>
+                    <div class="price-box" itemscope="" itemtype="http://schema.org/Offer">
+                      <span class="special-price">
+                        <span class="price product-price" itemprop="price">149.000₫</span>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá Khuyến mại -->
+                      <span class="old-price">
+                        <del class="price product-price-old" itemprop="priceSpecification">200.000₫</del>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá gốc -->
+                    </div>
+                    <div class="product-summary product_description margin-bottom-15">
+                      <div class="rte description">
+                        <p>Thiết kế thể thao</p>
+                        <p>Mạnh mẽ, nam tính</p>
+                        <p>Thấm hút tốt</p>
+                        <p>Thoáng mát, dễ chịu</p>
+                        <p>Chống trơn trượt</p>
+                      </div>
+                    </div>
+                    <div class="form-product">
+                        <div class="select-swatch">
+                          <div id="variant-swatch-0" class="swatch clearfix" data-option="option1" data-option-index="0">
+                            <div class="header">Kích thước</div>
+                            <div class="select-swap">
+                              <div data-value="X" class="n-sd swatch-element x ">
+                                <input class="variant-0" id="swatch-0-x" type="radio" name="option1" value="X">
+                                <label for="swatch-0-x"> X <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="X">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="X">
+                                </label>
+                              </div>
+                              <div data-value="M" class="n-sd swatch-element m ">
+                                <input class="variant-0" id="swatch-0-m" type="radio" name="option1" value="M" checked="">
+                                <label for="swatch-0-m"> M <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="M">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="M">
+                                </label>
+                              </div>
+                              <div data-value="L" class="n-sd swatch-element l ">
+                                <input class="variant-0" id="swatch-0-l" type="radio" name="option1" value="L">
+                                <label for="swatch-0-l"> L <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="L">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="L">
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-variant clearfix  hidden ">
+                          <fieldset class="form-group">
+                            <div class="selector-wrapper" style="text-align: left; margin-bottom: 15px;">
+                              <label>Kích thước</label>
+                              <select class="single-option-selector" data-option="option1" id="product-selectors-option-0">
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                              </select>
+                            </div>
+                            <select id="product-selectors" class="form-control form-control-lg" name="variantId" style="display:none">
+                              <option value="18931574">X - 0₫</option>
+                              <option value="18960192">M - 169.000₫</option>
+                              <option selected="selected" value="18960193">L - 149.000₫ </option>
+                            </select>
+                          </fieldset>
+                        </div>
+                        <div class="form-group">
+                          <div class="custom custom-btn-number form-control">
+                            <label>Số lượng</label>
+                            <div class="quantity-counter" style="display: flex !important;">
+                              <a id="counter-decrement" style="width: 40px; text-align: center; font-size: 30px;" class="decrement">-</a>
+                              <input id="counter-value" style="width: 40px; text-align: center; padding: unset;" class="value" type="number" value="1">
+                              <a id="counter-increment" style="width: 40px; text-align: center; font-size: 30px;" class="increment">+</a>
+                            </div>
+                            <script type="text/javascript">
+                              document.addEventListener("DOMContentLoaded", function() {
+                                const incrementButton = document.getElementById('counter-increment');
+                                const decrementButton = document.getElementById('counter-decrement');
+                                const inputField = document.getElementById('counter-value');
+                                // Tăng giá trị khi nhấn nút "+"
+                                incrementButton.addEventListener('click', function() {
+                                  let currentValue = parseInt(inputField.value);
+                                  if (!isNaN(currentValue)) {
+                                    inputField.value = currentValue + 1; // Tăng giá trị của input lên 1
+                                  }
+                                });
+                                // Giảm giá trị khi nhấn nút "-"
+                                decrementButton.addEventListener('click', function() {
+                                  let currentValue = parseInt(inputField.value);
+                                  if (!isNaN(currentValue) && currentValue > 0) {
+                                    inputField.value = currentValue - 1; // Giảm giá trị của input đi 1
+                                  }
+                                });
+
+                                 const muaNgayButton = document.getElementById('id-mua-ngay');
+
+                                muaNgayButton.addEventListener('click', function (event) {
+                                    event.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+
+                                    const isLogined = sessionStorage.getItem('isLoggedIn'); // Kiểm tra trạng thái đăng nhập trong sessionStorage
+
+                                    if (isLogined === "true") {
+                                        window.location.href = "cart.html"; // Nếu đã đăng nhập, chuyển sang trang cart.html
+                                    } else {
+                                        alert('Vui lòng đăng nhập để mua hàng!');
+                                        window.location.href = "login.html"; // Nếu chưa đăng nhập, chuyển sang trang login.html
+                                    }
+                                });
+                              });
+                               
+
+                            </script>
+                          </div>
+                            <div class="clearfix margin-bottom-20"></div>
+                            <div class="clearfix" style="text-align: left;"></div>
+                            <button type="submit" data-role="addtocart" class="btn btn-lg btn-danger btn-cart add_to_cart btn_buy add_to_cart" style="text-align: left;">
+                              <span class="txt-main" id="id-mua-ngay">Thêm vào giỏ hàng</span>
+                              <!-- <span class="txt-sub">Giao hàng tận nơi</span> -->
+                            </button>
+                            <!-- <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0123456789">
+                              <span class="txt-main" style="text-align: center; padding: 20px;"> Thêm vào giỏ hàng </span>
+                               <span class="txt-sub">Liên hệ 0123 456 789</span>
+                            </a> -->
+                          </div>
+                        </div>
+                    </div>
+                    <div class="product-single__visitor mb__20 flex">
+                      <i class="ion ion-md-contacts"></i> Hiện tại có <span class="product-single__visitor-number" data-min="4">34</span> người đang xem sản phẩm này
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-7 col-md-6 details-prox" style="display: none;">
+                    <h1 class="title-head">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</h1>
+                    <div class="panel-product-line panel-product-rating clearfix">
+                      <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                      </div>
+                      <div class="iddanhgia" onclick="scrollToxx();">
+                        <span>Viết đánh giá</span>
+                      </div>
+                    </div>
+                    <div class="divider-full-1"></div>
+                    <div class="inventory_quantity" itemscope="" itemtype="http://schema.org/ItemAvailability">
+                      <span class="stock-brand-title">
+                        <strong>Tình trạng:</strong>
+                      </span>
+                      <span class="a-stock" itemprop="supersededBy">
+                        <span class="a-stock" style="color: red">Hết hàng</span>
+                      </span>
+                    </div>
+                    <div class="price-box" itemscope="" itemtype="http://schema.org/Offer">
+                      <span class="special-price">
+                        <span class="price product-price" itemprop="price">Liên hệ</span>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá Khuyến mại -->
+                      <span class="old-price" style="display: none">
+                        <del class="price product-price-old" itemprop="priceSpecification">200.000₫</del>
+                        <meta itemprop="priceCurrency" content="VND">
+                      </span>
+                      <!-- Giá gốca -->
+                    </div>
+                    <div class="product-summary product_description margin-bottom-15">
+                      <div class="rte description">
+                        <p>Thiết kế thể thao</p>
+                        <p>Mạnh mẽ, nam tính</p>
+                        <p>Thấm hút tốt</p>
+                        <p>Thoáng mát, dễ chịu</p>
+                        <p>Chống trơn trượt</p>
+                      </div>
+                    </div>
+                    <div class="form-product">
+                      <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="form-inline has-validation-callback">
+                        <div class="select-swatch">
+                          <div id="variant-swatch-0" class="swatch clearfix" data-option="option1" data-option-index="0">
+                            <div class="header">Kích thước</div>
+                            <div class="select-swap">
+                              <div data-value="X" class="n-sd swatch-element x ">
+                                <input class="variant-0" id="swatch-0-x" type="radio" name="option1" value="X" checked="">
+                                <label for="swatch-0-x"> X <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="X">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="X">
+                                </label>
+                              </div>
+                              <div data-value="M" class="n-sd swatch-element m ">
+                                <input class="variant-0" id="swatch-0-m" type="radio" name="option1" value="M">
+                                <label for="swatch-0-m"> M <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="M">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="M">
+                                </label>
+                              </div>
+                              <div data-value="L" class="n-sd swatch-element l ">
+                                <input class="variant-0" id="swatch-0-l" type="radio" name="option1" value="L">
+                                <label for="swatch-0-l"> L <img class="crossed-out" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/soldout.png?1556002489878" alt="L">
+                                  <img class="img-check" src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/select-pro.png?1556002489878" alt="L">
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-variant clearfix  hidden ">
+                          <fieldset class="form-group">
+                            <div class="selector-wrapper" style="text-align: left; margin-bottom: 15px;">
+                              <label>Kích thước</label>
+                              <select class="single-option-selector" data-option="option1" id="product-selectors-option-0">
+                                <option value="X">X</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                              </select>
+                            </div>
+                            <select id="product-selectors" class="form-control form-control-lg" name="variantId" style="display:none">
+                              <option value="18931574">X - 0₫</option>
+                              <option value="18960192">M - 169.000₫</option>
+                              <option selected="selected" value="18960193">L - 149.000₫ </option>
+                            </select>
+                          </fieldset>
+                        </div>
+                        <div class="form-group" style="display: none">
+                          <div class="custom custom-btn-number form-control"></div>
+                          <div class="clearfix margin-bottom-20"></div>
+                          
+                        </div>
+                      </form>
+                    </div>
+                    <div class="product-single__visitor mb__20 flex">
+                      <i class="ion ion-md-contacts"></i> Hiện tại có <span class="product-single__visitor-number" data-min="4">34</span> người đang xem sản phẩm này
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              document.addEventListener("DOMContentLoaded", function () {
+                // Lấy tất cả các ảnh thumbnail
+                const thumbnails = document.querySelectorAll(".thumb-link");
+                const mainImage = document.querySelector("#myimage");
+
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener("click", function (e) {
+                        e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+                        const newImage = thumbnail.getAttribute("data-image"); // Lấy URL ảnh từ data-image
+                        const zoomImage = thumbnail.getAttribute("data-zoom-image"); // Lấy URL ảnh zoom từ data-zoom-image
+
+                        // Cập nhật ảnh chính
+                        mainImage.setAttribute("src", newImage);
+                        mainImage.parentElement.style.backgroundImage = `url('${zoomImage}')`;
+                    });
+                });
+            });
+
+            </script>
+            <div class="row margin-top-20" id="prđetal">
+              <div class="col-md-9">
+                <div class="border-bg clearfix">
+                  <div class="col-xs-12 col-lg-12">
+                    <!-- Nav tabs -->
+                    <div class="product-tab e-tabs padding-bottom-10">
+                      <ul class="tabs tabs-title clearfix">
+                        <li class="tab-link current" data-tab="tab-1" id="1" onclick="changestt()">
+                          <h3>
+                            <span>Mô tả</span>
+                          </h3>
+                        </li>
+                        <li class="tab-link" data-tab="tab-2" id="2" onclick="changestt2()">
+                          <h3>
+                            <span>Đánh giá</span>
+                          </h3>
+                        </li>
+                        
+                      </ul>
+                      <div id="tab-1" class="tab-content current">
+                        <div class="rte" id="tab1">
+                          <ul>
+                            <li>
+                              <strong>Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</strong>&nbsp;thích hợp cho các hoạt&nbsp;động thể thao, lái xe, dã ngoại,&nbsp;được nhiều người yêu thích và tin dùng.
+                            </li>
+                          </ul>
+                          <p>
+                            <img data-thumb="original" original-height="550" original-width="550" src="https://bizweb.dktcdn.net/100/315/907/products/gang-tay-1.jpg?v=1528296906033">
+                          </p>
+                          <ul>
+                            <li>Sản phẩm&nbsp;được gia công từ vải chất lượng cao, có lớp thấm hút mồ hôi nhanh, co giãn linh hoạt, hạn chế bám bụi.</li>
+                            <li>Các&nbsp;đường may&nbsp;được gia công tỉ mỉ, loại bỏ các chi tiết thừa, thiết kế thể thao, cá tính và trẻ trung.</li>
+                            <li>Găng tay POPO thoáng mát, dễ chịu&nbsp;đồng thời có khả năng chống trượt,&nbsp;độ bám tốt.</li>
+                            <li>Sản phẩm giúp hạn chế ma sát, bảo vệ da tay, hạn chế tình trạng&nbsp;đau và tê tay, giúp bạn thoải mái khi vận&nbsp;động thể thao.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="tab-3" class="tab-content" style="display: none"> Các nội dung Hướng dẫn mua hàng viết ở đây </div>
+                      <div id="tab-2" class="tab-content" style="display: none">
+                        <div id="bizweb-product-reviews" class="bizweb-product-reviews" data-id="11864618">
+                          <div>
+                            <div class="title-bl">
+                              <h4>Đánh giá sản phẩm</h4>
+                            </div>
+                            <div id="bizweb-product-reviews-sub">
+                              <div class="bizweb-product-reviews">
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Nguyễn Văn A</strong>
+                                    <span class="review-rating">★★★★★</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Sản phẩm tuyệt vời</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Sản phẩm đúng như mô tả, chất lượng rất tốt, giao hàng nhanh. Tôi sẽ tiếp tục ủng hộ.</p>
+                                  </div>
+                                </div>
+
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Trần Thị B</strong>
+                                    <span class="review-rating">★★★★☆</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Hài lòng nhưng vẫn cần cải thiện</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Chất lượng ổn nhưng thời gian giao hàng hơi chậm. Tuy nhiên, tổng quan thì vẫn rất hài lòng.</p>
+                                  </div>
+                                </div>
+
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Phạm Minh C</strong>
+                                    <span class="review-rating">★★★☆☆</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Sản phẩm trung bình</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Không đúng kỳ vọng, chất lượng không được như mô tả. Dịch vụ khách hàng cần cải thiện hơn nữa.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <p class="product-reviews-summary-actions">
+                                <input type="button" onclick="review();" id="btnnewreview" value="Viết đánh giá">
+                              </p>
+                              
+                              <div style="display:none;" id="bpr-thanks" class="bizweb-product-reviews-form">
+                                <b>Cảm ơn bạn đã đánh giá sản phẩm!</b>
+                              </div>
+                              <div id="bpr-list" class="bizweb-product-reviews-list"></div>
+                              <div id="bpr-more-reviews"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="border-bg clearfix">
+                  <div class="right_module">
+                    <div class="module_service_details margin-bottom-30">
+                      <div class="wrap_module_service">
+                        <div class="item_service">
+                          <div class="wrap_item_">
+                            <div class="image_service">
+                              <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/policy_image_1.png?1556002489878" alt="Giao hàng trong 24h">
+                            </div>
+                            <div class="content_service">
+                              <p>Giao hàng trong 24h</p>
+                              <span>Với đơn hàng trên 500.000 đ</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item_service">
+                          <div class="wrap_item_">
+                            <div class="image_service">
+                              <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/policy_image_2.png?1556002489878" alt="Bảo đảm chất lượng">
+                            </div>
+                            <div class="content_service">
+                              <p>Bảo đảm chất lượng</p>
+                              <span>Sản phẩm bảo đảm chất lượng.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item_service">
+                          <div class="wrap_item_">
+                            <div class="image_service">
+                              <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/policy_image_3.png?1556002489878" alt="Hỗ trợ 24/7">
+                            </div>
+                            <div class="content_service">
+                              <p>Hỗ trợ 24/7</p>
+                              <span>Hotline: <a href="tel:0123456789">0123 456 789</a>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item_service">
+                          <div class="wrap_item_">
+                            <div class="image_service">
+                              <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/policy_image_4.png?1556002489878" alt="Sản phẩm chính hãng">
+                            </div>
+                            <div class="content_service">
+                              <p>Sản phẩm chính hãng</p>
+                              <span>Sản phẩm nhập khẩu chính hãng</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="similar-product">
+                      <div class="right-bestsell">
+                        <h2>Sản phẩm bán chạy</h2>
+                        <div class="list-bestsell">
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/gang-tay-xe-dap-don-chong-truot-popo-gangtay-don-yellow-vang">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/gang-tay-1.jpg?v=1528296906033" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/gang-tay-1.jpg?v=1528296906033" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/gang-tay-xe-dap-don-chong-truot-popo-gangtay-don-yellow-vang" title="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">Liên hệ</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-23.jpg?v=1527432902510" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-23.jpg?v=1527432902510" alt="Xe đạp gấp dòng địa hình Fornix F3" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3" title="Xe đạp gấp dòng địa hình Fornix F3">Xe đạp gấp dòng địa hình Fornix F3</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">10.500.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/dong-ho-xe-dap-bogeer-manburen-ms-602b">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-22.jpg?v=1528295380640" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-22.jpg?v=1528295380640" alt="Đồng hồ xe đạp BoGeer Manburen MS-602B" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/dong-ho-xe-dap-bogeer-manburen-ms-602b" title="Đồng hồ xe đạp BoGeer Manburen MS-602B">Đồng hồ xe đạp BoGeer Manburen MS-602B</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">900.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/xe-dap-dua-the-thao-fornix-bt401">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-25.jpg?v=1527432565930" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-25.jpg?v=1527432565930" alt="Xe đạp đua thể thao fornix bt401" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/xe-dap-dua-the-thao-fornix-bt401" title="Xe đạp đua thể thao fornix bt401">Xe đạp đua thể thao fornix bt401</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">3.500.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/xe-dap-the-thao-tcr-advanced-pro-0-2018-do">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-28-783a00f7-d55e-43f5-b1cf-c5d7dc4c7872.jpg?v=1527432389797" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-28-783a00f7-d55e-43f5-b1cf-c5d7dc4c7872.jpg?v=1527432389797" alt="Xe đạp thể thao TCR ADVANCED PRO 0 - 2018 - Đỏ" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/xe-dap-the-thao-tcr-advanced-pro-0-2018-do" title="Xe đạp thể thao TCR ADVANCED PRO 0 - 2018 - Đỏ">Xe đạp thể thao TCR ADVANCED PRO 0 - 2018 - Đỏ</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">4.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-bestsell-item">
+                            <div class="thumbnail-container clearfix">
+                              <div class="product-image">
+                                <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g">
+                                  <img src="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-08.jpg?v=1527432270030" data-lazyload="https://bizweb.dktcdn.net/thumb/medium/100/315/907/products/product-08.jpg?v=1527432270030" alt="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G" class="img-responsive center-block">
+                                </a>
+                              </div>
+                              <div class="product-meta">
+                                <h3>
+                                  <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+                                </h3>
+                                <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="product-price-and-shipping">
+                                  <span class="price">750.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row margin-top-20">
+              <div class="col-lg-12">
+                <div class="border-bg clearfix">
+                  <div class="col-md-12">
+                    <div class="related-product">
+                      <div class="heading margin-bottom-20">
+                        <h2 class="title-head">
+                          <a href="/phu-kien-the-thao">Sản phẩm liên quan</a>
+                        </h2>
+                      </div>
+                      <div class="col-md-3 col-sm-6 splq" style="margin-top: 20px;">
+                        <div class="product-grid hover">
+                          <div class="product-image">
+                            <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                            <a href="product-detail.html">
+                              <img class="pic-1" src="./img/product-05.jpg">
+                              <img class="pic-2" src="./img/product-05-02.jpg">
+                            </a>
+                            <span class="tt-label-location">
+                              <span class="tt-label-new">Giảm 18% </span>
+                            </span>
+                          </div>
+                          <div class="product-content" style="margin-top: 30px; margin-left: -15px;">
+                            <h3 class="title">
+                              <a href="#">Bộ quần áo xe đạp thể thao Bianchi</a>
+                            </h3>
+                            <div class="tt-price">
+                              <span class="new-price">450.000₫</span>
+                              <span class="old-price">550.000₫ </span>
+                            </div>
+                            <div class="add-to-card">
+                              <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                              <a onclick="cartquick()">ADD TO CART</a>
+                              <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                                <i class="fa fa-heart-o"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <div id="top-tabs-info" class="">
+      <div class="productAnchor_horizonalNavs">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="productAnchor_horizonalNav">
+                <div class="product_info_image hidden-xs">
+                  <img class="pict imagelazyload" src="https://bizweb.dktcdn.net/thumb/large/100/315/907/products/gang-tay-1.jpg?v=1528296906033" alt="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">
+                </div>
+                <div class="product_info_content hidden-xs">
+                  <h2 class="product_info_name" title="Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</h2>
+                  <div class="product_info_price">
+                    <div class="product_info_price_title"> Giá bán: </div>
+                    <div class="product_info_price_value">
+                      <div class="product_info_price_value-final">149.000₫</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_info_buttons">
+                  <button class="btn btn_buyNow btn-buy-now-click">
+                    <span class="txt-main" >Thêm vào giỏ hàng</span>
+                    <!-- <span class="txt-sub">Giao hàng tận nơi</span> -->
+                  </button>
+                  <!-- <button class="btn btn_traGop btn-tra-gop-click s-flag">
+                    <span class="txt-main hidden-xs" style="text-align: center; padding: 20px;">Thêm vào giỏ hàng</span>
+                     <span class="txt-sub hidden-xs">Liên hệ 0123 456 789</span> 
+                    <i class="fa fa-phone visible-xs" aria-hidden="true"></i>
+                  </button>  -->
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const addToCartButton = document.querySelector(".btn-cart");
+                    addToCartButton.addEventListener("click", function() {
+                      alert("Bạn đã thêm vào giỏ hàng thành công");
+                    });
+                  });
+                </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function quickviewprd() {
+        const temp = document.getElementById("quickview")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("quickview").style.display = "block"
+        } else {
+          if (document.getElementById("quickview").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("quickview").style.display = "block"
+          }
+        }
+        document.getElementById("xemthem").style.display = "none"
+      }
+      var container = document.getElementById("quickview");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("fancybox-overlay-fixed");
+      var i;
+
+      function hidereview() {
+        const temp = document.getElementById("reviewprd")
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById("reviewprd").style.display = "none"
+        } else {
+          if (document.getElementById("reviewprd").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("reviewprd").style.display = "none"
+          }
+        }
+      }
+      var container = document.getElementById("reviewprd");
+      var btns = container.getElementsByClassName("fancybox-overlay-fixed");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("fancybox-overlay-fixed");
+          current[0].className = current[0].className.replace("fancybox-overlay-fixed", "");
+          this.className += "fancybox-overlay-fixed";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("fancybox-overlay-fixed");
+      var i;
+
+      function submit() {
+        const temp = document.getElementById("reviewprd")
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById("reviewprd").style.display = "none"
+        } else {
+          if (document.getElementById("reviewprd").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("reviewprd").style.display = "none"
+          }
+        }
+      }
+      var container = document.getElementById("reviewprd");
+      var btns = container.getElementsByClassName("fancybox-overlay-fixed");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("fancybox-overlay-fixed");
+          current[0].className = current[0].className.replace("fancybox-overlay-fixed", "");
+          this.className += "fancybox-overlay-fixed";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("e-tabs");
+      var i;
+
+      function changestt2() {
+        console.log("2")
+        const temp = document.getElementById("tab-2")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("tab-2").style.display = "block";
+          document.getElementById("2").classList.add("current");
+          document.getElementById("tab-1").style.display = "none";
+          document.getElementById("1").classList.remove("current");
+          document.getElementById("3").classList.remove("current");
+          document.getElementById("tab-3").style.display = "none";
+        }
+      }
+      var container = document.getElementById("tab-2");
+      var btns = container.getElementsByClassName("e-tabs");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("e-tabs");
+          current[0].className = current[0].className.replace("e-tabs", "");
+          this.className += "e-tabs";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("e-tabs");
+      var i;
+
+      function changestt() {
+        console.log("1")
+        const temp = document.getElementById("tab-1")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("tab-1").style.display = "block";
+          document.getElementById("1").classList.add("current");
+          document.getElementById("tab-2").style.display = "none";
+          document.getElementById("2").classList.remove("current");
+          document.getElementById("3").classList.remove("current");
+          document.getElementById("tab-3").style.display = "none";
+        }
+      }
+      var container = document.getElementById("tab-1");
+      var btns = container.getElementsByClassName("e-tabs");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("e-tabs");
+          current[0].className = current[0].className.replace("e-tabs", "");
+          this.className += "e-tabs";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("e-tabs");
+      var i;
+
+      function changestt3() {
+        console.log("3")
+        const temp = document.getElementById("tab-3")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("tab-3").style.display = "block";
+          document.getElementById("3").classList.add("current");
+          document.getElementById("tab-2").style.display = "none";
+          document.getElementById("2").classList.remove("current");
+          document.getElementById("1").classList.remove("current");
+          document.getElementById("tab-1").style.display = "none";
+        }
+      }
+      var container = document.getElementById("tab-3");
+      var btns = container.getElementsByClassName("e-tabs");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("e-tabs");
+          current[0].className = current[0].className.replace("e-tabs", "");
+          this.className += "e-tabs";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("tab-link");
+      var i;
+
+      function review() {
+        console.log("da an")
+        const temp = document.getElementById("reviewprd")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("reviewprd").style.display = "block";
+        }
+      }
+      var container = document.getElementById("reviewprd");
+      var btns = container.getElementsByClassName("tab-link");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("tab-link");
+          current[0].className = current[0].className.replace("tab-link", "");
+          this.className += "tab-link";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("modal");
+      var i;
+
+      function continute() {
+        const temp = document.getElementById("popup-cart")
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById("popup-cart").style.display = "none"
+        } else {
+          if (document.getElementById("popup-cart").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("popup-cart").style.display = "none"
+          }
+        }
+      }
+      var container = document.getElementById("popup-cart");
+      var btns = container.getElementsByClassName("modal");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("modal");
+          current[0].className = current[0].className.replace("modal", "");
+          this.className += "modal";
+        });
+      }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+    <script>
+      function imageZoom(imgID, resultID) {
+        var img, lens, result, cx, cy;
+        img = document.getElementById(imgID);
+        result = document.getElementById(resultID);
+        /*create lens:*/
+        lens = document.createElement("DIV");
+        lens.setAttribute("class", "img-zoom-lens");
+        /*insert lens:*/
+        img.parentElement.insertBefore(lens, img);
+        /*calculate the ratio between result DIV and lens:*/
+        cx = result.offsetWidth / lens.offsetWidth;
+        cy = result.offsetHeight / lens.offsetHeight;
+        /*set background properties for the result DIV:*/
+        result.style.backgroundImage = "url('" + img.src + "')";
+        result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+        /*execute a function when someone moves the cursor over the image, or the lens:*/
+        lens.addEventListener("mousemove", moveLens);
+        img.addEventListener("mousemove", moveLens);
+        /*and also for touch screens:*/
+        lens.addEventListener("touchmove", moveLens);
+        img.addEventListener("touchmove", moveLens);
+
+        function moveLens(e) {
+          var pos, x, y;
+          /*prevent any other actions that may occur when moving over the image:*/
+          e.preventDefault();
+          /*get the cursor's x and y positions:*/
+          pos = getCursorPos(e);
+          /*calculate the position of the lens:*/
+          x = pos.x - (lens.offsetWidth / 2);
+          y = pos.y - (lens.offsetHeight / 2);
+          /*prevent the lens from being positioned outside the image:*/
+          if (x > img.width - lens.offsetWidth) {
+            x = img.width - lens.offsetWidth;
+          }
+          if (x < 0) {
+            x = 0;
+          }
+          if (y > img.height - lens.offsetHeight) {
+            y = img.height - lens.offsetHeight;
+          }
+          if (y < 0) {
+            y = 0;
+          }
+          /*set the position of the lens:*/
+          lens.style.left = x + "px";
+          lens.style.top = y + "px";
+          /*display what the lens "sees":*/
+          result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+        }
+
+        function getCursorPos(e) {
+          var a, x = 0,
+            y = 0;
+          e = e || window.event;
+          /*get the x and y positions of the image:*/
+          a = img.getBoundingClientRect();
+          /*calculate the cursor's x and y coordinates, relative to the image:*/
+          x = e.pageX - a.left;
+          y = e.pageY - a.top;
+          /*consider any page scrolling:*/
+          x = x - window.pageXOffset;
+          y = y - window.pageYOffset;
+          return {
+            x: x,
+            y: y
+          };
+        }
+      }
+    </script>
+    <script>
+      // Initiate zoom effect:
+      function bigImg(x) {
+        x.style.display = "block";
+      }
+
+      function normalImg(x) {
+        x.style.display = "none";
+      }
+      imageZoom("myimage", "myresult");
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("product-grid");
+      var i;
+
+      function cartquick() {
+        const temp = document.getElementById("popup-cart")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("popup-cart").style.display = "block"
+        } else {
+          if (document.getElementById("popup-cart").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("popup-cart").style.display = "none"
+          }
+        }
+      }
+      var container = document.getElementById("popup-cart");
+      var btns = container.getElementsByClassName("product-grid");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("product-grid");
+          current[0].className = current[0].className.replace("product-grid", "");
+          this.className += "product-grid";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("modal");
+      var i;
+
+      function hidemd() {
+        const temp = document.getElementById("quickview")
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById("quickview").style.display = "none"
+        } else {
+          if (document.getElementById("quickview").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("quickview").style.display = "none"
+          }
+        }
+      }
+      var container = document.getElementById("quickview");
+      var btns = container.getElementsByClassName("modal");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("modal");
+          current[0].className = current[0].className.replace("modal", "");
+          this.className += "modal";
+        });
+      }
+    </script>
+    <div id="popup-cart" class="modal fade in" role="dialog" style="display: none; padding-right: 15px;">
+      <div id="popup-cart-desktop" class="clearfix">
+        <div class="title-popup-cart">
+          <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm <span class="cart-popup-name">
+            <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" style="color:red;" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+          </span> vào giỏ hàng
+        </div>
+        <div class="title-quantity-popup">
+          <a href="/cart">
+            <i class="ion ion-md-basket fa-shopping-cart"></i> Giỏ hàng của bạn ( <span class="cart-popup-count">1</span> sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="content-popup-cart">
+          <div class="thead-popup">
+            <div style="width: 55%;" class="text-left">Sản phẩm</div>
+            <div style="width: 15%;" class="text-right">Đơn giá</div>
+            <div style="width: 15%;" class="text-center">Số lượng</div>
+            <div style="width: 15%;" class="text-right">Thành tiền</div>
+          </div>
+          <div class="tbody-popup">
+            <div class="item-popup productid-18765235">
+              <div style="width: 55%;" class="text-left">
+                <div class="item-image">
+                  <a class="product-image" href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">
+                    <img alt="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G" src="https://bizweb.dktcdn.net/thumb/small/100/315/907/products/product-08.jpg" width="80">
+                  </a>
+                </div>
+                <div class="item-info">
+                  <p class="item-name">
+                    <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+                  </p>
+                  <p class="variant-title-popup" style="display: none;">Default Title</p>
+                  <p class="item-remove">
+                    <a href="javascript:;" class="remove-item-cart" title="Xóa" data-id="18765235">
+                      <i class="fa fa-close"></i> Bỏ sản phẩm </a>
+                  </p>
+                  <p class="addpass" style="color:#fff;">
+                    <span class="add_sus" style="color:#898989;">
+                      <i style="margin-right:5px; color:red; font-size:13px;" class="fa fa-check" aria-hidden="true"></i>Sản phẩm vừa thêm! </span>
+                  </p>
+                </div>
+              </div>
+              <div style="width: 15%;" class="text-right">
+                <div class="item-price">
+                  <span class="price">750.000₫</span>
+                </div>
+              </div>
+              <div style="width: 15%;" class="text-center">
+                <input class="variantID" type="hidden" name="variantId" value="18765235">
+                <button onclick="var result = document.getElementById('qtyItem18765235'); var qtyItem18765235 = result.value; if( !isNaN( qtyItem18765235 ) && qtyItem18765235 > 1 ) result.value--;return false;" disabled="" class="reduced items-count btn-minus" type="button">–</button>
+                <input type="text" maxlength="12" min="0" class="input-text number-sidebar qtyItem18765235" id="qtyItem18765235" name="Lines" size="4" value="1">
+                <button onclick="var result = document.getElementById('qtyItem18765235'); var qtyItem18765235 = result.value; if( !isNaN( qtyItem18765235 )) result.value++;return false;" class="increase items-count btn-plus" type="button">+</button>
+              </div>
+              <div style="width: 15%;" class="text-right">
+                <span class="cart-price">
+                  <span class="price">750.000₫</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="tfoot-popup">
+            <div class="tfoot-popup-1 clearfix">
+              <div class="pull-left popup-ship">
+                <p>Giao hàng trên toàn quốc</p>
+              </div>
+              <div class="pull-right popup-total">
+                <p>Thành tiền: <span class="total-price">750.000₫</span>
+                </p>
+              </div>
+            </div>
+            <div class="tfoot-popup-2 clearfix">
+              <a class="button btn-proceed-checkout" title="Tiến hành đặt hàng" href="checkout.html">
+                <span>Tiến hành đặt hàng <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="button btn-continue" title="Tiếp tục mua hàng" id="continute" onclick="continute()">
+                <span>
+                  <span>
+                    <i class="fa fa-caret-left" aria-hidden="true"></i> Chọn sản phẩm khác </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a title="Close" class="quickview-close close-window" id="hide-modal" onclick="hidenmodal()">
+          <i class="fa  fa-close"></i>
+        </a>
+      </div>
+    </div>
+    <div id="quickview" class="modal fade in" role="dialog" style="display: none;">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-6" style="width: 50%">
+                <div class="image margin-bottom-15">
+                  <a class="img-product clearfix mySlides" title="" href="javascript:;">
+                    <img id="product-featured-image-quickview" class="center-block img-responsive product-featured-image-quickview" src="https://bizweb.dktcdn.net/100/315/907/products/product-23.jpg?v=1527432902510" alt="quickview">
+                  </a>
+                  <a class="img-product clearfix mySlides" title="" href="javascript:;">
+                    <img id="product-featured-image-quickview" class="center-block img-responsive product-featured-image-quickview" src="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg" alt="quickview">
+                  </a>
+                </div>
+                <div id="thumbnail_quickview" class="op1">
+                  <div class="thumblist">
+                    <div class="thumblist_carousel owl-carousel owl-loaded owl-drag">
+                      <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 220px;">
+                          <div class="owl-item active" style="width: 95px; margin-right: 15px;">
+                            <div class="item">
+                              <img data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23.jpg" src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23.jpg" alt="Proimage" onclick="currentSlide(1)">
+                            </div>
+                          </div>
+                          <div class="owl-item active" style="width: 95px; margin-right: 15px;">
+                            <div class="item">
+                              <img data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg" src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23-02.jpg" alt="Proimage" onclick="currentSlide(2)">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="owl-nav disabled">
+                        <div class="owl-prev disabled">
+                          <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </div>
+                        <div class="owl-next disabled">
+                          <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                      <div class="owl-dots disabled"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" style="width: 50%">
+                <div class="content">
+                  <h3 class="product-name">
+                    <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3">Xe đạp gấp dòng địa hình Fornix F3</a>
+                  </h3>
+                  <div class="status clearfix"> Trạng thái: <span class="inventory">Còn hàng</span>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="info-other" style="display: block;">
+                    <p>
+                      <label class="inline-block">Hãng sản xuất</label>: Fornix
+                    </p>
+                    <p>
+                      <label class="inline-block">Loại sản phẩm</label>: Xe đạp
+                    </p>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="price-box margin-bottom-20 clearfix">
+                    <div class="special-price f-left">
+                      <span class="price product-price">10.500.000₫</span>
+                    </div>
+                    <div class="old-price">
+                      <span class="price product-price-old" style="display: none;"></span>
+                    </div>
+                  </div>
+                  <div class="product-description rte">
+                    <ul>
+                      <li>Ghi đông/Handlebar Aluminum 25.4 540mm</li>
+                      <li>Pô tăng/Stem Aluminum 25.4 90mm(XS、S)、110mm(M)</li>
+                      <li>Cốt yên/Seatpost Aluminum 27.2x300mm</li>
+                      <li>Yên/Saddle GIANT COMFORT LITE</li>
+                      <li>Bàn đạp/Pedals Aluminum CAGE</li>
+                    </ul>
+                  </div>
+                  <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3" class="view-more hidden">Xem chi tiết</a>
+                  <div class="clearfix"></div>
+                  <form action="" method="post" enctype="multipart/form-data" class="margin-top-20 variants form-ajaxtocart hasswatch">
+                    <span class="price-product-detail hidden" style="opacity: 0;">
+                      <span class=""></span>
+                    </span>
+                    <select name="variantId" class="hidden" style="display:none" id="product-select-11795655"></select>
+                    <div class="clearfix"></div>
+                    <div class="quantity_wanted_p">
+                      <label for="quantity-detail" class="quantity-selector">Số lượng</label>
+                      <input type="text" onchange="if(this.value == 0)this.value=1;" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" id="quantity-detail" name="quantity" value="1" class="quantity-selector text-center">
+                      <button type="submit" name="add" class="btn  btn-primary add_to_cart_detail ajax_addtocart" onclick="hidemdr()">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="total-price" style="display:none">750.000₫</div>
+                    <input type="hidden" name="id" value="11795655">
+                    <input type="hidden" name="variantId" value="18765326">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-close btn-default" data-dismiss="modal" onclick="hidemd()">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:707.5px;top:250.65625px;height:459px;width:459px;">
+      <div class="zoomLens" style="background-position: 0px 0px; float: right; overflow: hidden; z-index: 999; transform: translateZ(0px); opacity: 0.4; zoom: 1; width: 350.509px; height: 417.273px; background-color: white; cursor: pointer; border: 1px solid rgb(0, 0, 0); background-repeat: no-repeat; position: absolute; left: 2px; top: 40px; display: none;"> &nbsp;</div>
+      <div class="zoomWindowContainer" style="width: 420px;">
+        <div style="overflow: hidden; background-position: -18.5901px -53.8421px; text-align: center; background-color: rgb(255, 255, 255); width: 420px; height: 500px; float: left; background-size: 550px 550px; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;https://bizweb.dktcdn.net/100/315/907/products/gang-tay-3.jpg?v=1528296909407&quot;); top: 0px; left: 469px; display: none;" class="zoomWindow">&nbsp;</div>
+      </div>
+    </div>
+    <div class="fancybox-overlay fancybox-overlay-fixed  modal fade in" style="width: auto; height: auto; display: none;" id="reviewprd">
+      <div class="fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened" tabindex="-1" style="width: 330px; height: auto; position: absolute; top: 276px; left: 1000px; opacity: 1; overflow: visible;">
+        <div class="fancybox-skin" style="padding: 15px; width: auto; height: auto;">
+          <div class="fancybox-outer">
+            <div class="fancybox-inner" style="overflow: auto; width: 300px; height: auto;">
+              <div class="bizweb-product-reviews-form" id="bpr-form_11864618" style="">
+                <form method="post" id="bizweb-product-reviews-frm" name="bizweb-product-reviews-frm">
+                  <input type="hidden" name="productId" id="review_product_id" value="11864618">
+                  <h4>Đánh giá sản phẩm</h4>
+                  <fieldset class="bpr-form-rating">
+                    <div id="dvRating" style="cursor: pointer; color: rgb(255, 190, 0);">
+                      <i data-alt="1" class="star-on-png" title="bad" checked="" style="
+                            "></i>&nbsp; <i data-alt="2" class="star-off-png" title="poor"></i>&nbsp; <i data-alt="3" class="star-off-png" title="regular"></i>&nbsp; <i data-alt="4" class="star-off-png" title="good"></i>&nbsp; <i data-alt="5" class="star-off-png" title="gorgeous"></i>
+                      <input name="score" type="hidden" value="1">
+                    </div>
+                    <input type="hidden" name="rating" id="review_rate" value="1">
+                    <span class="bpr-form-message-error"></span>
+                  </fieldset>
+                  <fieldset class="bpr-form-contact">
+                    <div class="bpr-form-contact-name require">
+                      <input type="text" maxlength="128" id="review_author" name="author" value="" placeholder="Nhập tên của bạn">
+                      <span class="bpr-form-message-error"></span>
+                    </div>
+                    <div class="bpr-form-contact-email require">
+                      <input type="text" maxlength="128" id="review_email" name="email" value="" placeholder="nguyenvan@gmail.com">
+                      <span class="bpr-form-message-error"></span>
+                    </div>
+                  </fieldset>
+                  <fieldset class="bpr-form-review">
+                    <div class="bpr-form-review-title">
+                      <input type="text" maxlength="512" id="review_title" name="title" value="" placeholder="Tiêu đề">
+                      <span class="bpr-form-message-error"></span>
+                    </div>
+                    <div class="bpr-form-review-body">
+                      <textarea maxlength="1500" id="review_body" name="body" rows="5" placeholder="Nội dung"></textarea>
+                      <span class="bpr-form-message-error"></span>
+                    </div>
+                  </fieldset>
+                  <fieldset class="bpr-form-review-error">
+                    <p class="error"></p>
+                  </fieldset>
+                  <fieldset class="bpr-form-actions">
+                    <input type="button" onclick="submit()" value="Gửi" class="bpr-button-submit">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          <a title="Close" class="fancybox-item fancybox-close" id="close" onclick="hidereview()"></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('quickview');
+      var modal1 = document.getElementById('popup-cart');
+      var modal3 = document.getElementById('reviewprd');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        } else {
+          if (event.target == modal1) modal1.style.display = "none";
+        }
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+      }
+    </script>
+    <div class="footer-policy">
+      <div class="container">
+        <div class="row">
+          <div class="tt-services-listing clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="./product.html" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Miễn phí vận chuyển</h4>
+                  <p>Với đơn hàng trên 1tr VNĐ</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="./lienhe.html" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Hỗ trợ 24/7</h4>
+                  <p>Hỗ trợ 24h/ngày và 7 ngày/tuần</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="./lienhe.html" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto" />
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">30 ngày trả hàng</h4>
+                  <p>Trả lại hàng trong vòng 30 ngày</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
+      <div class="la-nav-top-login">
+        <div class="la-avatar-nav p-relative text-center">
+          <a href="https://ant-sport.bizwebvietnam.net/account">
+            <i class="fa fa-user-circle"></i>
+          </a>
+          <div class="la-hello-user-nav ng-scope">Xin chào</div>
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()">
+        </div>
+        <div class="la-action-link-nav text-center">
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="register.html" class="uppercase">ĐĂNG KÝ</a>
+        </div>
+      </div>
+      <aside class="aside-item collection-category">
+        <div class="aside-title">
+          <h3 class="title-head margin-top-0">
+            <span>Danh mục</span>
+          </h3>
+        </div>
+        <div class="aside-content">
+          <nav class="nav-category navbar-toggleable-md">
+            <ul class="nav navbar-pills">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="about.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Sản phẩm</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu nav-item active">
+                    <a class="nav-link" href="product.html">Giày</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày leo núi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày chạy bộ</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Trang phục thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ bơi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đấm bốc &amp; Võ thuật</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Dụng cụ thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga, thể hình</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn cá nhân</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Phụ kiện thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn tập thể</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ dưới nước</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Lều ngủ, Túi ngủ</a>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="/">Thương hiệu</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Nike</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Adidas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Gofit</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Bitis</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">New Nalance</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a href="product.html" class="nav-link">Thương hiệu</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Nike</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Adidas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Gofit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Bitis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">New Nalance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Khuyến mãi</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Tin tức</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-30 padding-bottom-20">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F1')">
+                    <span>Thông tin cửa hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F1">
+                    <li>
+                      <a href="/">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="/">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="/">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="/">Tuyển dụng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F2')">
+                    <span>Chính sách</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F2">
+                    <li>
+                      <a href="/">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="/">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="/">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="/">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="/">Trả góp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F3')">
+                    <span>Hỗ trợ khách hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu " id="F3">
+                    <li>
+                      <a href="/">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="/">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="/">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="/">Tra cứu thẻ thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget no-border">
+                  <h3 style="display: flex;justify-content: space-between;" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu ul-footer-contact" id="F4">
+                    <li>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:0123456789">0123 456 789</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright clearfix">
+        <div class="container">
+          <div class="inner clearfix">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function showproduct() {
+        const temp = document.getElementById("showprd");
+        if (temp.style.display == "none") {
+          temp.style.display = "flex";
+          document.getElementById("showprd").style.display = "flex";
+        } else {
+          if ((document.getElementById("showprd").style.display = "none")) {
+            temp.style.display = "flex";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("showprd").style.display = "flex";
+          }
+        }
+        document.getElementById("xemthem").style.display = "none";
+      }
+      var container = document.getElementById("showprd");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function quickviewprd() {
+        const temp = document.getElementById("quickview");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("quickview").style.display = "block";
+        } else {
+          if ((document.getElementById("quickview").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("quickview").style.display = "block";
+          }
+        }
+        document.getElementById("xemthem").style.display = "none";
+      }
+      var container = document.getElementById("quickview");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+      var elements = document.getElementsByClassName("product-grid");
+var i;
+
+function cartquick() {
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa
+  if (sessionStorage.getItem("isLoggedIn") === "true") {
+    const temp = document.getElementById("popup-cart");
+    if (temp.style.display == "none") {
+      temp.style.display = "block";
+      document.getElementById("popup-cart").style.display = "block";
+    } else {
+      if ((document.getElementById("popup-cart").style.display = "none")) {
+        temp.style.display = "block";
+      } else {
+        temp.style.display = "none";
+        document.getElementById("popup-cart").style.display = "none";
+      }
+    }
+  } else {
+    // Thông báo và chuyển hướng nếu chưa đăng nhập
+    alert("Vui lòng đăng nhập để sử dụng chức năng này.");
+    window.location.href = "login.html";
+  }
+}
+
+// --- Cart badge visibility control (added) ---
+(function() {
+  try {
+    var isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+    var badgeEls = document.getElementsByClassName('cartCount');
+    for (var i = 0; i < badgeEls.length; i++) {
+      if (!isLoggedIn) {
+        badgeEls[i].style.display = 'none';
+      } else {
+        var storedCount = sessionStorage.getItem('cartCount');
+        if (storedCount && !isNaN(parseInt(storedCount, 10))) {
+          badgeEls[i].textContent = storedCount;
+          badgeEls[i].style.display = 'inline-block';
+        } else if (badgeEls[i].textContent.trim() !== '' && !isNaN(parseInt(badgeEls[i].textContent.trim(),10))) {
+          badgeEls[i].style.display = 'inline-block';
+        } else {
+          badgeEls[i].textContent = '0';
+          badgeEls[i].style.display = 'inline-block';
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Cart badge init error', e);
+  }
+})();
+// --- End cart badge visibility control ---
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("row");
+      var i;
+
+      function quickviewprd() {
+        const temp = document.getElementById("quickview");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("quickview").style.display = "block";
+        } else {
+          if ((document.getElementById("quickview").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("quickview").style.display = "block";
+          }
+        }
+        document.getElementById("xemthem").style.display = "none";
+      }
+      var container = document.getElementById("quickview");
+      var btns = container.getElementsByClassName("row");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("row");
+          current[0].className = current[0].className.replace("row", "");
+          this.className += "row";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "none") {
+          temp.style.display = "block";
+          document.getElementById("cmenushow").style.display = "block";
+        } else {
+          if ((document.getElementById("cmenushow").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("cmenushow").style.display = "block";
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("cmenushow").style.display = "none";
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("modal");
+      var i;
+
+      function hidenmodal() {
+        const temp = document.getElementById("popup-cart");
+        if (temp.style.display == "block") {
+          temp.style.display = "none";
+          document.getElementById("popup-cart").style.display = "none";
+        } else {
+          if ((document.getElementById("popup-cart").style.display = "none")) {
+            temp.style.display = "block";
+          } else {
+            temp.style.display = "none";
+            document.getElementById("popup-cart").style.display = "none";
+          }
+        }
+      }
+      var container = document.getElementById("popup-cart");
+      var btns = container.getElementsByClassName("modal");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("modal");
+          current[0].className = current[0].className.replace("modal", "");
+          this.className += "modal";
+        });
+      }
+    </script>
+
+    </footer>
+  </body>
+</html>

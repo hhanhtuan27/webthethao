@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href=".././admin/admin.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Menu bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <main>
+        <div class="login-container" style="text-align: center">
+          <div class="logo">
+            <img src="../img/logo.png" alt="Logo" />
+          </div>
+          <h2>Login</h2>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="email">Tên người dùng hoặc Email</label>
+              <input type="text" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="password">Mật khẩu</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <button type="button" onclick="handleLogin()">Đăng nhập</button>
+          </form>
+          <div class="form-footer">
+            <a href="sign_up.html" class="forgot-password">Quên mật khẩu?</a>
+            <p>
+              Không có tài khoản?
+              <a href="sign_up.html" class="signup-link">Đăng ký</a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer  -->
+
+    <script>
+      function handleLogin() {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (email && password) {
+          // Lưu thông tin đăng nhập vào sessionStorage
+          sessionStorage.setItem("username", email);
+          sessionStorage.setItem("loggedIn", "true");
+          alert("Đăng nhập thành công!");
+
+          // Chuyển hướng đến trang admin.html
+          window.location.href = "admin.html";
+        } else {
+          alert("Vui lòng nhập đầy đủ thông tin.");
+        }
+      }
+    </script>
+
+    <style>
+      .login-container {
+        border: 2px solid #ccc;
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 200px);
+        margin: auto auto;
+      }
+
+      .form-footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

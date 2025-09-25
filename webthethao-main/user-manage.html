@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý người dùng</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">TỔNG QUAN</a></li>
+            <li><a href="#">SẢN PHẨM</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="#">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-brands fa-product-hunt"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li>
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./statistic.html">Thống kê và báo cáo</a>
+                </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Quản lý người dùng  -->
+
+      <div class="change-table-3">
+        <h1>Quản lý Người dùng</h1>
+
+        <div class="user-manager">
+          <!-- Bảng hiển thị danh sách người dùng -->
+          <table>
+            <thead>
+              <tr>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Phân quyền</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nguyễn Văn A</td>
+                <td>nguyenvana@example.com</td>
+                <td>0123456789</td>
+                <td>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales">Nhân viên bán hàng</option>
+                    <option value="customer" selected>Khách hàng</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn-1">Lưu</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Trần Thị B</td>
+                <td>tranthib@example.com</td>
+                <td>0987654321</td>
+                <td>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales" selected>Nhân viên bán hàng</option>
+                    <option value="customer">Khách hàng</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn-1">Lưu</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Phạm Văn C</td>
+                <td>phamvanc@example.com</td>
+                <td>0234567890</td>
+                <td>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales">Nhân viên bán hàng</option>
+                    <option value="customer" selected>Khách hàng</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn-1">Lưu</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Inner Wrap -->
+
+    <!-- Quản lý người dùng  -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="back-to-top show">
+                  <i class="fa fa-arrow-circle-up"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="">
+          <div class="inner-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Change Wrap -->
+      <div class="change-wrap">
+        <h1>Quản lý sản phẩm</h1>
+
+        <!-- Form Thêm/Sửa Sản phẩm -->
+        <form id="productForm">
+          <h2>Thêm/Sửa sản phẩm</h2>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="productName">Tên sản phẩm</label>
+              <input
+                type="text"
+                id="productName"
+                placeholder="Tên sản phẩm"
+                required
+              />
+            </div>
+
+            <div class="form-item">
+              <label for="productPrice">Giá</label>
+              <input
+                type="number"
+                id="productPrice"
+                placeholder="Giá"
+                required
+              />
+            </div>
+
+            <div class="form-item">
+              <label for="productCategory">Danh mục</label>
+              <select id="productCategory" required>
+                <option value="Giày">Giày</option>
+                <option value="Trang phục thể thao">Trang phục thể thao</option>
+                <option value="Dụng cụ thể thao">Dụng cụ thể thao</option>
+                <option value="Lều ngủ - Túi ngủ">Lều ngủ - Túi ngủ</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productCategory">Kích thước</label>
+              <select id="productCategory" required>
+                <option value="">Chọn kích thước</option>
+                <option value="Size X">X</option>
+                <option value="Size M">M</option>
+                <option value="Size L">L</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productName">Thêm mô tả</label>
+              <input type="text" id="productName" placeholder="" required />
+            </div>
+
+            <div class="form-item">
+              <label for="productStatus">Trạng thái</label>
+              <select id="productStatus" required>
+                <option value="Còn hàng">Còn hàng</option>
+                <option value="Hết hàng">Hết hàng</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label for="productDiscount">Giảm giá (%)</label>
+              <input
+                type="number"
+                id="productDiscount"
+                placeholder="Giảm giá"
+              />
+            </div>
+
+            <div class="form-item" >
+                <label for="productImage">Hình ảnh</label>
+                <input type="file" id="productImage" accept="image/*" />
+                <!-- Vùng hiển thị ảnh cũ khi sửa -->
+                <div id="productImagePreview" style="margin-top: 10px; margin-bottom: 10px;"></div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Lưu sản phẩm</button>
+          </div>
+        </form>
+
+        <!-- Danh sách Sản phẩm -->
+        <div id="productList">
+          <h2>Danh sách sản phẩm</h2>
+          <div class="product">
+            <img src=".././img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" alt="Product Image" />
+            <div class="product-info">
+              <h3>Giày Nike Air Force 1 '07</h3>
+              <p>Giá: 2000000₫</p>
+              <p>Trạng thái: Còn hàng</p>
+              <p>Giảm giá: 25%</p>
+            </div>
+            <div class="product-actions">
+              <button class="edit-btn">Sửa</button>
+              <button class="delete-btn">Xóa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner Wrap -->
+    </div>
+    <!-- Main Content -->
+
+    <!-- End Task 1  -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner padding-top-20 padding-bottom-20">
+          <div class="copyright clearfix">
+            <div class="container">
+              <div class="inner clearfix">
+                <div class="row">
+                  <div class="col-sm-12 text-center">
+                    <span
+                      >© Bản quyền thuộc về <b>Nhóm 21</b>
+                      <span class="s480-f">|</span> Cung cấp bởi
+                      <a
+                        href="https://fit.sgu.edu.vn/site/"
+                        title="SGU IT"
+                        target="_blank"
+                        rel="nofollow"
+                        style="color: white"
+                        >SGU IT</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    const productForm = document.getElementById("productForm");
+    const productNameInput = document.getElementById("productName");
+    const productPriceInput = document.getElementById("productPrice");
+    const productCategorySelect = document.getElementById("productCategory");
+    const productStatusSelect = document.getElementById("productStatus");
+    const productDiscountInput = document.getElementById("productDiscount");
+    const productImageInput = document.getElementById("productImage");
+    const productList = document.getElementById("productList");
+    const formTitle = productForm.querySelector("h2");
+
+    let isEditing = false; // Trạng thái sửa
+    let currentEditProduct = null; // Sản phẩm đang sửa
+    let productImage = "../img/default-product.jpg"; // Ảnh mặc định
+
+    // Xử lý lưu sản phẩm
+    productForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const productName = productNameInput.value;
+        const productPrice = productPriceInput.value;
+        const productCategory = productCategorySelect.value;
+        const productStatus = productStatusSelect.value;
+        const productDiscount = productDiscountInput.value;
+
+        // Nếu có thay đổi ảnh thì sử dụng ảnh mới, nếu không sẽ giữ ảnh cũ hoặc ảnh mặc định
+        const newProductImage = productImageInput.files[0]
+            ? URL.createObjectURL(productImageInput.files[0])
+            : currentEditProduct && currentEditProduct.querySelector("img")
+            ? currentEditProduct.querySelector("img").src
+            : productImage; // Ảnh mặc định khi không có ảnh
+
+        if (isEditing && currentEditProduct) {
+            // Chỉnh sửa sản phẩm
+            currentEditProduct.querySelector(".product-info h3").textContent = productName;
+            currentEditProduct.querySelector(".product-info p:nth-child(2)").textContent = `Giá: ${productPrice}₫`;
+            currentEditProduct.querySelector(".product-info p:nth-child(3)").textContent = `Trạng thái: ${productStatus}`;
+            currentEditProduct.querySelector(".product-info p:nth-child(4)").textContent = `Giảm giá: ${productDiscount}%`;
+            currentEditProduct.querySelector("img").src = newProductImage;
+
+            alert("Sản phẩm đã được sửa thành công!");
+        } else {
+            // Thêm sản phẩm mới
+            const productHTML = `
+                <div class="product">
+                    <img src="${newProductImage}" alt="${productName}" />
+                    <div class="product-info">
+                        <h3>${productName}</h3>
+                        <p>Giá: ${productPrice}₫</p>
+                        <p>Trạng thái: ${productStatus}</p>
+                        <p>Giảm giá: ${productDiscount}%</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="edit-btn">Sửa</button>
+                        <button class="delete-btn">Xóa</button>
+                    </div>
+                </div>
+            `;
+            productList.insertAdjacentHTML("beforeend", productHTML);
+            alert("Sản phẩm đã được thêm thành công!");
+        }
+
+        resetForm();
+    });
+
+    productList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("edit-btn")) {
+            const product = e.target.closest(".product");
+            currentEditProduct = product;
+
+            const productName = product.querySelector(".product-info h3").textContent;
+            const productPriceText = product.querySelector(".product-info p:nth-child(2)").textContent.replace("Giá: ", "").replace("₫", "").trim();
+            const productStatus = product.querySelector(".product-info p:nth-child(3)").textContent.replace("Trạng thái: ", "");
+            const productDiscount = product.querySelector(".product-info p:nth-child(4)").textContent.replace("Giảm giá: ", "").replace("%", "").trim();
+            let productImage = product.querySelector("img").src;
+
+            // Gán ảnh mặc định nếu không có ảnh
+            if (!productImage) {
+                productImage = "../img/default-product.jpg"; // Gán ảnh mặc định nếu không có ảnh
+            }
+
+            // Cập nhật giá trị vào form
+            productNameInput.value = productName;
+            productPriceInput.value = productPriceText;  // Đảm bảo giá trị giá là một chuỗi số hợp lệ
+            productStatusSelect.value = productStatus;
+            productDiscountInput.value = productDiscount;
+
+            // Hiển thị ảnh cũ hoặc mới khi sửa
+            const imgElement = document.createElement("img");
+            imgElement.src = productImage;
+            imgElement.width = 100;  // Gán kích thước hiển thị ảnh
+            document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh cũ
+            document.getElementById("productImagePreview").appendChild(imgElement);
+
+            // Thêm dấu X để xóa ảnh
+            const deleteImageBtn = document.createElement("button");
+            deleteImageBtn.textContent = "X";
+            deleteImageBtn.classList.add("delete-image-btn");
+            document.getElementById("productImagePreview").appendChild(deleteImageBtn);
+
+            deleteImageBtn.addEventListener("click", function () {
+                document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh khi nhấn nút X
+                productImageInput.value = ""; // Reset input file
+                // Cập nhật ảnh mặc định vào biến productImage
+                productImage = "../img/default-product.jpg";
+
+                // Cập nhật ảnh trong form và ở sản phẩm đang sửa
+                if (currentEditProduct) {
+                    currentEditProduct.querySelector("img").src = productImage; // Cập nhật ảnh trong sản phẩm đang sửa
+                }
+            });
+
+            isEditing = true;
+            formTitle.textContent = "Sửa sản phẩm";
+        }
+    });
+
+    // Xử lý sự kiện xóa
+    productList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-btn")) {
+            const product = e.target.closest(".product");
+            const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+            if (confirmDelete) {
+                product.remove();
+                alert("Sản phẩm đã được xóa!");
+            }
+        }
+    });
+
+    // Reset form
+    function resetForm() {
+        productForm.reset();
+        isEditing = false;
+        currentEditProduct = null;
+        formTitle.textContent = "Thêm/Sửa sản phẩm";
+        document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh cũ khi reset
+    }
+
+    // Xử lý sự kiện thay đổi ảnh
+    productImageInput.addEventListener("change", function () {
+        const previewContainer = document.getElementById("productImagePreview");
+        previewContainer.innerHTML = ""; // Xóa ảnh cũ
+
+        if (productImageInput.files && productImageInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const imgElement = document.createElement("img");
+                imgElement.src = e.target.result;
+                imgElement.width = 100;  // Kích thước ảnh preview
+                previewContainer.appendChild(imgElement);
+
+                // Thêm nút xóa ảnh
+                const deleteImageBtn = document.createElement("button");
+                deleteImageBtn.textContent = "X";
+                deleteImageBtn.classList.add("delete-image-btn");
+                previewContainer.appendChild(deleteImageBtn);
+
+                deleteImageBtn.addEventListener("click", function () {
+                    previewContainer.innerHTML = ""; // Xóa ảnh khi nhấn nút X
+                    productImageInput.value = ""; // Reset input file
+                });
+            };
+            reader.readAsDataURL(productImageInput.files[0]);
+        }
+    });
+});
+
+
+
+</script>
+ <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+
+
+
+    <!-- Footer  -->
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .product-grid { margin-bottom: 20px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container margin-bottom-20" id="prd-container">
+        <div class="row" id="ctgprd">
+            <aside class="sidebar left left-content col-md-3 col-sm-12 col-xs-12">
+                <div class="left-filters">
+                    <div class="aside-filter">
+                        <div class="heading">
+                            <h2 class="title-head">Bộ lọc</h2>
+                            <p>Giúp lọc nhanh sản phẩm bạn tìm kiếm</p>
+                        </div>
+                        <div class="aside-content filter-group">
+                            <!-- Filter by Brand -->
+                            <aside class="aside-item filter-vendor">
+                                <div class="aside-title">
+                                    <h2 class="title-head"><span>Thương hiệu</span></h2>
+                                </div>
+                                <ul class="filter-list">
+                                    <li><label><input type="checkbox" class="filter-brand" value="Nike"> Nike</label></li>
+                                    <li><label><input type="checkbox" class="filter-brand" value="Adidas"> Adidas</label></li>
+                                </ul>
+                            </aside>
+                            <!-- Filter by Type -->
+                            <aside class="aside-item filter-type">
+                                <div class="aside-title">
+                                    <h2 class="title-head"><span>Loại</span></h2>
+                                </div>
+                                <ul class="filter-list">
+                                    <li><label><input type="checkbox" class="filter-type" value="Shoes"> Giày</label></li>
+                                    <li><label><input type="checkbox" class="filter-type" value="Bags"> Balo</label></li>
+                                </ul>
+                            </aside>
+                            <!-- Filter by Price -->
+                            <aside class="aside-item filter-price">
+                                <div class="aside-title">
+                                    <h2 class="title-head"><span>Khoảng giá</span></h2>
+                                </div>
+                                <ul class="filter-list">
+                                    <li><label><input type="checkbox" class="filter-price" value="<100000"> Dưới 100.000đ</label></li>
+                                    <li><label><input type="checkbox" class="filter-price" value="100000-500000"> 100.000đ - 500.000đ</label></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="main_container collection col-md-9 col-sm-12 col-xs-12">
+                <div class="product-list">
+                    <div class="row">
+                        <!-- Product Items -->
+                        <div class="col-md-3 col-sm-6 product-item" data-brand="Nike" data-type="Shoes" data-price="450000">
+                            <div class="product-grid">
+                                <div class="product-image"><img src="./img/gang-tay-1.jpg" alt="Nike Shoes"></div>
+                                <h3 class="title">Nike Shoes</h3>
+                                <div class="price">450.000₫</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 product-item" data-brand="Adidas" data-type="Bags" data-price="200000">
+                            <div class="product-grid">
+                                <div class="product-image"><img src="./img/product-23.jpg" alt="Adidas Bag"></div>
+                                <h3 class="title">Adidas Bag</h3>
+                                <div class="price">200.000₫</div>
+                            </div>
+                        </div>
+                        <!-- Add more products as needed -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            function filterProducts() {
+                const selectedBrands = $('.filter-brand:checked').map(function () { return $(this).val(); }).get();
+                const selectedTypes = $('.filter-type:checked').map(function () { return $(this).val(); }).get();
+                const selectedPrices = $('.filter-price:checked').map(function () { return $(this).val(); }).get();
+
+                $('.product-item').each(function () {
+                    const brand = $(this).data('brand');
+                    const type = $(this).data('type');
+                    const price = parseInt($(this).data('price'), 10);
+
+                    let brandMatch = !selectedBrands.length || selectedBrands.includes(brand);
+                    let typeMatch = !selectedTypes.length || selectedTypes.includes(type);
+                    let priceMatch = !selectedPrices.length || selectedPrices.some(function (priceRange) {
+                        if (priceRange.startsWith('<')) return price < parseInt(priceRange.slice(1), 10);
+                        const [min, max] = priceRange.split('-').map(Number);
+                        return price >= min && price <= max;
+                    });
+
+                    if (brandMatch && typeMatch && priceMatch) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            $('.filter-group input[type="checkbox"]').on('change', filterProducts);
+        });
+    </script>
+</body>
+</html>

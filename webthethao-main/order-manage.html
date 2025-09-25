@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu bar  -->
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">TỔNG QUAN</a></li>
+            <li><a href="#">SẢN PHẨM</a></li>
+            <li><a href="#">DANH MỤC</a></li>
+            <li><a href="#">KHÁCH HÀNG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- // Menu bar  -->
+
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-brands fa-product-hunt"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li>
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./statistic.html">Thống kê và báo cáo</a>
+                </li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+
+      <!-- Quản lý đơn hàng  -->
+
+      <!-- Bảng hiển thị đơn hàng -->
+      <div class="change-table-1">
+        <h1>Quản lý Đơn hàng</h1>
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>Mã Đơn hàng</th>
+              <th>Ngày mua</th>
+              <th>Trạng thái</th>
+              <th>Tổng tiền</th>
+              <th>Chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>2024-11-03</td>
+              <td><span class="status pending">Đang chờ xử lý</span></td>
+              <td>2,000,000₫</td>
+              <td>
+                <button onclick="showOrderDetails()" class="btn update">
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#002</td>
+              <td>2024-11-02</td>
+              <td><span class="status shipped">Đã vận chuyển</span></td>
+              <td>1,500,000₫</td>
+              <td>
+                <button onclick="showOrderDetails()" class="btn update">
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#003</td>
+              <td>2024-11-01</td>
+              <td><span class="status completed">Đã hoàn thành</span></td>
+              <td>3,200,000₫</td>
+              <td>
+                <button onclick="showOrderDetails()" class="btn update">
+                  Xem
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Chi tiết đơn hàng -->
+        <div id="orderDetails" class="order-details" style="display: none">
+          <h2>Chi tiết Đơn hàng</h2>
+          <div><label>Mã Đơn hàng:</label> #001</div>
+          <div><label>Thông tin sản phẩm:</label> Áo thun, Quần jeans</div>
+          <div><label>Số lượng:</label> 2</div>
+          <div><label>Giá tiền:</label> 1,000,000₫</div>
+          <div><label>Người mua:</label> Nguyễn Văn A</div>
+          <div>
+            <label>Địa chỉ giao hàng:</label> 123 Đường ABC, Quận 1, TP. HCM
+          </div>
+
+          <!-- Chức năng cập nhật và in hóa đơn -->
+          <div class="actions">
+            <button class="btn update">Cập nhật trạng thái</button>
+            <button class="btn print" onclick="window.print()">
+              In hóa đơn
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Inner Wrap -->
+
+    <script>
+      // Hiển thị chi tiết đơn hàng khi bấm nút "Xem"
+      function showOrderDetails() {
+        document.getElementById("orderDetails").style.display = "block";
+      }
+    </script>
+
+    <!-- Quản lý đơn hàng  -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="back-to-top show">
+                  <i class="fa fa-arrow-circle-up"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer  -->
+  </body>
+</html>

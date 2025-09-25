@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=".././admin/admin_responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <!-- Menu bar  -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="./admin.html">TỔNG QUAN</a>
+            </li>
+            <li>
+              <a href="./product-manage.html">SẢN PHẨM</a>
+            </li>
+            <li>
+              <a href="./manage-category.html">DANH MỤC</a>
+            </li>
+            <li>
+              <a href="./user-manage.html">KHÁCH HÀNG</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <!-- // Menu bar  -->
+    <!-- Inner Wrap -->
+    <div class="inner-wrap">
+      <!-- Slide bar Left  -->
+      <ul class="sider">
+        <li class="active">
+          <div class="inner-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a href="./admin.html">Tổng quan</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <a href="./product-manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-list"></i>
+          </div>
+          <a href="./manage-category.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <a href="./order-manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <a href="./user-manage.html">Quản lý người dùng</a>
+        </li>
+        <li>
+          <div class="inner-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <a href="./content-manage.html">Quản lý nội dung trang</a>
+        </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
+      <!-- Slide bar Left  -->
+      <!-- Tổng quan trang admin  -->
+      <div class="inner-manage">
+        <!-- Thanh tìm kiếm -->
+        <!-- <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <i class="fad fa-search"></i>
+        </div> -->
+        <!-- Hàng 1: Số liệu tổng quát -->
+        <div class="table-container table-1">
+          <h3>Số liệu tổng quát</h3>
+          <div class="row">
+            <div class="card">
+              <h3>Tổng Sản Phẩm</h3>
+              <p>1200</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Đơn Hàng</h3>
+              <p>850</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Khách Hàng</h3>
+              <p>450</p>
+            </div>
+            <div class="card">
+              <h3>Tổng Doanh Thu</h3>
+              <p>1,500,000₫</p>
+            </div>
+          </div>
+        </div>
+        <!-- Hàng 2: Đơn hàng gần đây -->
+        <div class="table-container table-2">
+          <h3>Những Đơn Hàng Gần Đây</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Tên Khách Hàng</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Ngày Mua</th>
+                <th>Số Lượng</th>
+                <th>Số Tiền</th>
+                <th>Trạng Thái</th>
+                <th>Xem Chi Tiết</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nguyễn Văn A</td>
+                <td>Áo Thun</td>
+                <td>01/11/2024</td>
+                <td>2</td>
+                <td>2,000,000₫</td>
+                <td>Đã Giao</td>
+                <td>
+                  <a href="./order-detail.html?orderId=001" class="btn-view"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Trần Thị B</td>
+                <td>Giày Thể Thao</td>
+                <td>30/10/2024</td>
+                <td>1</td>
+                <td>3.200,004₫</td>
+                <td>Đang Giao</td>
+                <td>
+                  <a href="./order-detail.html?orderId=004" class="btn-view"
+                    >View</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Hàng 3: Quản lý chung -->
+          <div class="table-container table-3">
+            <h3>Quản lý chung</h3>
+            <div class="row">
+              <div class="dashboard-box">
+                <h4>Tài Khoản Người Dùng</h4>
+                <p>Số lượng tài khoản: 150</p>
+                <p>Đang hoạt động: 120</p>
+                <p>Ngừng hoạt động: 30</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Danh Mục Sản Phẩm</h4>
+                <p>Số lượng danh mục: 20</p>
+                <p>Đang hoạt động: 18</p>
+                <p>Ngừng hoạt động: 2</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Sản Phẩm</h4>
+                <p>Số lượng sản phẩm: 500</p>
+                <p>Đang hoạt động: 450</p>
+                <p>Hết hàng: 30</p>
+                <p>Ngừng hoạt động: 20</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Khách Hàng Truy Cập</h4>
+                <p>Số lượng truy cập hiện tại: 25</p>
+                <p>Thời gian truy cập nhiều nhất: 15h</p>
+                <p>
+                  Tài khoản vừa truy cập: nguyen@example.com, Nguyễn Văn C,
+                  0123456789
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span
+              >Nhấn nút Thống kê để xem dữ liệu. Vui lòng bỏ trống khoảng thời
+              gian để xem tất cả dữ liệu.</span
+            >
+          </p>
+          <!-- Form Lọc Thống Kê -->
+          <form id="statsForm" onsubmit="filterStats(event)">
+            <label for="statsStartDate">Từ ngày:</label>
+            <input type="date" id="statsStartDate" />
+            <label for="statsEndDate">Đến ngày:</label>
+            <input type="date" id="statsEndDate" />
+            <button type="submit">Thống kê</button>
+          </form>
+          <!-- Thống kê Mặt Hàng -->
+          <h2>Thống kê Mặt Hàng</h2>
+          <table class="product-stats-table">
+            <thead>
+              <tr>
+                <th>Mặt hàng</th>
+                <th>Số lượng bán ra</th>
+                <th>Tổng tiền</th>
+                <th>Xem hóa đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
+            </tbody>
+          </table>
+          <table class="product-stats-table">
+            <thead>
+              <tr>
+                <th>Tổng thu:</th>
+                <th style="font-weight: bold; color: green">
+                  Sản phẩm bán chạy nhất
+                </th>
+                <th style="font-weight: bold; color: orange">
+                  Sản phẩm bán ế nhất
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>
+                <span id="totalSales">0₫</span>
+              </td>
+              <td>
+                <span id="bestSellingItem">Chưa có dữ liệu</span>
+              </td>
+              <td>
+                <span id="leastSellingItem">Chưa có dữ liệu</span>
+              </td>
+            </tbody>
+          </table>
+          <!-- Thống kê Khách Hàng -->
+          <h2>Thống kê Khách Hàng</h2>
+          <table class="customer-stats-table">
+            <thead>
+              <tr>
+                <th>Khách hàng</th>
+                <th>Tổng số tiền</th>
+                <th>Xem hóa đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
+            </tbody>
+          </table>
+          <button onclick="printTables()" class="btn btn-primary">
+            In thống kê
+          </button>
+        </div>
+        <script>
+          // Giả sử chúng ta có dữ liệu mẫu cho mặt hàng và khách hàng
+          const orders = [
+            {
+              orderId: "001",
+              date: "2024-11-03",
+              items: [
+                {
+                  name: "Đồng hồ xe đạp BoGeer Manburen MS-602B",
+                  quantity: 10,
+                  total: 2000000,
+                },
+              ],
+              customer: "Nguyễn Văn Duy",
+              total: 2000000,
+            },
+            {
+              orderId: "002",
+              date: "2024-11-02",
+              items: [
+                {
+                  name: "Đồ bơi thể thao Adidas",
+                  quantity: 5,
+                  total: 1500000,
+                },
+              ],
+              customer: "Trần Thị Lan",
+              total: 1500000,
+            },
+            {
+              orderId: "003",
+              date: "2024-11-01",
+              items: [
+                {
+                  name: "Balo leo núi JACK WOLFSKIN MOAB JAM 18",
+                  quantity: 15,
+                  total: 1500000,
+                },
+              ],
+              customer: "Nguyễn Văn Anh",
+              total: 1500000,
+            },
+            {
+              orderId: "004",
+              date: "2024-11-05",
+              items: [
+                {
+                  name: "Áo chơi bóng bàn",
+                  quantity: 12,
+                  total: 3200000,
+                },
+              ],
+              customer: "Lê Thị Duyên",
+              total: 3200000,
+            },
+            // Thêm các đơn hàng khác...
+          ];
+
+          function filterStats(event) {
+            event.preventDefault();
+            const startDate = document.getElementById("statsStartDate").value;
+            const endDate = document.getElementById("statsEndDate").value;
+            // Lọc đơn hàng theo khoảng thời gian
+            const filteredOrders = orders.filter((order) => {
+              const orderDate = new Date(order.date);
+              return (
+                (!startDate || orderDate >= new Date(startDate)) &&
+                (!endDate || orderDate <= new Date(endDate))
+              );
+            });
+            updateProductStats(filteredOrders);
+            updateCustomerStats(filteredOrders);
+          }
+
+          function updateProductStats(filteredOrders) {
+            const productStats = {};
+            let totalSales = 0;
+            // Thống kê mặt hàng
+            filteredOrders.forEach((order) => {
+              order.items.forEach((item) => {
+                if (!productStats[item.name]) {
+                  productStats[item.name] = {
+                    quantity: 0,
+                    total: 0,
+                    orderIds: [],
+                  }; // Thêm orderIds để lưu thông tin các orderId
+                }
+                productStats[item.name].quantity += item.quantity;
+                productStats[item.name].total += item.total;
+                productStats[item.name].orderIds.push(order.orderId); // Lưu orderId vào đây
+                totalSales += item.total;
+              });
+            });
+            // Cập nhật bảng mặt hàng
+            const productTableBody = document.querySelector(
+              ".product-stats-table tbody"
+            );
+            productTableBody.innerHTML = "";
+            let bestSellingItem = {
+              name: "",
+              total: 0,
+            };
+            let leastSellingItem = {
+              name: "",
+              total: Infinity,
+            };
+            Object.keys(productStats).forEach((itemName) => {
+              const stats = productStats[itemName];
+              const row = document.createElement("tr");
+              row.innerHTML = `
+      
+            <td>${itemName}</td>
+            <td>${stats.quantity}</td>
+            <td>${stats.total.toLocaleString()}₫</td>
+            <td>
+              <a href="order-detail.html?orderId=${stats.orderIds.join(
+                ","
+              )}" class="btn">Xem hóa đơn</a>
+            </td>
+            <!-- Sử dụng join để hiển thị tất cả orderIds -->
+    `;
+              productTableBody.appendChild(row);
+              // Cập nhật bán chạy và ế nhất
+              if (stats.total > bestSellingItem.total) {
+                bestSellingItem = {
+                  name: itemName,
+                  total: stats.total,
+                };
+              }
+              if (stats.total < leastSellingItem.total) {
+                leastSellingItem = {
+                  name: itemName,
+                  total: stats.total,
+                };
+              }
+            });
+            // Cập nhật tổng thu, bán chạy nhất và ế nhất
+            document.getElementById("totalSales").textContent =
+              totalSales.toLocaleString() + "₫";
+            document.getElementById("bestSellingItem").textContent =
+              bestSellingItem.name;
+            document.getElementById("leastSellingItem").textContent =
+              leastSellingItem.name === ""
+                ? "Chưa có dữ liệu"
+                : leastSellingItem.name;
+          }
+
+          function updateCustomerStats(filteredOrders) {
+            const customerStats = {};
+
+            // Thống kê khách hàng
+            filteredOrders.forEach((order) => {
+              const customer = order.customer;
+              if (!customerStats[customer]) {
+                customerStats[customer] = {
+                  total: 0,
+                  orderIds: [], // Thêm danh sách orderId cho từng khách hàng
+                };
+              }
+              customerStats[customer].total += order.total;
+              customerStats[customer].orderIds.push(order.orderId); // Lưu orderId
+            });
+
+            // Cập nhật bảng khách hàng
+            const customerTableBody = document.querySelector(
+              ".customer-stats-table tbody"
+            );
+            customerTableBody.innerHTML = "";
+
+            // Lấy danh sách khách hàng sắp xếp theo tổng tiền giảm dần (top 5)
+            const sortedCustomers = Object.keys(customerStats)
+              .sort((a, b) => customerStats[b].total - customerStats[a].total)
+              .slice(0, 5);
+
+            sortedCustomers.forEach((customerName) => {
+              const stats = customerStats[customerName];
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                  <td>${customerName}</td>
+                  <td>${stats.total.toLocaleString()}₫</td>
+                  <td>
+                    <a href="order-detail.html?orderId=${stats.orderIds.join(
+                      ","
+                    )}" class="btn">Xem hóa đơn</a>
+                  </td>
+                `;
+              customerTableBody.appendChild(row);
+            });
+          }
+        </script>
+        <script>
+          // Hàm để in các bảng
+          function printTables() {
+            // Tạo một bản sao của các bảng cần in
+            const productTable = document.querySelector(
+              ".product-stats-table"
+            ).outerHTML;
+            const customerTable = document.querySelector(
+              ".customer-stats-table"
+            ).outerHTML;
+            // Lấy nội dung bảng thông kê
+            const totalSales =
+              document.getElementById("totalSales").textContent;
+            const bestSellingItem =
+              document.getElementById("bestSellingItem").textContent;
+            const leastSellingItem =
+              document.getElementById("leastSellingItem").textContent;
+
+            // Tạo nội dung để in
+            const printContent = `
+                  <h2>Thống kê Mặt Hàng</h2>
+                  ${productTable}
+                  <h2>Thống kê Khách Hàng</h2>
+                  ${customerTable}
+              `;
+
+            // Tạo bảng thống kê mới với dữ liệu
+            const statsTable = `
+                  <table class="product-stats-table">
+                    <thead>
+                      <tr>
+                        <th>Tổng thu:</th>
+                        <th>Bán chạy nhất:</th>
+                        <th>Ế nhất:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>${totalSales}</td>
+                        <td>${bestSellingItem}</td>
+                        <td>${leastSellingItem}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                `;
+
+            // Tạo một cửa sổ mới để in
+            const printWindow = window.open("", "", "height=600,width=800");
+            printWindow.document.write(
+              "<html><head><title>In Thống Kê</title></head><body>"
+            );
+            printWindow.document.write(printContent);
+            // Chèn nội dung bảng vào cửa sổ in
+            printWindow.document.write("<h2>Thống kê</h2>");
+            printWindow.document.write(statsTable);
+            printWindow.document.write(
+              "<style>/* Định dạng khi in */ body { font-family: Arial, sans-serif; margin: 20px; } table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { padding: 8px; text-align: left; border: 1px solid #ddd; } th { background-color: #4CAF50; color: white; } tr:nth-child(even) { background-color: #f2f2f2; } tr:hover { background-color: transparent; } .print-btn { display: none; }</style></body></html>"
+            );
+            printWindow.document.close();
+            printWindow.print();
+          }
+        </script>
+        <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+              userTitle.textContent = `Admin (${username})`;
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              userTitle.textContent = "Chưa Login";
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+      </div>
+    </div>
+    <!-- Inner Wrap -->
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-20 padding-bottom-20">
+            <div class="copyright clearfix">
+              <div class="container">
+                <div class="inner clearfix">
+                  <div class="row">
+                    <div class="col-sm-12 text-center">
+                      <span
+                        >© Bản quyền thuộc về <b>Nhóm 21</b>
+                        <span class="s480-f">|</span> Cung cấp bởi
+                        <a
+                          href="https://fit.sgu.edu.vn/site/"
+                          title="SGU IT"
+                          target="_blank"
+                          rel="nofollow"
+                          style="color: white"
+                          >SGU IT</a
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer  -->
+  </body>
+</html>
