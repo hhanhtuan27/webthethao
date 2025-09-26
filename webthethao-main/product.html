@@ -17,6 +17,15 @@
     <script src="./js/main.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/cs.script.js"></script>
+    <style>
+      /* 3 sản phẩm / hàng trên màn hình >=992px */
+      @media (min-width:992px){
+        .selection-new-product .product-grid.col-md-3{
+          flex:0 0 33.3333%;
+          max-width:33.3333%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -108,7 +117,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -162,10 +171,16 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
                           <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -191,7 +206,13 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -220,6 +241,9 @@
                         </li>
                         <li>
                           <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -311,7 +335,7 @@
                               </li>
                               <li class="level1 parent item">
                                 <h2 class="h4">
-                                  <a href="./product.html?query=áo">
+                                  <a href="./product.html?query=trangphucthethao">
                                     <span>Trang phục thể thao</span>
                                   </a>
                                 </h2>
@@ -849,7 +873,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -877,7 +901,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -905,7 +929,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -933,7 +957,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -958,7 +982,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -986,7 +1010,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1014,7 +1038,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1042,7 +1066,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1070,7 +1094,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1098,14 +1122,14 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-grid col-md-3 col-sm-6" data-brand="Bianchi" data-type="Quần áo thể thao" data-key="Bộ quần áo xe đạp thể thao Bianchi" data-price="450000">
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Bianchi" data-type="Quần áo thể thao" data-key="Bộ quần áo xe đạp thể thao Bianchi" data-price="450000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                       <a href="#">
@@ -1154,7 +1178,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1182,7 +1206,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1210,7 +1234,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1238,7 +1262,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1294,14 +1318,14 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                       <a href="#">
@@ -1322,14 +1346,14 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao polo Kamito Victory" data-price="159000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                       <a href="#">
@@ -1350,14 +1374,14 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể nam nam Kamito Hanabi" data-price="152000">
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao nam Kamito Hanabi" data-price="152000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                       <a href="#">
@@ -1370,7 +1394,7 @@
                     </div>
                     <div class="product-content">
                       <h3 class="title">
-                        <a href="#">Áo thể nam nam Kamito Hanabi</a>
+                        <a href="#">Áo thể thao nam Kamito Hanabi</a>
                       </h3>
                       <div class="tt-price">
                         <span class="new-price">152.000₫</span>
@@ -1378,14 +1402,14 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao nam Kamito Hanabi" data-price="152000">
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo thể thao nam Kamito Hanabi" data-price="152000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                       <a href="#">
@@ -1406,13 +1430,131 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
                       </div>
                     </div>
                   </div>
+
+                <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo Polo Kamito LS.01" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/ao_lifestyle-05_5e2443cbc289423e9872c700250f3eaa_master.jpg" />
+                        <img class="pic-2" src="./img/ao_lifestyle-06_e493c042b903466c8d1314d6dc658dae_master.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo Polo Kamito LS.01</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                      <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Áo" data-key="Áo Polo Kamito LS.02" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/ao_lifestyle-07_4fce7794e6ab42dcb6a8a8f614d4edc4_master.jpg" />
+                        <img class="pic-2" src="./img/ao_lifestyle-08_01a097b0d9e442d6ab596acf00d598c6_master.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Áo Polo Kamito LS.02</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Quần" data-key=" Quần short Kamito Comfort" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/artboard_3_3c8287d7aad7484089b521674a9b1bcc_master.png" />
+                        <img class="pic-2" src="./img/artboard_1_efcb84ec550d4911bca5853ac9d28b87_master.png" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Quần short Kamito Comfort</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-grid col-md-4 col-sm-6" data-brand="Khác" data-type="Quần" data-key="Quần Kamito Basic V1" data-price="152000">
+                    <div class="product-image">
+                      <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
+                      <a href="#">
+                        <img class="pic-1" src="./img/artboard_6_79d23628ac014e17bce7fa9f772c0d21_master.jpg" />
+                        <img class="pic-2" src="./img/artboard_4_a02fde4494b34c6a85ac55203c6463b1_master.jpg" />
+                      </a>
+                      <span class="tt-label-location">
+                        <span class="tt-label-new">Giảm 15% </span>
+                      </span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title">
+                        <a href="#">Quần Kamito Basic V1</a>
+                      </h3>
+                      <div class="tt-price">
+                        <span class="new-price">152.000₫</span>
+                        <span class="old-price">179.000₫ </span>
+                      </div>
+                      <div class="add-to-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <a onclick="cartquick()">ADD TO CARD</a>
+                        <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
+                          <i class="fa fa-heart-o"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
                   <div class="product-grid col-md-3 col-sm-6" data-brand="Khác" data-type="Balo" data-key="Ba Lô 5.11 Tactical Rush 12" data-price="455000">
                     <div class="product-image">
                       <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
@@ -1434,7 +1576,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1462,7 +1604,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1490,7 +1632,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1518,7 +1660,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                       </div>
                     </div>
                   </div>
@@ -1543,7 +1685,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1571,7 +1713,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                        <a onclick="cartquick()">ADD TO CARD</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1637,10 +1779,94 @@
                 </div>
               </div>
               
-              <div id="pagination" style="display:none; text-align: center;">
+              <!-- <div id="pagination" style="display:none; text-align: center;">
                 <button class="btn btn-gray" style="border: 1px solid; background: gray; color: white;" id="prev" > 1 </button>
                 <button class="btn  btn-gray" style="border: 1px solid; background: gray; color: white;"   id="next"> 2 </button>
-              </div>
+              </div> -->
+
+
+              <!-- PHÂN TRANG (thay cho đoạn cũ) -->
+<div id="pagination" class="pagination-wrapper" style="text-align:center; margin:25px 0;">
+  <!-- prev/next ẩn để không lỗi với script cũ -->
+  <button id="prev" style="display:none;"></button>
+  <button id="next" style="display:none;"></button>
+
+  <button class="btn btn-gray page-btn" data-page="1" style="border:1px solid gray; background:gray; color:#fff;">1</button>
+  <button class="btn btn-gray page-btn" data-page="2" style="border:1px solid gray; background:gray; color:#fff;">2</button>
+  <button class="btn btn-gray page-btn" data-page="3" style="border:1px solid gray; background:gray; color:#fff;">3</button>
+</div>
+<script>
+/* Phân trang chỉ cập nhật tham số ?page=, không thay đổi nội dung */
+(function(){
+  const totalPages = 3;
+  const wrap = document.getElementById('pagination');
+  if(!wrap) return;
+
+  function getPage(){
+    const p = parseInt(new URLSearchParams(window.location.search).get('page')||'1',10);
+    return (p>=1 && p<=totalPages) ? p : 1;
+  }
+  let currentPage = getPage();
+
+  function highlight(){
+    wrap.querySelectorAll('.page-btn').forEach(b=>{
+      const active = parseInt(b.dataset.page,10) === currentPage;
+      b.classList.toggle('active', active);
+      if(active){
+        b.classList.add('active');
+        b.style.background = '#0099cc';
+        b.style.borderColor = '#0099cc';
+        b.style.color = '#fff';
+      }else{
+        b.classList.remove('active');
+        b.style.background = 'gray';
+        b.style.borderColor = 'gray';
+        b.style.color = '#fff';
+      }
+    });
+  }
+
+  function setUrl(page){
+    const params = new URLSearchParams(window.location.search);
+    params.set('page', page);
+    history.replaceState(null,'', window.location.pathname + '?' + params.toString());
+  }
+
+  wrap.addEventListener('click', e=>{
+    if(e.target.classList.contains('page-btn')){
+      e.preventDefault();
+      const p = parseInt(e.target.dataset.page,10);
+      if(p!==currentPage){
+        currentPage = p;
+        setUrl(p);
+        highlight();
+      }
+    }
+  });
+
+  highlight();
+})();
+</script>
+
+<style>
+.pagination-wrapper .page-btn{
+  border:1px solid gray;
+  background:gray;
+  color:#fff;
+  margin:0 3px;
+  min-width:38px;
+}
+.pagination-wrapper .page-btn.active{
+  background:#0099cc;
+  border-color:#0099cc;
+}
+.pagination-wrapper .page-btn:hover{
+  background:#007fa6;
+  border-color:#007fa6;
+}
+</style>
+
+
 
 <script type="text/javascript">
   const products = document.querySelectorAll(".product-grid"); // Lấy tất cả các sản phẩm
@@ -1796,15 +2022,6 @@ window.onload = function() {document.getElementById("next").click();};
                 </span>
               </div>
             </div>
-          </div>
-          <div class="tfoot-popup">
-            <div class="tfoot-popup-1 clearfix">
-              <div class="pull-left popup-ship">
-                <p>Giao hàng trên toàn quốc</p>
-              </div>
-              <div class="pull-right popup-total">
-                <p>Thành tiền: <span class="total-price">750.000₫</span>
-                </p>
               </div>
             </div>
             <div class="tfoot-popup-2 clearfix">
@@ -2319,8 +2536,6 @@ function cartquick() {
     window.location.href = "login.html";
   }
 }
-
-    // duplicate cart badge script removed (handled globally in js/cart.js)
     </script>
     <script>
       var elements = document.getElementsByClassName("row");
@@ -2428,6 +2643,101 @@ function cartquick() {
         });
       }
     </script>
-  <script src="js/cart.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function filterProducts() {
+      const selectedBrands = $('.filter-brand:checked').map(function() {
+        return $(this).val().toLowerCase();
+      }).get();
+      const selectedTypes = $('.filter-type:checked').map(function() {
+        return $(this).val().toLowerCase();
+      }).get();
+      const selectedPrices = $('.filter-price:checked').map(function() {
+        return $(this).val();
+      }).get();
+      let visibleProductsCount = 0;
+
+      const queryKeywordRaw = getQueryParam('query');
+      const queryKeyword = queryKeywordRaw ? queryKeywordRaw.toLowerCase() : '';
+
+      // Từ khóa đặc biệt cho Trang phục thể thao
+      const apparelKeywords = ['áo','quần'];
+      const isApparelQuery = queryKeyword === 'trangphucthethao';
+
+      $('.product-grid').each(function() {
+        const brand = ($(this).data('brand') || '').toLowerCase();
+        const type  = ($(this).data('type')  || '').toLowerCase();
+        const key   = ($(this).data('key')   || '').toLowerCase();
+        const name  = ($(this).data('name')  || '').toLowerCase();
+        const price = parseInt($(this).data('price'), 10);
+
+        let keywordMatch = true;
+        if (queryKeyword) {
+          if (isApparelQuery) {
+            // Match nếu chứa ít nhất 1 trong các từ “áo” hoặc “quần”
+            keywordMatch = apparelKeywords.some(k =>
+              name.includes(k) || key.includes(k) || type.includes(k)
+            );
+          } else {
+            keywordMatch = name.includes(queryKeyword) ||
+                           brand.includes(queryKeyword) ||
+                           key.includes(queryKeyword) ||
+                           type.includes(queryKeyword);
+          }
+        }
+
+        let brandMatch = !selectedBrands.length || selectedBrands.some(b => brand.includes(b));
+        let typeMatch  = !selectedTypes.length  || selectedTypes.some(t => type.includes(t));
+        let priceMatch = !selectedPrices.length || selectedPrices.some(function(range) {
+          if (range.startsWith('<')) return price < parseInt(range.slice(1),10);
+            const [min,max] = range.split('-').map(Number);
+            return price >= min && price <= max;
+        });
+
+        if (brandMatch && typeMatch && priceMatch && keywordMatch) {
+          $(this).show();
+          visibleProductsCount++;
+        } else {
+          $(this).hide();
+        }
+      });
+
+      if (visibleProductsCount === 0) {
+        $('#noProductsMessage').show().html(`
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          Không tìm thấy sản phẩm cho từ khoá '<strong>${queryKeywordRaw}</strong>'.
+        `);
+      } else {
+        $('#noProductsMessage').hide();
+        if (queryKeywordRaw) {
+          $('#ti-title').html(
+            isApparelQuery
+              ? "Trang phục thể thao"
+              : `Sản phẩm cho từ khoá '<strong>${queryKeywordRaw}</strong>'.`
+          );
+        }
+      }
+    }
+
+    filterProducts();
+    $('.filter-list input[type="checkbox"]').on('change', filterProducts);
+  });
+</script>
+
+
+<!--PHÂN TRANG -->
+
+
+
+
   </body>
 </html>

@@ -17,7 +17,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/cs.script.js"></script>
-    <script src="./js/account-header.js"></script>
   </head>
   <body>
     <header>
@@ -109,7 +108,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -150,78 +149,99 @@
                   }
                 </style>
                 <div class="account-sign">
-                  <!-- Sẽ được account-header.js thay nội dung -->
-                  <a href="login.html" class="account-header">
+                  <a href="#" class="account-header">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <div class="a-text">
-                      Đăng nhập
-                      <span>Tài khoản và đơn hàng</span>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <!-- <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a> -->
+                        </li>
+                      </ul>
                     </div>
                   </a>
                 </div>
-                <!-- (ĐÃ XÓA các <script> cũ hiển thị theo email) -->
                 <script type="text/javascript">
-  // Helper (đặt trước mọi script dùng tên hiển thị)
-  function escapeHtml(str){
-    return str ? str.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])) : '';
-  }
-  function getDisplayName(){
-    const keys = ['displayName','userName','fullName','userFullName'];
-    for (const k of keys){
-      const v = sessionStorage.getItem(k);
-      if (v) return v;
-    }
-    const email = sessionStorage.getItem('userEmail');
-    return email ? email.split('@')[0] : '';
-  }
-</script>
-<!-- Script thay account-sign -->
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    const accountSign = document.querySelector(".account-sign");
-    const email = sessionStorage.getItem("userEmail");
-    const displayNameRaw = getDisplayName();
-    const loggedIn = !!email;
-    if (loggedIn){
-      const safeName = escapeHtml(displayNameRaw || email);
-      accountSign.innerHTML = `
-        <a href="customer-information.html" class="account-header">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <div class="a-text">
-            ${safeName}
-            <span>Tài khoản và đơn hàng</span>
-          </div>
-          <div class="Sub-1">
-            <ul class="Sub-menu">
-              <li><a href="customer-information.html">Quản lý tài khoản</a></li>
-              <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
-            </ul>
-          </div>
-        </a>`;
-      document.getElementById("logoutBtn").addEventListener("click", function(e){
-        e.preventDefault();
-        sessionStorage.clear();
-        alert("Bạn đã đăng xuất.");
-        window.location.reload();
-      });
-    } else {
-      accountSign.innerHTML = `
-        <a href="login.html" class="account-header">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <div class="a-text">
-            Đăng nhập
-            <span>Tài khoản và đơn hàng</span>
-          </div>
-          <div class="Sub-1">
-            <ul class="Sub-menu">
-              <li><a href="login.html">Đăng nhập</a></li>
-              <li><a href="register.html">Đăng ký</a></li>
-            </ul>
-          </div>
-        </a>`;
-    }
-  });
-</script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
                 <script type="text/javascript">
                   document.addEventListener("DOMContentLoaded", function () {
                   // Lấy phần tử nút giỏ hàng
@@ -424,8 +444,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/slick.js" type="text/javascript"></script>
-  <script src="js/cart.js"></script>
-  <script>
+    <script>
       $(document).ready(function() {
         $(".slider").slick({
           dots: true,
@@ -491,7 +510,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -521,7 +540,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -551,7 +570,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -581,7 +600,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -608,7 +627,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -638,7 +657,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -668,7 +687,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -698,7 +717,7 @@
               </div>
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                <a onclick="cartquick()">ADD TO CARD</a>
                 <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -729,7 +748,7 @@
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -759,7 +778,7 @@
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -819,7 +838,7 @@
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -849,7 +868,7 @@
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1259,37 +1278,6 @@ function cartquick() {
   }
 }
 
-// --- Cart badge visibility control (added) ---
-(function() {
-  try {
-    var isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-    var badgeEls = document.getElementsByClassName('cartCount');
-    for (var i = 0; i < badgeEls.length; i++) {
-      if (!isLoggedIn) {
-        badgeEls[i].style.display = 'none';
-      } else {
-        // Only show if there is a numeric count stored
-        var storedCount = sessionStorage.getItem('cartCount');
-        if (storedCount && !isNaN(parseInt(storedCount, 10))) {
-          badgeEls[i].textContent = storedCount;
-          badgeEls[i].style.display = 'inline-block';
-        } else if (badgeEls[i].textContent.trim() !== '' && !isNaN(parseInt(badgeEls[i].textContent.trim(),10))) {
-          // Preserve existing hard-coded count (if any) when logged in
-          badgeEls[i].style.display = 'inline-block';
-        } else {
-          // Default to 0 if logged in but no data
-            badgeEls[i].textContent = '0';
-            badgeEls[i].style.display = 'inline-block';
-        }
-      }
-    }
-  } catch (e) {
-    // Fail silently to avoid breaking page
-    console.warn('Cart badge init error', e);
-  }
-})();
-// --- End cart badge visibility control ---
-
       var container = document.getElementById("popup-cart");
       var btns = container.getElementsByClassName("product-grid");
       for (var i = 0; i < btns.length; i++) {
@@ -1475,7 +1463,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1505,7 +1493,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1535,7 +1523,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a>VIEW PRODUCTS</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1565,7 +1553,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1597,7 +1585,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1627,7 +1615,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1657,7 +1645,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1687,7 +1675,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1719,7 +1707,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -1749,7 +1737,7 @@ function cartquick() {
                 </div>
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                  <a onclick="addToCartCount(1);cartquick()">ADD TO CARD</a>
+                  <a onclick="cartquick()">ADD TO CARD</a>
                   <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
@@ -2247,18 +2235,6 @@ function cartquick() {
                   </h3>
                   <ul class="list-menu" id="F3">
                     <li>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="footer-widget">
-                  <h3 onclick="F4('F3')">
-                    <span>Hỗ trợ khách hàng</span>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </h3>
-                  <ul class="list-menu" id="F3">
-                    <li>
                       <a href="index.html">Hướng dẫn mua hàng</a>
                     </li>
                     <li>
@@ -2337,6 +2313,9 @@ function cartquick() {
       var elements = document.getElementsByClassName("footer-widget");
       var i;
 
+      function F4(id) {
+        const temp = document.getElementById(id);
+        if (temp.style.display == "block") {
           temp.style.display = "none";
           document.getElementById(id).style.display = "none";
         } else {

@@ -108,7 +108,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -162,6 +162,9 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
@@ -194,7 +197,13 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -880,31 +889,6 @@
           modal1.style.display = "none";
         }
       };
-    </script>
-    <script>
-      // Cart badge visibility control
-      (function() {
-        try {
-          var isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-          var badgeEls = document.getElementsByClassName('cartCount');
-          for (var i = 0; i < badgeEls.length; i++) {
-            if (!isLoggedIn) {
-              badgeEls[i].style.display = 'none';
-            } else {
-              var storedCount = sessionStorage.getItem('cartCount');
-              if (storedCount && !isNaN(parseInt(storedCount, 10))) {
-                badgeEls[i].textContent = storedCount;
-                badgeEls[i].style.display = 'inline-block';
-              } else if (badgeEls[i].textContent.trim() !== '' && !isNaN(parseInt(badgeEls[i].textContent.trim(),10))) {
-                badgeEls[i].style.display = 'inline-block';
-              } else {
-                badgeEls[i].textContent = '0';
-                badgeEls[i].style.display = 'inline-block';
-              }
-            }
-          }
-        } catch (e) { console.warn('Cart badge init error', e);} 
-      })();
     </script>
   </body>undefined
 </html>

@@ -108,7 +108,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -162,10 +162,16 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
                           <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -191,7 +197,13 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -220,6 +232,9 @@
                         </li>
                         <li>
                           <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -672,7 +687,9 @@
               }
 
               function addFilteredItem(name, id) {
-                var filteredItemTemplate = "<li class='filter-container__selected-filter-item' data-for='{3}'><a href='javascript:void(0)' onclick=\"{0}\"><i class='fa fa-close'></i> {1}</a></li>";
+                var filteredItemTemplate = " < li class = 'filter-container__selected-filter-item'
+                for = '{3}' > < a href = 'javascript:void(0)'
+                onclick = \"{0}\"> < i class = 'fa fa-close' > < /i> {1} < /a> < /li>";
                 filteredItemTemplate = filteredItemTemplate.replace("{0}", "removeFilteredItem('" + id + "')");
                 filteredItemTemplate = filteredItemTemplate.replace("{1}", name);
                 filteredItemTemplate = filteredItemTemplate.replace("{3}", id);

@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thông tin</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cs.script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="topbar" style="max-width: 1150px; margin: auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-7 left-infor">
+                <ul class="ul-inform">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-5 hidden-xs">
+                <ul class="ul-social">
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-main" style="max-width: 1150px; margin: auto">
+            <div class="row" style="
+                display: flex;
+                max-width: 1150px;
+                margin: auto;
+                justify-content: space-between;
+              ">
+              <div class="col-md-3 col-100-h">
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+                </button>
+                <div class="logo">
+                  <a href="index.html" class="logo-wrapper">
+                    <img src="./img/logo.png" alt="logo SGU Sport" />
+                  </a>
+                </div>
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-forms">
+                <div class="search-header">
+                  <div class="header_search search_form">
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn icon-fallback-text">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="index-cart cart-wishlist">
+                  <ul class="clearfix">
+                    <li>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
+                <div class="account-sign">
+                  <a href="#" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html" style="display: none">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <nav class="hidden-sm hidden-xs">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul id="nav" class="nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="has-mega">
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <div class="mega-content">
+                        <div class="level0-wrapper2">
+                          <div class="nav-block nav-block-center">
+                            <ul class="level0">
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="level1 parent item">
+                                <h2 class="h4">
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
+                                </h2>
+                                <ul class="level1">
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
+                                  </li>
+                                  <li class="level2">
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="has-mega abc">
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
+                      <ul class="menu">
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
+                        </li>
+                        <li class="nav-item-lv2">
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="bread-crumb margin-bottom-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <li class="home">
+                <a itemprop="url" href="/" title="Trang chủ">
+                  <span itemprop="title">Trang chủ</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li>
+                <a itemprop="url" href="/account">
+                  <span itemprop="title">Trang Tài khoản</span>
+                </a>
+                <span>
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </li>
+              <li class="active" itemprop="title">Sổ địa chỉ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="address panel-login account-page margin-bottom-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-lg-12">
+            <h1 class="title-head">Địa chỉ của bạn</h1>
+          </div>
+          <div class="col-sm-12 col-lg-12">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="btn-row">
+                  <button class="btn-edit-addr btn btn-blues" type="button" onclick="addadress()">+ Thêm địa chỉ</button>
+                </p>
+              </div>
+              <div id="add_address" class="col-md-12 form-list" style="display:none; margin-top:30px;">
+                <form accept-charset="UTF-8" action="/account/addresses" id="customer_address" method="post" class="has-validation-callback">
+                  <input name="FormType" type="hidden" value="customer_address">
+                  <input name="utf8" type="hidden" value="true">
+                  <div class="clearfix row">
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Tên <span class="required">*</span>
+                        </label>
+                        <input type="text" data-validation-error-msg="Không được để trống" data-validation="required" class="form-control" name="FirstName" placeholder="Nhập tên của bạn" value="ada" required="" requiredmsg="Không được bỏ trống">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Họ <span class="required">*</span>
+                        </label>
+                        <input type="text" data-validation-error-msg="Không được để trống" data-validation="required" class="form-control" name="LastName" placeholder="Nhập họ của bạn" value="" required="" requiredmsg="Không được bỏ trống">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Công ty</label>
+                        <input type="text" class="form-control" name="Company" placeholder="Nhập công ty của bạn" value="">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Địa chỉ <span class="required">*</span>
+                        </label>
+                        <input type="text" data-validation-error-msg="Không được để trống" data-validation="required" class="form-control" name="Address1" placeholder="Nhập địa chỉ của bạn" value="" required="" requiredmsg="Không được bỏ trống">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Địa chỉ 2</label>
+                        <input type="text" class="form-control" name="Address2" placeholder="Nhập địa chỉ của bạn" value="">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Thành phố <span class="required">*</span>
+                        </label>
+                        <input type="text" data-validation-error-msg="Không được để trống" data-validation="required" class="form-control" name="City" placeholder="Nhập thành phố của bạn" value="" required="" requiredmsg="Không được bỏ trống">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Quốc gia <span class="required">*</span>
+                        </label>
+                        <select name="Country" class="form-control mySelect2" id="mySelect1" data-default="Việt Nam">
+                          <option value="United States">United States</option>
+                          <option value="Canada">Canada</option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Armenia">Armenia</option>
+                          <option value="Aruba">Aruba</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Austria">Austria</option>
+                          <option value="Azerbaijan">Azerbaijan</option>
+                          <option value="Bahamas">Bahamas</option>
+                          <option value="Bangladesh">Bangladesh</option>
+                          <option value="Belarus">Belarus</option>
+                          <option value="Belgium">Belgium</option>
+                          <option value="Belize">Belize</option>
+                          <option value="Bermuda">Bermuda</option>
+                          <option value="Bolivia">Bolivia</option>
+                          <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                          <option value="Brazil">Brazil</option>
+                          <option value="Bulgaria">Bulgaria</option>
+                          <option value="Cayman Islands">Cayman Islands</option>
+                          <option value="Chile">Chile</option>
+                          <option value="China">China</option>
+                          <option value="Colombia">Colombia</option>
+                          <option value="Costa Rica">Costa Rica</option>
+                          <option value="Croatia">Croatia</option>
+                          <option value="Cuba">Cuba</option>
+                          <option value="Cyprus">Cyprus</option>
+                          <option value="Czech Republic">Czech Republic</option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="Dominican Republic">Dominican Republic</option>
+                          <option value="Ecuador">Ecuador</option>
+                          <option value="Egypt">Egypt</option>
+                          <option value="Finland">Finland</option>
+                          <option value="France">France</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Germany">Germany</option>
+                          <option value="Gibraltar">Gibraltar</option>
+                          <option value="Greece">Greece</option>
+                          <option value="Guatemala">Guatemala</option>
+                          <option value="Hong Kong">Hong Kong</option>
+                          <option value="Hungary">Hungary</option>
+                          <option value="India">India</option>
+                          <option value="Indonesia">Indonesia</option>
+                          <option value="Ireland">Ireland</option>
+                          <option value="Israel">Israel</option>
+                          <option value="Italy">Italy</option>
+                          <option value="Jamaica">Jamaica</option>
+                          <option value="Japan">Japan</option>
+                          <option value="Jordan">Jordan</option>
+                          <option value="Kazakhstan">Kazakhstan</option>
+                          <option value="Korea, Democratic People" s="" republic="" of'="">Korea, Democratic People's Republic of</option>
+                          <option value="Kuwait">Kuwait</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Mexico">Mexico</option>
+                          <option value="Netherlands">Netherlands</option>
+                          <option value="New Zealand">New Zealand</option>
+                          <option value="Norway">Norway</option>
+                          <option value="Pakistan">Pakistan</option>
+                          <option value="Paraguay">Paraguay</option>
+                          <option value="Peru">Peru</option>
+                          <option value="Philippines">Philippines</option>
+                          <option value="Poland">Poland</option>
+                          <option value="Portugal">Portugal</option>
+                          <option value="Puerto Rico">Puerto Rico</option>
+                          <option value="Qatar">Qatar</option>
+                          <option value="Romania">Romania</option>
+                          <option value="Russia">Russia</option>
+                          <option value="Saudi Arabia">Saudi Arabia</option>
+                          <option value="Singapore">Singapore</option>
+                          <option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic) </option>
+                          <option value="Slovenia">Slovenia</option>
+                          <option value="South Africa">South Africa</option>
+                          <option value="Spain">Spain</option>
+                          <option value="Sweden">Sweden</option>
+                          <option value="Switzerland">Switzerland</option>
+                          <option value="Taiwan">Taiwan</option>
+                          <option value="Thailand">Thailand</option>
+                          <option value="Turkey">Turkey</option>
+                          <option value="Ukraine">Ukraine</option>
+                          <option value="United Arab Emirates">United Arab Emirates</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States minor outlying islands">United States minor outlying islands</option>
+                          <option value="Uruguay">Uruguay</option>
+                          <option value="Uzbekistan">Uzbekistan</option>
+                          <option value="Venezuela">Venezuela</option>
+                          <option value="Serbia">Serbia</option>
+                          <option value="Afghanistan">Afghanistan</option>
+                          <option value="Albania">Albania</option>
+                          <option value="Algeria">Algeria</option>
+                          <option value="American Samoa">American Samoa</option>
+                          <option value="Andorra">Andorra</option>
+                          <option value="Angola">Angola</option>
+                          <option value="Anguilla">Anguilla</option>
+                          <option value="Antarctica">Antarctica</option>
+                          <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                          <option value="Bahrain">Bahrain</option>
+                          <option value="Barbados">Barbados</option>
+                          <option value="Benin">Benin</option>
+                          <option value="Bhutan">Bhutan</option>
+                          <option value="Botswana">Botswana</option>
+                          <option value="Bouvet Island">Bouvet Island</option>
+                          <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                          <option value="Brunei Darussalam">Brunei Darussalam</option>
+                          <option value="Burkina Faso">Burkina Faso</option>
+                          <option value="Burundi">Burundi</option>
+                          <option value="Cambodia">Cambodia</option>
+                          <option value="Cameroon">Cameroon</option>
+                          <option value="Cape Verde">Cape Verde</option>
+                          <option value="Central African Republic">Central African Republic </option>
+                          <option value="Chad">Chad</option>
+                          <option value="Christmas Island">Christmas Island</option>
+                          <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                          <option value="Comoros">Comoros</option>
+                          <option value="Congo">Congo</option>
+                          <option value="Cook Islands">Cook Islands</option>
+                          <option value="Ivory Coast">Ivory Coast</option>
+                          <option value="Djibouti">Djibouti</option>
+                          <option value="Dominica">Dominica</option>
+                          <option value="El Salvador">El Salvador</option>
+                          <option value="Equatorial Guinea">Equatorial Guinea</option>
+                          <option value="Eritrea">Eritrea</option>
+                          <option value="Estonia">Estonia</option>
+                          <option value="Ethiopia">Ethiopia</option>
+                          <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas) </option>
+                          <option value="Faroe Islands">Faroe Islands</option>
+                          <option value="Fiji">Fiji</option>
+                          <option value="French Guiana">French Guiana</option>
+                          <option value="French Polynesia">French Polynesia</option>
+                          <option value="French Southern Territories">French Southern Territories </option>
+                          <option value="Gabon">Gabon</option>
+                          <option value="Gambia">Gambia</option>
+                          <option value="Ghana">Ghana</option>
+                          <option value="Greenland">Greenland</option>
+                          <option value="Grenada">Grenada</option>
+                          <option value="Guadeloupe">Guadeloupe</option>
+                          <option value="Guam">Guam</option>
+                          <option value="Guinea">Guinea</option>
+                          <option value="Guinea-bissau">Guinea-bissau</option>
+                          <option value="Guyana">Guyana</option>
+                          <option value="Haiti">Haiti</option>
+                          <option value="Heard and Mc Donald Islands">Heard and Mc Donald Islands </option>
+                          <option value="Honduras">Honduras</option>
+                          <option value="Iceland">Iceland</option>
+                          <option value="Iran (Islamic Republic of)">Iran (Islamic Republic of) </option>
+                          <option value="Iraq">Iraq</option>
+                          <option value="Kenya">Kenya</option>
+                          <option value="Kiribati">Kiribati</option>
+                          <option value="Korea">Korea</option>
+                          <option value="Kyrgyzstan">Kyrgyzstan</option>
+                          <option value="Lao People" s="" democratic="" republic'="">Lao People's Democratic Republic</option>
+                          <option value="Latvia">Latvia</option>
+                          <option value="Lebanon">Lebanon</option>
+                          <option value="Lesotho">Lesotho</option>
+                          <option value="Liberia">Liberia</option>
+                          <option value="Libya">Libya</option>
+                          <option value="Liechtenstein">Liechtenstein</option>
+                          <option value="Lithuania">Lithuania</option>
+                          <option value="Luxembourg">Luxembourg</option>
+                          <option value="Macau">Macau</option>
+                          <option value="Macedonia">Macedonia</option>
+                          <option value="Madagascar">Madagascar</option>
+                          <option value="Malawi">Malawi</option>
+                          <option value="Maldives">Maldives</option>
+                          <option value="Mali">Mali</option>
+                          <option value="Malta">Malta</option>
+                          <option value="Marshall Islands">Marshall Islands</option>
+                          <option value="Martinique">Martinique</option>
+                          <option value="Mauritania">Mauritania</option>
+                          <option value="Mauritius">Mauritius</option>
+                          <option value="Mayotte">Mayotte</option>
+                          <option value="Micronesia">Micronesia</option>
+                          <option value="Moldova">Moldova</option>
+                          <option value="Monaco">Monaco</option>
+                          <option value="Mongolia">Mongolia</option>
+                          <option value="Montenegro">Montenegro</option>
+                          <option value="Montserrat">Montserrat</option>
+                          <option value="Morocco">Morocco</option>
+                          <option value="Mozambique">Mozambique</option>
+                          <option value="Myanmar">Myanmar</option>
+                          <option value="Namibia">Namibia</option>
+                          <option value="Nauru">Nauru</option>
+                          <option value="Nepal">Nepal</option>
+                          <option value="Netherlands Antilles">Netherlands Antilles</option>
+                          <option value="New Caledonia">New Caledonia</option>
+                          <option value="Nicaragua">Nicaragua</option>
+                          <option value="Niger">Niger</option>
+                          <option value="Nigeria">Nigeria</option>
+                          <option value="Niue">Niue</option>
+                          <option value="Norfolk Island">Norfolk Island</option>
+                          <option value="Northern Mariana Islands">Northern Mariana Islands </option>
+                          <option value="Oman">Oman</option>
+                          <option value="Palau">Palau</option>
+                          <option value="Panama">Panama</option>
+                          <option value="Papua New Guinea">Papua New Guinea</option>
+                          <option value="Pitcairn">Pitcairn</option>
+                          <option value="Reunion">Reunion</option>
+                          <option value="Rwanda">Rwanda</option>
+                          <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                          <option value="Saint Lucia">Saint Lucia</option>
+                          <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                          <option value="Samoa">Samoa</option>
+                          <option value="San Marino">San Marino</option>
+                          <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                          <option value="Senegal">Senegal</option>
+                          <option value="Seychelles">Seychelles</option>
+                          <option value="Sierra Leone">Sierra Leone</option>
+                          <option value="Solomon Islands">Solomon Islands</option>
+                          <option value="Somalia">Somalia</option>
+                          <option value="South Georgia &amp; South Sandwich Islands">South Georgia &amp; South Sandwich Islands</option>
+                          <option value="Sri Lanka">Sri Lanka</option>
+                          <option value="St. Helena">St. Helena</option>
+                          <option value="St. Pierre and Miquelon">St. Pierre and Miquelon</option>
+                          <option value="Sudan">Sudan</option>
+                          <option value="Suriname">Suriname</option>
+                          <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                          <option value="Swaziland">Swaziland</option>
+                          <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                          <option value="Tajikistan">Tajikistan</option>
+                          <option value="Tanzania">Tanzania</option>
+                          <option value="Togo">Togo</option>
+                          <option value="Tokelau">Tokelau</option>
+                          <option value="Tonga">Tonga</option>
+                          <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                          <option value="Tunisia">Tunisia</option>
+                          <option value="Turkmenistan">Turkmenistan</option>
+                          <option value="Turks and Caicos Islands">Turks and Caicos Islands </option>
+                          <option value="Tuvalu">Tuvalu</option>
+                          <option value="Uganda">Uganda</option>
+                          <option value="Vanuatu">Vanuatu</option>
+                          <option value="Vatican City State (Holy See)">Vatican City State (Holy See)</option>
+                          <option value="Việt Nam">Việt Nam</option>
+                          <option value="Virgin Islands (British)">Virgin Islands (British) </option>
+                          <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+                          <option value="Wallis and Futuna Islands">Wallis and Futuna Islands </option>
+                          <option value="Western Sahara">Western Sahara</option>
+                          <option value="Yemen">Yemen</option>
+                          <option value="Zambia">Zambia</option>
+                          <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group">
+                        <label>Mã Zip</label>
+                        <input type="text" class="form-control number-sidebar" name="Zip" placeholder="Nhập Zip Code của bạn" value="">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12">
+                      <div class="form-group" style="margin-bottom:0;">
+                        <label>Số điện thoại <span class="required">*</span>
+                        </label>
+                        <input type="text" data-validation-error-msg="Không được để trống" data-validation="required" class="form-control number-sidebar" name="PhoneNumber" placeholder="Nhập số điện thoại của bạn" value="" required="" requiredmsg="Không được bỏ trống">
+                      </div>
+                    </div>
+                    <div class="checkbox col-xs-12 col-lg-12">
+                      <label class="c-input c-checkbox">
+                        <input type="checkbox" id="address_default_address_0" name="IsDefault" value="true" style="top:5px;">
+                        <span class="c-indicator"></span> Đặt là địa chỉ mặc định? </label>
+                    </div>
+                    <div class="form-group clearfix col-xs-12 col-lg-12">
+                      <button class="btn btn-blues" type="submit">
+                        <span>
+                          <i class="fa fa-check"></i> Thêm địa chỉ </span>
+                      </button>
+                      <button class="btn btn-blues article-readmore" type="button" onclick="">
+                        <span>
+                          <i class="fa fa-close"></i> Hủy </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-12">
+            <div class="row total_address collections-container">
+              <div id="view_address_13224995" class="customer_address col-xs-12">
+                <div class="row" style="border-top: 1px #ebebeb solid;padding-top: 15px;margin-top: 15px;">
+                  <div class="col-sm-6">
+                    <div class="address_info ">
+                      <div class="info clearfix">
+                        <span class="address-group">
+                          <div class="address form-signup fix-address-mobile">
+                            <p>
+                              <strong>Tên tài khoản: </strong> ada <small class="required">(Địa chỉ mặc định)</small>
+                            </p>
+                            <p>
+                              <strong>Địa chỉ: </strong> sdfsfsf , , TP Hồ Chí Minh, Việt Nam
+                            </p>
+                            <p>
+                              <strong>Quốc tịch:</strong> Việt Nam
+                            </p>
+                            <p>
+                              <strong>Số điện thoại:</strong> 242423122143543
+                            </p>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                    <div id="tool_address_13224995" class="">
+                      <p class="btn-row">
+                        <button class="btn-edit-addr btn btn-blues" type="button" data-toggle="collapse" data-target="#collapseExample-13224995" aria-expanded="false" aria-controls="collapseExample-13224995">
+                          <i class="fa fa-undo"></i> Chỉnh sửa địa chỉ </button>
+                        <button class="hidden btn btn-blues btn-edit-addr" type="button" onclick="" style="display: none">
+                          <span>
+                            <i class="fa fa-close"></i> Xóa </span>
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="collapse" id="collapseExample-13224995" style="display: none;">
+                      <div id="edit_address_13224995" class="form-list">
+                        <form accept-charset="UTF-8" action="/account/addresses/13224995" id="customer_address" method="post" class="has-validation-callback">
+                          <input name="FormType" type="hidden" value="customer_address">
+                          <input name="utf8" type="hidden" value="true">
+                          <div class="clearfix">
+                            <div class="form-group">
+                              <label>Tên <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form-control" data-validation-error-msg="Không được để trống" data-validation="required" name="FirstName" value="ada" required="" requiredmsg="Không được bỏ trống">
+                            </div>
+                            <div class="form-group">
+                              <label>Họ <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form-control" data-validation-error-msg="Không được để trống" data-validation="required" name="LastName" value="" required="" requiredmsg="Không được bỏ trống">
+                            </div>
+                            <div class="form-group">
+                              <label>Công ty</label>
+                              <input type="text" class="form-control" name="Company" value="">
+                            </div>
+                            <div class="form-group">
+                              <label>Địa chỉ <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form-control" data-validation-error-msg="Không được để trống" data-validation="required" name="Address1" value="sdfsfsf" required="" requiredmsg="Không được bỏ trống">
+                            </div>
+                            <div class="form-group">
+                              <label>Địa chỉ 2</label>
+                              <input type="text" class="form-control" name="Address2" value="">
+                            </div>
+                            <div class="form-group">
+                              <label>Thành phố <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form-control" data-validation-error-msg="Không được để trống" data-validation="required" name="City" value="TP Hồ Chí Minh" required="" requiredmsg="Không được bỏ trống">
+                            </div>
+                            <div class="form-group">
+                              <label>Quốc gia <span class="required">*</span>
+                              </label>
+                              <select name="Country" class="form-control mySelect2" id="mySelect2_13224995" data-default="Việt Nam">Việt Nam <option value="United States">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Armenia">Armenia</option>
+                                <option value="Aruba">Aruba</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Azerbaijan">Azerbaijan</option>
+                                <option value="Bahamas">Bahamas</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Belize">Belize</option>
+                                <option value="Bermuda">Bermuda</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Bulgaria">Bulgaria</option>
+                                <option value="Cayman Islands">Cayman Islands</option>
+                                <option value="Chile">Chile</option>
+                                <option value="China">China</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Croatia">Croatia</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Cyprus">Cyprus</option>
+                                <option value="Czech Republic">Czech Republic</option>
+                                <option value="Denmark">Denmark</option>
+                                <option value="Dominican Republic">Dominican Republic </option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="Finland">Finland</option>
+                                <option value="France">France</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Gibraltar">Gibraltar</option>
+                                <option value="Greece">Greece</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Hong Kong">Hong Kong</option>
+                                <option value="Hungary">Hungary</option>
+                                <option value="India">India</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Ireland">Ireland</option>
+                                <option value="Israel">Israel</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Jamaica">Jamaica</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Jordan">Jordan</option>
+                                <option value="Kazakhstan">Kazakhstan</option>
+                                <option value="Korea, Democratic People" s="" republic="" of'="">Korea, Democratic People's Republic of</option>
+                                <option value="Kuwait">Kuwait</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="Norway">Norway</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Peru">Peru</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Qatar">Qatar</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Russia">Russia</option>
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option>
+                                <option value="Slovenia">Slovenia</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Taiwan">Taiwan</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="United Arab Emirates">United Arab Emirates </option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States minor outlying islands">United States minor outlying islands</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Uzbekistan">Uzbekistan</option>
+                                <option value="Venezuela">Venezuela</option>
+                                <option value="Serbia">Serbia</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Antarctica">Antarctica</option>
+                                <option value="Antigua and Barbuda">Antigua and Barbuda </option>
+                                <option value="Bahrain">Bahrain</option>
+                                <option value="Barbados">Barbados</option>
+                                <option value="Benin">Benin</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="Botswana">Botswana</option>
+                                <option value="Bouvet Island">Bouvet Island</option>
+                                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                <option value="Burkina Faso">Burkina Faso</option>
+                                <option value="Burundi">Burundi</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Cameroon">Cameroon</option>
+                                <option value="Cape Verde">Cape Verde</option>
+                                <option value="Central African Republic">Central African Republic</option>
+                                <option value="Chad">Chad</option>
+                                <option value="Christmas Island">Christmas Island</option>
+                                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                <option value="Comoros">Comoros</option>
+                                <option value="Congo">Congo</option>
+                                <option value="Cook Islands">Cook Islands</option>
+                                <option value="Ivory Coast">Ivory Coast</option>
+                                <option value="Djibouti">Djibouti</option>
+                                <option value="Dominica">Dominica</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                <option value="Eritrea">Eritrea</option>
+                                <option value="Estonia">Estonia</option>
+                                <option value="Ethiopia">Ethiopia</option>
+                                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                <option value="Faroe Islands">Faroe Islands</option>
+                                <option value="Fiji">Fiji</option>
+                                <option value="French Guiana">French Guiana</option>
+                                <option value="French Polynesia">French Polynesia</option>
+                                <option value="French Southern Territories">French Southern Territories</option>
+                                <option value="Gabon">Gabon</option>
+                                <option value="Gambia">Gambia</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Greenland">Greenland</option>
+                                <option value="Grenada">Grenada</option>
+                                <option value="Guadeloupe">Guadeloupe</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Guinea">Guinea</option>
+                                <option value="Guinea-bissau">Guinea-bissau</option>
+                                <option value="Guyana">Guyana</option>
+                                <option value="Haiti">Haiti</option>
+                                <option value="Heard and Mc Donald Islands">Heard and Mc Donald Islands</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="Iceland">Iceland</option>
+                                <option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option>
+                                <option value="Iraq">Iraq</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Kiribati">Kiribati</option>
+                                <option value="Korea">Korea</option>
+                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                <option value="Lao People" s="" democratic="" republic'=""> Lao People's Democratic Republic</option>
+                                <option value="Latvia">Latvia</option>
+                                <option value="Lebanon">Lebanon</option>
+                                <option value="Lesotho">Lesotho</option>
+                                <option value="Liberia">Liberia</option>
+                                <option value="Libya">Libya</option>
+                                <option value="Liechtenstein">Liechtenstein</option>
+                                <option value="Lithuania">Lithuania</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Macau">Macau</option>
+                                <option value="Macedonia">Macedonia</option>
+                                <option value="Madagascar">Madagascar</option>
+                                <option value="Malawi">Malawi</option>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Malta">Malta</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Martinique">Martinique</option>
+                                <option value="Mauritania">Mauritania</option>
+                                <option value="Mauritius">Mauritius</option>
+                                <option value="Mayotte">Mayotte</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Moldova">Moldova</option>
+                                <option value="Monaco">Monaco</option>
+                                <option value="Mongolia">Mongolia</option>
+                                <option value="Montenegro">Montenegro</option>
+                                <option value="Montserrat">Montserrat</option>
+                                <option value="Morocco">Morocco</option>
+                                <option value="Mozambique">Mozambique</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Namibia">Namibia</option>
+                                <option value="Nauru">Nauru</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="Netherlands Antilles">Netherlands Antilles </option>
+                                <option value="New Caledonia">New Caledonia</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Niue">Niue</option>
+                                <option value="Norfolk Island">Norfolk Island</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Oman">Oman</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Panama">Panama</option>
+                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                <option value="Pitcairn">Pitcairn</option>
+                                <option value="Reunion">Reunion</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis </option>
+                                <option value="Saint Lucia">Saint Lucia</option>
+                                <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                <option value="Samoa">Samoa</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Sao Tome and Principe">Sao Tome and Principe </option>
+                                <option value="Senegal">Senegal</option>
+                                <option value="Seychelles">Seychelles</option>
+                                <option value="Sierra Leone">Sierra Leone</option>
+                                <option value="Solomon Islands">Solomon Islands</option>
+                                <option value="Somalia">Somalia</option>
+                                <option value="South Georgia &amp; South Sandwich Islands"> South Georgia &amp; South Sandwich Islands</option>
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="St. Helena">St. Helena</option>
+                                <option value="St. Pierre and Miquelon">St. Pierre and Miquelon</option>
+                                <option value="Sudan">Sudan</option>
+                                <option value="Suriname">Suriname</option>
+                                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                <option value="Swaziland">Swaziland</option>
+                                <option value="Syrian Arab Republic">Syrian Arab Republic </option>
+                                <option value="Tajikistan">Tajikistan</option>
+                                <option value="Tanzania">Tanzania</option>
+                                <option value="Togo">Togo</option>
+                                <option value="Tokelau">Tokelau</option>
+                                <option value="Tonga">Tonga</option>
+                                <option value="Trinidad and Tobago">Trinidad and Tobago </option>
+                                <option value="Tunisia">Tunisia</option>
+                                <option value="Turkmenistan">Turkmenistan</option>
+                                <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                <option value="Tuvalu">Tuvalu</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Vanuatu">Vanuatu</option>
+                                <option value="Vatican City State (Holy See)">Vatican City State (Holy See)</option>
+                                <option value="Việt Nam">Việt Nam</option>
+                                <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.) </option>
+                                <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+                                <option value="Western Sahara">Western Sahara</option>
+                                <option value="Yemen">Yemen</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>Mã Zip</label>
+                              <input type="text" class="number-sidebar form-control" name="Zip" value="">
+                            </div>
+                            <div class="form-group">
+                              <label>Số điện thoại <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form-control number-sidebar" data-validation-error-msg="Không được để trống" data-validation="required" name="PhoneNumber" value="242423122143543" required="" requiredmsg="Không được bỏ trống">
+                            </div>
+                          </div>
+                          <div class="form-group clearfix">
+                            <div class="col-sm-9">
+                              <div class="row">
+                                <button class="btn btn-blues" type="submit">
+                                  <span>
+                                    <i class="fa fa-check-square-o"></i> Cập nhật địa chỉ </span>
+                                </button>
+                                <button id="btn-13224995" class="btn btn-blues" type="button" data-toggle="collapse" data-target="#collapseExample-13224995" aria-expanded="false" aria-controls="collapseExample-13224995">
+                                  <i class="fa fa-close"></i> Hủy </button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <script>
+                        $(document).ready(function() {
+                          $('#btn-13224995').click(function() {
+                            $('#collapseExample-13224995').css({
+                              'display': 'none'
+                            });
+                          });
+                        });
+                      </script>
+                      <script>
+                        var elements = document.getElementsByClassName("form-list");
+                        var i;
+
+                        function addadress() {
+                          const temp = document.getElementById("add_address")
+                          if (temp.style.display == "block") {
+                            temp.style.display = "none"
+                            document.getElementById("add_address").style.display = "none"
+                          } else {
+                            if (document.getElementById("add_address").style.display = "none") {
+                              temp.style.display = "block"
+                            } else {
+                              temp.style.display = "none"
+                              document.getElementById("add_address").style.display = "none"
+                            }
+                          }
+                        }
+                        var container = document.getElementById("add_address");
+                        var btns = container.getElementsByClassName("form-list");
+                        for (var i = 0; i < btns.length; i++) {
+                          btns[i].addEventListener("click", function() {
+                            var current = document.getElementsByClassName("form-list");
+                            current[0].className = current[0].className.replace("form-list", "");
+                            this.className += "form-list";
+                          });
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-12">
+            <div class="text-centers" style="margin-top:0px;">
+              <a href="customer-information.html" class="btn btn-blues">
+                <i class="fa fa-reply" aria-hidden="true"></i> Trang thông tin tài khoản </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-policy">
+      <div class="container">
+        <div class="row">
+          <div class="tt-services-listing clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto;">
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Miễn phí vận chuyển</h4>
+                  <p>Với đơn hàng trên 1tr VNĐ</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto;">
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">Hỗ trợ 24/7</h4>
+                  <p>Hỗ trợ 24h/ngày và 7 ngày/tuần</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="/lien-he" class="tt-services-block">
+                <div class="tt-col-icon">
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto;">
+                </div>
+                <div class="tt-col-description">
+                  <h4 class="tt-title">30 ngày trả hàng</h4>
+                  <p>Trả lại hàng trong vòng 30 ngày</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
+      <div class="la-nav-top-login">
+        <div class="la-avatar-nav p-relative text-center">
+          <a href="https://ant-sport.bizwebvietnam.net/account">
+            <i class="fa fa-user-circle"></i>
+          </a>
+          <div class="la-hello-user-nav ng-scope">Xin chào</div>
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()">
+        </div>
+        <div class="la-action-link-nav text-center">
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="register.html" class="uppercase">ĐĂNG KÝ</a>
+        </div>
+      </div>
+      <aside class="aside-item collection-category">
+        <div class="aside-title">
+          <h3 class="title-head margin-top-0">
+            <span>Danh mục</span>
+          </h3>
+        </div>
+        <div class="aside-content">
+          <nav class="nav-category navbar-toggleable-md">
+            <ul class="nav navbar-pills">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="about.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Sản phẩm</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu nav-item active">
+                    <a class="nav-link" href="product.html">Giày</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày leo núi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Giày chạy bộ</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Trang phục thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nam</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Dành cho Nữ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ bơi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đấm bốc &amp; Võ thuật</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="product.html">Dụng cụ thể thao</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Yoga, thể hình</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn cá nhân</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Phụ kiện thể thao</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Các môn tập thể</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Đồ dưới nước</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Lều ngủ, Túi ngủ</a>
+                  </li>
+                  <li class="dropdown-submenu nav-item">
+                    <a class="nav-link" href="/">Thương hiệu</a>
+                    <i class="fa fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Nike</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Adidas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Gofit</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Bitis</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">New Nalance</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a href="product.html" class="nav-link">Thương hiệu</a>
+                <i class="fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Nike</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Adidas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Gofit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Bitis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">New Nalance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Khuyến mãi</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Tin tức</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="product.html">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="container">
+          <div class="footer-inner padding-top-30 padding-bottom-20">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F1')">
+                    <span>Thông tin cửa hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F1">
+                    <li>
+                      <a href="about.html">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tuyển dụng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F2')">
+                    <span>Chính sách</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F2">
+                    <li>
+                      <a href="index.html">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Trả góp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget">
+                  <h3 onclick="F4('F3')">
+                    <span>Hỗ trợ khách hàng</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu" id="F3">
+                    <li>
+                      <a href="index.html">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tra cứu thẻ thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer-widget no-border">
+                  <h3 style="display: flex; justify-content: space-between" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </h3>
+                  <ul class="list-menu ul-footer-contact" id="F4">
+                    <li>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:0982362509"> 0123 456 789</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:baotrung304@gmail.com"></a> acquy666@gmail.com </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright clearfix">
+        <div class="container">
+          <div class="inner clearfix">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="back-to-top show">
+            <i class="fa fa-arrow-circle-up"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var elements = document.getElementsByClassName("footer-widget");
+      var i;
+
+      function F4(id) {
+        const temp = document.getElementById(id)
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById(id).style.display = "none"
+        } else {
+          if (document.getElementById(id).style.display == "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "block"
+            document.getElementById(id).style.display = "none"
+          }
+        }
+      }
+      var btns = container.getElementsByClassName("footer-widget");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("footer-widget");
+          current[0].className = current[0].className.replace("footer-widget", "");
+          this.className += "footer-widget";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function shownav() {
+        const temp = document.getElementById("cmenushow")
+        if (temp.style.display == "none") {
+          temp.style.display = "block"
+          document.getElementById("cmenushow").style.display = "block"
+        } else {
+          if (document.getElementById("cmenushow").style.display = "none") {
+            temp.style.display = "block"
+          } else {
+            temp.style.display = "none"
+            document.getElementById("cmenushow").style.display = "block"
+          }
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      var elements = document.getElementsByClassName("c-menu--slide-left");
+      var i;
+
+      function hidemenu() {
+        const temp = document.getElementById("cmenushow")
+        if (temp.style.display == "block") {
+          temp.style.display = "none"
+          document.getElementById("cmenushow").style.display = "none"
+        }
+      }
+      var container = document.getElementById("cmenushow");
+      var btns = container.getElementsByClassName("c-menu--slide-left");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("c-menu--slide-left");
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
+          this.className += "c-menu--slide-left";
+        });
+      }
+    </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('quickview');
+      var modal1 = document.getElementById('popup-cart');
+      var modal2 = document.getElementById('cmenushow');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.id == 'cmenushow') {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

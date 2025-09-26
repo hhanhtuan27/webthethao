@@ -17,64 +17,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/cs.script.js"></script>
-    <link rel="stylesheet" href="./css/cs.script.css">
-    <style>
-      /* Style chỉ áp dụng cho khu vực form đăng ký */
-      .register-form .form-control {
-        width: 100%;
-        max-width: 100%;
-        height: 48px;
-        border: 1.5px solid #b7dafc; /* viền xanh dương nhạt */
-        border-radius: 6px;
-        padding: 10px 14px;
-        box-shadow: none;
-        background: #fff;
-      }
-      .register-form .form-control:focus {
-        border-color: #6cb6ff;
-        outline: none;
-      }
-      .register-form label {
-        display: block;
-        font-weight: 600;
-        margin-top: 14px;
-        margin-bottom: 6px;
-      }
-      .register-form .col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      /* Giảm khoảng trắng thừa do các fieldset rỗng */
-      .register-form fieldset {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
-      .register-form-inner {
-  margin-top: 20px;
-}
-.register-form .form-group {
-  margin-bottom: 16px;
-}
-.register-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-.register-form .form-control {
-  width: 100%;
-  height: 48px;
-  border: 1.5px solid #b7dafc;
-  border-radius: 6px;
-  padding: 10px 14px;
-  background: #fff;
-  box-shadow: none;
-}
-.register-form .form-control:focus {
-  border-color: #6cb6ff;
-  outline: none;
-}
-    </style>
   </head>
   <body>
     <header>
@@ -220,10 +162,16 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
                           <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -232,7 +180,7 @@
                 <script type="text/javascript">
                   document.addEventListener("DOMContentLoaded", function() {
                     const accountSign = document.querySelector(".account-sign");
-                    const userName = sessionStorage.getItem("userUsername"); // Lấy tên đăng nhập từ sessionStorage
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
                     if (userName) {
                       // Nếu đã đăng nhập
                       accountSign.innerHTML = `
@@ -249,7 +197,13 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -279,6 +233,9 @@
                         <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
                       </ul>
                     </div>
                   </a>
@@ -288,13 +245,15 @@
                 </script>
                 <script type="text/javascript">
                   document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
                   const cartButton = document.querySelector(".header-cart");
-                  if(!cartButton) return;
+
+                  // Gắn sự kiện click vào nút giỏ hàng
                   cartButton.addEventListener("click", function (event) {
                     event.preventDefault(); // Ngăn chuyển trang mặc định
 
                     // Kiểm tra trạng thái đăng nhập
-                    const isLoggedIn = sessionStorage.getItem("userUsername"); // Kiểm tra nếu có userEmail trong sessionStorage
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
 
                     if (isLoggedIn) {
                       // Nếu đã đăng nhập, chuyển đến cart.html
@@ -503,71 +462,81 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="page-login account-box-shadow">
             <div id="login">
-              <h1 class="title-head text-center">Đăng ký tài khoản</h1>
-              <div class="text-center">
-                <span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
-              </div>
+              <form accept-charset="UTF-8" action="/account/register" id="customer_register" method="post" class="has-validation-callback">
+                <h1 class="title-head text-center">Đăng ký tài khoản</h1>
+                <div class="text-center">
+                  <span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
+                </div>
+                <div class="form-signup clearfix">
+                  <div class="row" id="form-signup">
+                    <div class="col-md-12">
+                      <fieldset class="form-group">
+                        <label>Tên người dùng <span class="required">*</span></label>
+                        <input type="text" class="form-control form-control-lg" name="username" id="username" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" class="form-control form-control-lg" name="email" id="email" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset class="form-group">
+                        <label>Mật khẩu <span class="required">*</span></label>
+                        <input type="password" class="form-control form-control-lg" name="password" id="password" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset class="form-group">
+                        <label>Số điện thoại <span class="required"></span></label>
+                        <input type="tel" class="form-control form-control-lg" name="phone" id="phone" pattern="[0-9]{9,11}" title="Nhập 9-11 chữ số">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset class="form-group">
+                        <label>Địa chỉ <span class="required"></span></label>
+                        <input type="text" class="form-control form-control-lg" name="address" id="address">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12 text-center" style="margin-top:15px;padding:0">
+                      <button type="button" id="registerBtn" class="btn btn-style btn-blues">Đăng ký</button>
+                      <a href="login.html" class="btn-link-style btn-register" style="margin-left:20px;color:#26aed4;text-decoration:underline">Đăng nhập</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <script>
+                document.getElementById("registerBtn").addEventListener("click", function () {
+                  const username = document.getElementById("username").value.trim();
+                  const email = document.getElementById("email").value.trim();
+                  const password = document.getElementById("password").value.trim();
+                  const phone = document.getElementById("phone").value.trim();
+                  const address = document.getElementById("address").value.trim();
 
-              <div class="form-signup clearfix register-form">
-                <form id="customer_register" class="register-form-inner" action="/account/register" method="post" onsubmit="return false;">
-                  <!-- THAY 2 Ô HỌ / TÊN BẰNG 1 Ô TÊN NGƯỜI DÙNG -->
-                  <div class="form-group">
-                    <label for="username">Tên người dùng <span class="required">*</span></label>
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Nhập tên đăng nhập">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="text" class="form-control" name="email" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Mật khẩu <span class="required">*</span></label>
-                    <input type="password" class="form-control" name="password" id="password">
-                  </div>
-                  <div class="form-group">
-                    <label for="address">Địa chỉ <span class="required">*</span></label>
-                    <input type="text" class="form-control" name="address" id="address" placeholder="Nhập địa chỉ của bạn">
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Số điện thoại <span class="required">*</span></label>
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Nhập số điện thoại của bạn">
-                  </div>
-                  <div class="text-center btn-row" style="margin-top:18px;">
-                    <button type="button" id="registerBtn" class="btn btn-style btn-blues">Đăng ký</button>
-                    <a href="login.html" class="btn-link-style btn-register" style="margin-left:20px;color:#26aed4;text-decoration:underline;">Đăng nhập</a>
-                  </div>
-                </form>
-              </div>
+                  if (!username || !email || !password) {
+                    alert("Vui lòng nhập đủ Tên người dùng, Email và Mật khẩu.");
+                    return;
+                  }
+                  if (phone && !/^[0-9]{9,11}$/.test(phone)) {
+                    alert("Số điện thoại không hợp lệ (nếu nhập phải gồm 9-11 chữ số).");
+                    return;
+                  }
+
+                  alert(
+                    `Thông tin đăng ký:\nTên người dùng: ${username}\nEmail: ${email}\nSĐT: ${phone || 'Chưa cung cấp'}\nĐịa chỉ: ${address || 'Chưa cung cấp'}`
+                  );
+
+                  const formContainer = document.getElementById("customer_register");
+                  formContainer.innerHTML = `
+      <div style="height: 500px; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+        <h3>Đăng ký thành công!</h3>
+        <p>Vui lòng <a href="login.html" style="font-weight:bold;">đăng nhập</a> để tiếp tục.</p>
+      </div>
+    `;
+                });
+              </script>
             </div>
-            <script>
-// REGISTER SAVE TO sessionStorage (ĐÃ CẬP NHẬT DÙNG username)
-(function(){
-  const btn = document.getElementById("registerBtn");
-  if(!btn) return;
-  btn.addEventListener("click", function () {
-    const username = document.getElementById("username").value.trim();
-    const email     = document.getElementById("email").value.trim();
-    const password  = document.getElementById("password").value;
-    const address   = document.getElementById("address").value.trim();
-    const phone     = document.getElementById("phone").value.trim();
-
-    if(!username || !email || !password){
-      alert("Vui lòng nhập đủ Tên người dùng, Email, Mật khẩu.");
-      return;
-    }
-
-    // Username trở thành khóa đăng nhập chính
-    sessionStorage.setItem("userUsername", username);
-    sessionStorage.setItem("userEmail", email);       // vẫn lưu để hiển thị / liên hệ
-    sessionStorage.setItem("userAddress", address);
-    sessionStorage.setItem("userPhone", phone);
-    sessionStorage.setItem("userPassword", password);
-
-    console.log("Đã lưu user:", {username,email,address,phone});
-    alert("Đăng ký thành công!");
-    window.location.href = "customer-information.html";
-  });
-})();
-            </script>
           </div>
         </div>
       </div>
@@ -1005,26 +974,20 @@
       };
     </script>
     <script>
-      document.getElementById("registerForm").addEventListener("submit", function(e){
-  // Nếu muốn ngăn redirect mặc định để kiểm tra thì tạm: e.preventDefault();
-  const fullName = document.getElementById("fullName").value.trim();
-  const email    = document.getElementById("email").value.trim();
-  const address  = document.getElementById("address").value.trim();
-  const phone    = document.getElementById("phone").value.trim();
-  const password = document.getElementById("password").value;
-
-  sessionStorage.setItem("userFullName", fullName);
-  sessionStorage.setItem("userEmail", email);
-  sessionStorage.setItem("userAddress", address);
-  sessionStorage.setItem("userPhone", phone);
-  sessionStorage.setItem("userPassword", password);
-
-  // (Có thể lưu thêm vào localStorage nếu muốn bền hơn)
-  // localStorage.setItem("userFullName", fullName);
-
-  // Sau khi submit có thể redirect:
-  // window.location.href = "customer-information.html";
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("registerForm"); // đổi id nếu khác
+  if (!form) return;
+  form.addEventListener("submit", function() {
+    const email   = document.getElementById("email")?.value || "";
+    const name    = document.getElementById("fullname")?.value || "";
+    const address = document.getElementById("address")?.value || "";
+    const phone   = document.getElementById("phone")?.value || "";
+    sessionStorage.setItem("userEmail", email);
+    sessionStorage.setItem("userName", name);
+    if (address) sessionStorage.setItem("userAddress", address);
+    if (phone) sessionStorage.setItem("userPhone", phone);
+  });
 });
-    </script>
+</script>
   </body>
 </html>

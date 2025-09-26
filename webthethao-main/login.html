@@ -108,7 +108,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -162,10 +162,16 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
                           <a href="register.html">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -191,7 +197,13 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -220,6 +232,9 @@
                         </li>
                         <li>
                           <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
@@ -462,13 +477,11 @@
                     <input type="text" class="form-control form-control-lg valid" value="" name="username" id="customer_username" required="" data-validation="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" data-validation-error-msg="Tên không hợp lên" placeholder="Nhập Username" />
                   </fieldset>
                   <fieldset class="form-group has-success">
-                    <label>Mật khẩu <span class="required">*</span>
-                    </label>
-                    <div style="position:relative;">
-                      <input type="password" class="form-control form-control-lg valid" value="" name="password" id="customer_password" data-validation-error-msg="Không được để trống" data-validation="required" placeholder="Mật khẩu" autocomplete="current-password" />
-                      <button type="button" id="togglePwd" aria-label="Hiện mật khẩu" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#0aa1dd;cursor:pointer;font-size:12px;">Hiện</button>
-                      <button type="button" id="clearPwd" aria-label="Xóa mật khẩu" style="position:absolute;right:60px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#dc3545;cursor:pointer;font-size:12px;">Xóa</button>
-                    </div>
+                    <label>Mật khẩu <span class="required">*</span></label>
+                    <input type="password" class="form-control form-control-lg"
+                           name="password" id="customer_password"
+                           data-validation-error-msg="Không được để trống"
+                           data-validation="required" placeholder="Mật khẩu" />
                   </fieldset>
                   <div class="pull-xs-left" style="margin-top: 15px">
                     <button class="btn btn-style btn-blues" type="submit" value="Đăng nhập"> ĐĂNG NHẬP </button>
@@ -500,26 +513,6 @@
                     alert("Username hoặc mật khẩu không đúng. Vui lòng thử lại!");
                   }
                 });
-                // Toggle & Clear password logic
-                (function(){
-                  const pwd = document.getElementById('customer_password');
-                  const toggle = document.getElementById('togglePwd');
-                  const clearBtn = document.getElementById('clearPwd');
-                  if (toggle && pwd) {
-                    toggle.addEventListener('click', function(){
-                      const showing = pwd.getAttribute('type') === 'text';
-                      pwd.setAttribute('type', showing ? 'password' : 'text');
-                      toggle.textContent = showing ? 'Hiện' : 'Ẩn';
-                      toggle.setAttribute('aria-label', showing ? 'Hiện mật khẩu' : 'Ẩn mật khẩu');
-                    });
-                  }
-                  if (clearBtn && pwd) {
-                    clearBtn.addEventListener('click', function(){
-                      pwd.value='';
-                      pwd.focus();
-                    });
-                  }
-                })();
               </script>
             </div>
             <hr />
@@ -941,30 +934,5 @@
         }
       };
     </script>
-          <script>
-            // Cart badge visibility control
-            (function() {
-              try {
-                var isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-                var badgeEls = document.getElementsByClassName('cartCount');
-                for (var i = 0; i < badgeEls.length; i++) {
-                  if (!isLoggedIn) {
-                    badgeEls[i].style.display = 'none';
-                  } else {
-                    var storedCount = sessionStorage.getItem('cartCount');
-                    if (storedCount && !isNaN(parseInt(storedCount, 10))) {
-                      badgeEls[i].textContent = storedCount;
-                      badgeEls[i].style.display = 'inline-block';
-                    } else if (badgeEls[i].textContent.trim() !== '' && !isNaN(parseInt(badgeEls[i].textContent.trim(),10))) {
-                      badgeEls[i].style.display = 'inline-block';
-                    } else {
-                      badgeEls[i].textContent = '0';
-                      badgeEls[i].style.display = 'inline-block';
-                    }
-                  }
-                }
-              } catch (e) { console.warn('Cart badge init error', e);} 
-            })();
-          </script>
   </body>
 </html>

@@ -108,7 +108,7 @@
                   <ul class="clearfix">
                     <li>
                       <a href="cart.html" class="header-cart">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount" style="display:none"></span>
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
@@ -162,6 +162,9 @@
                           <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
                           <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
@@ -174,68 +177,95 @@
                   </a>
                 </div>
                 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-  const accountSign = document.querySelector(".account-sign");
-  const username = sessionStorage.getItem("userUsername") || "";
-  const email    = sessionStorage.getItem("userEmail") || "";
-  const displayName = username || email; // ưu tiên username
-
-  if (displayName) {
-    accountSign.innerHTML = `
-      <a href="customer-information.html" class="account-header">
-        <i class="fa fa-user" aria-hidden="true"></i>
-        <div class="a-text">
-          ${displayName}
-          <span>Tài khoản và đơn hàng</span>
-        </div>
-        <div class="Sub-1">
-          <ul class="Sub-menu">
-            <li><a href="customer-information.html">Quản lý tài khoản</a></li>
-            <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
-          </ul>
-        </div>
-      </a>`;
-    document.getElementById("logoutBtn").addEventListener("click", function(e){
-      e.preventDefault();
-      sessionStorage.clear();
-      alert("Đã đăng xuất.");
-      window.location.reload();
-    });
-  } else {
-    accountSign.innerHTML = `
-      <a href="login.html" class="account-header">
-        <i class="fa fa-user" aria-hidden="true"></i>
-        <div class="a-text">
-          Đăng nhập
-          <span>Tài khoản và đơn hàng</span>
-        </div>
-        <div class="Sub-1">
-          <ul class="Sub-menu">
-            <li><a href="login.html">Đăng nhập</a></li>
-            <li><a href="register.html">Đăng ký</a></li>
-            <li><a href="javascript:;" class="smartLogin iWishView">Danh sách yêu thích</a></li>
-          </ul>
-        </div>
-      </a>`;
-  }
-});
-</script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
                 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function () {
-  const cartButton = document.querySelector(".header-cart");
-  if(!cartButton) return;
-  cartButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    const isLoggedIn = sessionStorage.getItem("userUsername"); // dùng username
-    if (isLoggedIn) {
-      window.location.href = "cart.html";
-    } else {
-      alert("Vui lòng đăng nhập để xem giỏ hàng.");
-      window.location.href = "login.html";
-    }
-  });
-});
-</script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
               </div>
             </div>
           </div>
@@ -436,52 +466,36 @@ document.addEventListener("DOMContentLoaded", function () {
                   <h1 class="title-head widget-title">Thông tin tài khoản</h1>
                 </div>
                 <div class="form-signup">
-                  <p id="welcomeText">
-                    <i>Xin chào</i>
+                  <p>
+                    <i>Xin chào, <span id="ciGreetingName">...</span></i>
                   </p>
                 </div>
-                <!-- Thông tin + nút -->
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+              </div>
+             
+                <div class="col-xs-12 col-sm-12 col-md-3 col-md-push-9 col-lg-3 col-lg-push-9">
                   <div class="block block-account margin-bottom-20">
                     <div class="block-title">
-                      <h2 class="widget-title">Chi tiết tài khoản</h2>
+                      <h2 class="widget-title">Thông tin khách hàng</h2>
                     </div>
                     <div class="divider-full-1"></div>
-                    <div class="block-content form-signup block-edit-padding" id="accountInfoView">
-                      <p><i class="fa fa-user"></i> <span id="infoUsername">--</span></p>
-                      <p><i class="fa fa-envelope"></i> <span id="infoEmail">--</span></p>
-                      <p><i class="fa fa-map-marker"></i> <span id="infoAddress">--</span></p>
-                      <p><i class="fa fa-phone"></i> <span id="infoPhone">--</span></p>
-                      <div class="margin-top-20" style="display:flex;gap:10px;flex-wrap:wrap">
-                        <button class="btn btn-primary" id="btnEditInfo">Sửa thông tin</button>
-                        <button class="btn btn-warning" id="btnChangePassword" data-toggle="modal" data-target="#changePasswordModal">Đổi mật khẩu</button>
+                    <div class="block-content form-signup block-edit-padding">
+                      <p>
+                        <i class="fa fa-user"></i> <span id="ciName">...</span>
+                      </p>
+                      <p>
+                        <i class="fa fa-map-marker"></i> <span id="ciAddress">...</span>
+                      </p>
+                      <p>
+                        <i class="fa fa-phone"></i> <span id="ciPhone">...</span>
+                      </p>
+                      <p>
+                        <i class="fa fa-envelope"></i> <span id="ciEmail">...</span>
+                      </p>
+                      <div class="margin-top-20">
+                        <a href="./sodiachi.html" class="btn btn-blues btn-full">
+                          <i class="fa fa-book"></i> Sổ địa chỉ (1) </a>
                       </div>
                     </div>
-
-                    <!-- Form chỉnh sửa -->
-                    <form id="accountEditForm" style="display:none;margin-top:15px">
-                      <div class="form-group">
-                        <label>Tên người dùng (không đổi)</label>
-                        <input type="text" class="form-control" id="editUsername" disabled />
-                      </div>
-                      <div class="form-group">
-                        <label>Email (không đổi)</label>
-                        <input type="email" class="form-control" id="editEmail" readonly />
-                      </div>
-                      <div class="form-group">
-                        <label>Địa chỉ</label>
-                        <input type="text" class="form-control" id="editAddress" />
-                      </div>
-                      <div class="form-group">
-                        <label>Số điện thoại</label>
-                        <input type="tel" class="form-control" id="editPhone" pattern="^[0-9+ ]{8,15}$" />
-                      </div>
-                      <div style="display:flex;gap:10px;flex-wrap:wrap">
-                        <button type="submit" class="btn btn-success">Lưu</button>
-                        <button type="button" id="btnCancelEdit" class="btn btn-secondary">Hủy</button>
-                      </div>
-                      <small style="display:block;margin-top:10px;color:#888">Dữ liệu demo: lưu trong sessionStorage.</small>
-                    </form>
                   </div>
                 </div>
               </div>
@@ -490,40 +504,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </section>
-    <!-- Modal đổi mật khẩu -->
-<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="padding:10px">
-      <div class="modal-header">
-        <h5 class="modal-title">Đổi mật khẩu</h5>
-        <button type="button" class="close" data-dismiss="modal">
-          <span>&times;</span>
-        </button>
-      </div>
-      <form id="changePasswordForm">
-        <div class="modal-body">
-          <div class="form-group">
-            <label>Mật khẩu cũ</label>
-            <input type="password" class="form-control" id="oldPassword" required />
-          </div>
-          <div class="form-group">
-            <label>Mật khẩu mới</label>
-            <input type="password" class="form-control" id="newPassword" minlength="6" required />
-          </div>
-            <div class="form-group">
-            <label>Xác nhận mật khẩu mới</label>
-            <input type="password" class="form-control" id="confirmPassword" minlength="6" required />
-          </div>
-          <div id="pwMessage" style="margin-top:8px;font-size:13px;color:#c00;display:none"></div>
-        </div>
-        <div class="modal-footer" style="display:flex;gap:8px">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-          <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
     <div class="footer-policy">
       <div class="container">
         <div class="row">
@@ -1009,228 +989,47 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "./login-admin.html";
           });
         </script>
-<script>
-// ================== QUẢN LÝ THÔNG TIN TÀI KHOẢN (CLIENT DEMO) ==================
-(function() {
-  const keys = {
-    name: "userFullName",
-    email: "userEmail",
-    address: "userAddress",
-    phone: "userPhone",
-    password: "userPassword" // (đã lưu khi đăng ký)
-  };
+    <script>
+      (function () {
+        document.addEventListener("DOMContentLoaded", function () {
+          const preferKeys = (candidates) => {
+            for (const k of candidates) {
+              const v = sessionStorage.getItem(k) || localStorage.getItem(k);
+              if (v) return v;
+            }
+            return "";
+          };
 
-  function getUserData() {
-    return {
-      name: sessionStorage.getItem(keys.name) || "",
-      email: sessionStorage.getItem(keys.email) || "",
-      address: sessionStorage.getItem(keys.address) || "",
-      phone: sessionStorage.getItem(keys.phone) || "",
-      password: sessionStorage.getItem(keys.password) || ""
-    };
-  }
+          const email   = preferKeys(["userEmail","email","registerEmail"]);
+          if (!email) {
+            alert("Vui lòng đăng nhập.");
+            window.location.href = "login.html";
+            return;
+          }
 
-  function requireLogin(user) {
-    if (!user.email) {
-      alert("Vui lòng đăng nhập.");
-      window.location.href = "login.html";
-      return true;
-    }
-    return false;
-  }
+            // Lấy tên: ưu tiên userName/fullname, fallback phần trước @
+          const name    = preferKeys(["userName","fullname","fullName","name"]) || email.split("@")[0];
+          const address = preferKeys(["userAddress","address","registerAddress"]);
+          const phone   = preferKeys(["userPhone","phone","mobile","registerPhone"]);
 
-  function fillView(u) {
-    const safe = (v) => v || "(Chưa cập nhật)";
-    document.getElementById("welcomeText").innerHTML = `<i>Xin chào, ${safe(u.name)}</i>`;
-    setText("infoName", safe(u.name));
-    setText("infoEmail", safe(u.email));
-    setText("infoAddress", safe(u.address));
-    setText("infoPhone", safe(u.phone));
-    setText("sideName", safe(u.name));
-    setText("sideAddress", safe(u.address));
-    setText("sidePhone", safe(u.phone));
-  }
+          const setText = (id, value, fallback = "Chưa cập nhật") => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value && value.trim() ? value : fallback;
+          };
 
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
+          setText("ciGreetingName", name, "Người dùng");
+          setText("ciName", name);
+          setText("ciAddress", address);
+          setText("ciPhone", phone);
+          setText("ciEmail", email);
 
-  function showEditForm(u) {
-    document.getElementById("accountInfoView").style.display = "none";
-    const form = document.getElementById("accountEditForm");
-    form.style.display = "block";
-    document.getElementById("editFullName").value = u.name;
-    document.getElementById("editEmail").value = u.email;
-    document.getElementById("editAddress").value = u.address;
-    document.getElementById("editPhone").value = u.phone;
-  }
-
-  function hideEditForm() {
-    document.getElementById("accountInfoView").style.display = "block";
-    document.getElementById("accountEditForm").style.display = "none";
-  }
-
-  function saveUserData(data) {
-    sessionStorage.setItem(keys.name, data.name);
-    sessionStorage.setItem(keys.address, data.address);
-    sessionStorage.setItem(keys.phone, data.phone);
-    // email không đổi ở đây
-  }
-
-  function initEvents(user) {
-    const btnEdit = document.getElementById("btnEditInfo");
-    const formEdit = document.getElementById("accountEditForm");
-    const btnCancelEdit = document.getElementById("btnCancelEdit");
-    const btnChangePw = document.getElementById("btnChangePassword");
-
-    btnEdit?.addEventListener("click", () => showEditForm(getUserData()));
-    btnCancelEdit?.addEventListener("click", hideEditForm);
-
-    formEdit?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const updated = {
-        name: document.getElementById("editFullName").value.trim(),
-        address: document.getElementById("editAddress").value.trim(),
-        phone: document.getElementById("editPhone").value.trim()
-      };
-      saveUserData(updated);
-      fillView(getUserData());
-      hideEditForm();
-      alert("Đã cập nhật thông tin.");
-    });
-
-    // Đổi mật khẩu
-    btnChangePw?.addEventListener("click", () => {
-      if (typeof $ !== "undefined" && $("#changePasswordModal").modal) {
-        $("#changePasswordModal").modal("show");
-      } else {
-        document.getElementById("changePasswordModal").style.display = "block";
-      }
-      document.getElementById("changePasswordForm").reset();
-      document.getElementById("pwMessage").style.display = "none";
-    });
-
-    const pwForm = document.getElementById("changePasswordForm");
-    pwForm?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const oldPw = document.getElementById("oldPassword").value;
-      const newPw = document.getElementById("newPassword").value;
-      const cfPw = document.getElementById("confirmPassword").value;
-      const msg = document.getElementById("pwMessage");
-
-      if (oldPw !== sessionStorage.getItem(keys.password)) {
-        msg.textContent = "Mật khẩu cũ không đúng.";
-        msg.style.display = "block";
-        return;
-      }
-      if (newPw.length < 6) {
-        msg.textContent = "Mật khẩu mới tối thiểu 6 ký tự.";
-        msg.style.display = "block";
-        return;
-      }
-      if (newPw !== cfPw) {
-        msg.textContent = "Xác nhận mật khẩu không khớp.";
-        msg.style.display = "block";
-        return;
-      }
-
-      sessionStorage.setItem(keys.password, newPw);
-      msg.style.color = "green";
-      msg.textContent = "Đổi mật khẩu thành công.";
-      msg.style.display = "block";
-
-      setTimeout(() => {
-        if (typeof $ !== "undefined" && $("#changePasswordModal").modal) {
-          $("#changePasswordModal").modal("hide");
-        } else {
-          document.getElementById("changePasswordModal").style.display = "none";
-        }
-      }, 800);
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const user = getUserData();
-    if (requireLogin(user)) return;
-    fillView(user);
-    initEvents(user);
-  });
-})();
-</script>
-<script>
-// QUẢN LÝ THÔNG TIN TÀI KHOẢN (DÙNG userUsername LÀM TÊN ĐĂNG NHẬP)
-(function(){
-  function $(id){ return document.getElementById(id); }
-  const username = sessionStorage.getItem("userUsername");
-  const email    = sessionStorage.getItem("userEmail") || "";
-  const address  = sessionStorage.getItem("userAddress") || "";
-  const phone    = sessionStorage.getItem("userPhone") || "";
-  const password = sessionStorage.getItem("userPassword") || "";
-
-  if(!username){ 
-    alert("Vui lòng đăng nhập.");
-    window.location.href = "login.html";
-    return;
-  }
-
-  // Hiển thị
-  $("welcomeText").innerHTML = `<i>Xin chào, ${username}</i>`;
-  setText("infoUsername", username);
-  setText("infoEmail", email || "(Chưa cập nhật)");
-  setText("infoAddress", address || "(Chưa cập nhật)");
-  setText("infoPhone", phone || "(Chưa cập nhật)");
-
-  // Điền form sửa
-  $("editUsername").value = username;
-  $("editEmail").value    = email;
-  $("editAddress").value  = address;
-  $("editPhone").value    = phone;
-
-  // Nút Sửa
-  $("btnEditInfo")?.addEventListener("click", ()=>{
-    $("accountInfoView").style.display="none";
-    $("accountEditForm").style.display="block";
-  });
-  $("btnCancelEdit")?.addEventListener("click", ()=>{
-    $("accountInfoView").style.display="block";
-    $("accountEditForm").style.display="none";
-  });
-
-  // Lưu sửa (không cho đổi username/email)
-  $("accountEditForm")?.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    const newAddress = $("editAddress").value.trim();
-    const newPhone   = $("editPhone").value.trim();
-    sessionStorage.setItem("userAddress", newAddress);
-    sessionStorage.setItem("userPhone", newPhone);
-    setText("infoAddress", newAddress || "(Chưa cập nhật)");
-    setText("infoPhone", newPhone || "(Chưa cập nhật)");
-    alert("Đã cập nhật thông tin.");
-    $("accountInfoView").style.display="block";
-    $("accountEditForm").style.display="none";
-  });
-
-  // Đổi mật khẩu (modal đã tồn tại)
-  $("changePasswordForm")?.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    const oldPw = $("oldPassword").value;
-    const newPw = $("newPassword").value;
-    const cfPw  = $("confirmPassword").value;
-    const msg   = $("pwMessage");
-    msg.style.display="block"; msg.style.color="#c00";
-    if(oldPw !== password){ msg.textContent="Mật khẩu cũ không đúng."; return; }
-    if(newPw.length < 6){ msg.textContent="Mật khẩu mới tối thiểu 6 ký tự."; return; }
-    if(newPw !== cfPw){ msg.textContent="Xác nhận mật khẩu không khớp."; return; }
-    sessionStorage.setItem("userPassword", newPw);
-    msg.style.color="green"; msg.textContent="Đổi mật khẩu thành công.";
-    setTimeout(()=> {
-      if(window.jQuery) $('#changePasswordModal').modal('hide');
-    }, 800);
-  });
-
-  function setText(id,val){ const el=$(id); if(el) el.textContent=val; }
-})();
-</script>
+          // Chuẩn hóa lại key thống nhất
+          sessionStorage.setItem("userEmail", email);
+          sessionStorage.setItem("userName", name);
+          if (address) sessionStorage.setItem("userAddress", address);
+          if (phone) sessionStorage.setItem("userPhone", phone);
+        });
+      })();
+    </script>
   </body>
 </html>
