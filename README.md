@@ -20,34 +20,36 @@
 - ⚡ Tối ưu lọc bằng data-* attributes
 
 
-webthethao-main/
- ├─ admin/
- ├─ css/
- ├─ img/
- ├─ js/
- ├─ index.html
- └─ admin.html
+🗃️ Cấu Trúc (rút gọn)
 
+webthethao-main/  
+├─ admin/  
+├─ css/  
+├─ img/  
+├─ js/  
+├─ index.html  
+└─ admin.html
 
- 🧪 Ghi Chú Kỹ Thuật
-Lọc dựa trên: data-brand, data-type, data-key, data-price, data-equip
-Mapping query → nhóm data-equip (giày=1, trangphucthethao=2, dungcuthethao=3)
+ 🧪 Ghi Chú Kỹ Thuật  
+ Lọc dựa trên: data-brand, data-type, data-key, data-price, data-equip  
+Mapping query → nhóm data-equip (giày=1, trangphucthethao=2, dungcuthethao=3)  
 Có thể mở rộng thêm bằng cách bổ sung vào equipMap trong script.
 
 👥 Thành Viên Nhóm 04
-MSSV	Họ Tên	Vai Trò
-3123411323	Hồ Hữu Anh Tuấn	Dev
-3123411283	Lê Minh Thịnh	Dev
-3123411285	Ngũ Vĩnh Thịnh	Dev
-3123411342	Nguyễn Thành Vinh	Dev
-3123411290	Nguyễn Minh Thuận	Dev
-
-📌 Định Hướng Mở Rộng
-Tích hợp API giỏ hàng thật
-Thêm đăng ký / đăng nhập JWT
-Tìm kiếm toàn cục không dấu
+|    MSSV	 |     Họ Tên         | Vai Trò |
+|------------|--------------------|---------|
+| 3123411323 |  Hồ Hữu Anh Tuấn   |   Dev   |
+| 3123411283 |  Lê Minh Thịnh     |   Dev   |
+| 3123411285 |  Ngũ Vĩnh Thịnh    |   Dev   |
+| 3123411342 |  Nguyễn Thành Vinh |	  Dev   |
+| 3123411290 |	Nguyễn Minh Thuận |	  Dev   |
+  
+📌 Định Hướng Mở Rộng  
+Tích hợp API giỏ hàng thật  
+Thêm đăng ký / đăng nhập JWT  
+Tìm kiếm toàn cục không dấu  
 Lazy load hình ảnh
-
-
-🛡️ Bản Quyền
+  
+🛡️ Bản Quyền  
 Dự án học tập – chỉ dùng cho mục đích giáo dục.
+
