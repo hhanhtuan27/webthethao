@@ -3,7 +3,7 @@
 > Nền tảng bán & giới thiệu trang phục, dụng cụ thể thao.
 
 <p align="center">
-  <img src="docs/screenshot-home.png" alt="Trang chủ (placeholder)" width="600" />
+  <a href = "https://github.com/hhanhtuan27/webthethao/tree/main/webthethao-main" alt="Trang chủ" width="600" ></a>
 </p>
 
 ---
