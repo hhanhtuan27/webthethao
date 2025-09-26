@@ -2,10 +2,6 @@
 
 > Nền tảng bán & giới thiệu trang phục, dụng cụ thể thao.
 
-<p align="center">
-  <a href = "https://github.com/hhanhtuan27/webthethao/tree/main/webthethao-main" alt="Trang chủ" width="600" ></a>
-</p>
-
 ---
 
 ### 🔧 Tech Stack
@@ -23,32 +19,21 @@
 - 🗂️ Phân trang tham số ?page=
 - ⚡ Tối ưu lọc bằng data-* attributes
 
-### 🚀 Khởi Chạy Nhanh
-```bash
-# Clone
-git clone <repo-url>
-cd webthethao-main
-
-# Mở VS Code
-code .
-
-# Dùng Live Server (hoặc)
-start "" product.html
-
 
 webthethao-main/
- ├─ product.html
- ├─ product-detail.html
+ ├─ admin/
  ├─ css/
- ├─ js/
  ├─ img/
- └─ docs/ (thêm ảnh screenshot tại đây)
+ ├─ js/
+ ├─ index.html
+ └─ admin.html
 
 
  🧪 Ghi Chú Kỹ Thuật
 Lọc dựa trên: data-brand, data-type, data-key, data-price, data-equip
 Mapping query → nhóm data-equip (giày=1, trangphucthethao=2, dungcuthethao=3)
 Có thể mở rộng thêm bằng cách bổ sung vào equipMap trong script.
+
 👥 Thành Viên Nhóm 04
 MSSV	Họ Tên	Vai Trò
 3123411323	Hồ Hữu Anh Tuấn	Dev
@@ -56,10 +41,13 @@ MSSV	Họ Tên	Vai Trò
 3123411285	Ngũ Vĩnh Thịnh	Dev
 3123411342	Nguyễn Thành Vinh	Dev
 3123411290	Nguyễn Minh Thuận	Dev
+
 📌 Định Hướng Mở Rộng
 Tích hợp API giỏ hàng thật
 Thêm đăng ký / đăng nhập JWT
 Tìm kiếm toàn cục không dấu
 Lazy load hình ảnh
+
+
 🛡️ Bản Quyền
 Dự án học tập – chỉ dùng cho mục đích giáo dục.
